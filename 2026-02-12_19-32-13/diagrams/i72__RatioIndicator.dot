@@ -1,0 +1,27 @@
+// Diagram for RatioIndicator
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		RatioIndicator [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">RatioIndicator</TD></TR></TABLE>> URL="../classes/i72__RatioIndicator.md" margin=0]
+	}
+	Indicator [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Indicator</TD></TR></TABLE>> URL="../_counters/i72__Indicator.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Quantity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Quantity</TD></TR></TABLE>> URL="../_counters/i72__Quantity.md" margin=0]
+		Unit_division [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Unit_division</TD></TR></TABLE>> URL="../_counters/i72__Unit_division.md" margin=0]
+	}
+	RatioIndicator -> Indicator [arrowhead=onormal style=solid]
+	RatioIndicator -> Invis [style=invis]
+	Invis -> Quantity [style=invis]
+	Quantity -> Unit_division [style=invis]
+	RatioIndicator -> Quantity [label=" denominator 
+ «exactly 1»  " arrowhead=normal style=solid]
+	RatioIndicator -> Quantity [label=" numerator 
+ «exactly 1»  " arrowhead=normal style=solid]
+	RatioIndicator -> Unit_division [label=" onProperty: unit_of_measure 
+ «exactly 1»  " arrowhead=normal style=dashed]
+}

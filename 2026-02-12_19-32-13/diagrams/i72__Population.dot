@@ -1,0 +1,35 @@
+// Diagram for Population
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Population [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Population</TD></TR></TABLE>> URL="../classes/i72__Population.md" margin=0]
+	}
+	ISO21972Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ISO21972Thing</TD></TR></TABLE>> URL="../_counters/i72__ISO21972Thing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Feature [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Feature</TD></TR></TABLE>> URL="../_counters/i72__Feature.md" margin=0]
+		owl__Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">owl::Thing</TD></TR></TABLE>> margin=0]
+		Parameter [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Parameter</TD></TR></TABLE>> URL="../_counters/i72__Parameter.md" margin=0]
+		time__DateTimeInterval [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">time::DateTimeInterval</TD></TR></TABLE>> margin=0]
+	}
+	Population -> ISO21972Thing [arrowhead=onormal style=solid]
+	Population -> Invis [style=invis]
+	Invis -> Feature [style=invis]
+	Feature -> owl__Thing [style=invis]
+	owl__Thing -> Parameter [style=invis]
+	Parameter -> time__DateTimeInterval [style=invis]
+	Population -> owl__Thing [label=" defined_by 
+ «only»  " arrowhead=normal style=solid]
+	Population -> time__DateTimeInterval [label=" for_time_interval 
+ «only»  " arrowhead=normal style=solid]
+	owl__Thing -> Population [label=" inverse member_of 
+ «only»  " arrowhead=inv style=solid]
+	Population -> Parameter [label=" is_described_by 
+ «only»  " arrowhead=normal style=solid]
+	Population -> Feature [label=" definition 
+ «exactly 1»  " arrowhead=normal style=solid]
+}
