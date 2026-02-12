@@ -1,0 +1,29 @@
+// Diagram for fixed point
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		"fixed point" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">fixed point</TD></TR></TABLE>> URL="../classes/i72__fixed point.md" margin=0]
+	}
+	Point [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Point</TD></TR></TABLE>> URL="../_counters/i72__Point.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Fixed_point [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Fixed_point</TD></TR></TABLE>> URL="../_counters/i72__Fixed_point.md" margin=0]
+		Measure [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Measure</TD></TR></TABLE>> URL="../_counters/i72__Measure.md" margin=0]
+		Quantity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Quantity</TD></TR></TABLE>> URL="../_counters/i72__Quantity.md" margin=0]
+	}
+	"fixed point" -> Point [arrowhead=onormal style=solid]
+	"fixed point" -> Invis [style=invis]
+	Invis -> Fixed_point [style=invis]
+	Fixed_point -> Measure [style=invis]
+	Measure -> Quantity [style=invis]
+	Na8f2c5b664b248f19caf30e90f8fef1e [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	Na8f2c5b664b248f19caf30e90f8fef1e -> Fixed_point [label=member arrowhead=normal style=dotted]
+	Na8f2c5b664b248f19caf30e90f8fef1e -> Measure [label=member arrowhead=normal style=dotted]
+	Na8f2c5b664b248f19caf30e90f8fef1e -> Quantity [label=member arrowhead=normal style=dotted]
+	"fixed point" -> Na8f2c5b664b248f19caf30e90f8fef1e [label=" definition 
+ «only»  " arrowhead=normal style=solid]
+}
