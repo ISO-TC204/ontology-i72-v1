@@ -1,0 +1,21 @@
+// Diagram for Variable
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Variable [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Variable</TD></TR><TR><TD ALIGN="LEFT">has_Name: xsd::string «max 1»</TD></TR></TABLE>> URL="../classes/i72__Variable.md" margin=0]
+	}
+	ISO21972Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ISO21972Thing</TD></TR></TABLE>> URL="../_counters/i72__ISO21972Thing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Observation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Observation</TD></TR></TABLE>> URL="../_counters/i72__Observation.md" margin=0]
+	}
+	Variable -> ISO21972Thing [arrowhead=onormal style=solid]
+	Variable -> Invis [style=invis]
+	Invis -> Observation [style=invis]
+	Variable -> Observation [label=" is_characteristic_of 
+ «only»  " arrowhead=normal style=solid]
+}
