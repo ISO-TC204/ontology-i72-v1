@@ -10,7 +10,6 @@
 
 | Property | Constraint |
 |----------|------------|
-| subClassOf | gis::Polygon |
 | subClassOf | geo::Feature |
 | subClassOf | ISO21972Thing |
 
