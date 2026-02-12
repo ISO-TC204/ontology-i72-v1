@@ -1,0 +1,21 @@
+// Diagram for Standard_deviation
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Standard_deviation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Standard_deviation</TD></TR></TABLE>> URL="../classes/i72__Standard_deviation.md" margin=0]
+	}
+	Parameter [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Parameter</TD></TR></TABLE>> URL="../_counters/i72__Parameter.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Population [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Population</TD></TR></TABLE>> URL="../_counters/i72__Population.md" margin=0]
+	}
+	Standard_deviation -> Parameter [arrowhead=onormal style=solid]
+	Standard_deviation -> Invis [style=invis]
+	Invis -> Population [style=invis]
+	Standard_deviation -> Population [label=" std_of 
+ «exactly 1»  " arrowhead=normal style=solid]
+}
