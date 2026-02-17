@@ -1,0 +1,19 @@
+// Diagram for Cardinality_unit
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Cardinality_unit [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Cardinality_unit</TD></TR></TABLE>> URL="../classes/i72__Cardinality_unit.md" margin=0]
+	}
+	Singular_unit [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Singular_unit</TD></TR></TABLE>> URL="../_counters/i72__Singular_unit.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+	}
+	Cardinality_unit -> Singular_unit [arrowhead=onormal style=solid]
+	Cardinality_scale [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Cardinality_scale</TD></TR></TABLE>> URL="../_counters/i72__Cardinality_scale.md" margin=0]
+	Cardinality_scale -> Cardinality_unit [label=" inverse unit_of_measure 
+ «exactly 1»  " arrowhead=inv style=solid]
+}

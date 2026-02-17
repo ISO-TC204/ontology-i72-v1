@@ -1,0 +1,28 @@
+// Diagram for Unit_multiple_or_submultiple
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Unit_multiple_or_submultiple [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Unit_multiple_or_submultiple</TD></TR></TABLE>> URL="../Unit_multiple_or_submultiple.md" margin=0]
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Measure [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Measure</TD></TR></TABLE>> URL="../Measure.md" margin=0]
+		Quantity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Quantity</TD></TR></TABLE>> URL="../Quantity.md" margin=0]
+	}
+	Unit_of_measure [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Unit_of_measure</TD></TR></TABLE>> URL="../Unit_of_measure.md" margin=0]
+	Unit_multiple_or_submultiple -> Unit_of_measure [arrowhead=onormal style=solid]
+	Unit_multiple_or_submultiple -> Invis [style=invis]
+	Invis -> Measure [style=invis]
+	Measure -> Quantity [style=invis]
+	N37dedb899d094b609ce8c95a9f50bde6 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	N37dedb899d094b609ce8c95a9f50bde6 -> Measure [label=member arrowhead=normal style=dotted]
+	N37dedb899d094b609ce8c95a9f50bde6 -> Quantity [label=member arrowhead=normal style=dotted]
+	Unit_of_measure [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Unit_of_measure</TD></TR></TABLE>> URL="../Unit_of_measure.md" margin=0]
+	N37dedb899d094b609ce8c95a9f50bde6 -> Unit_of_measure [label=member arrowhead=normal style=dotted]
+	Unit_multiple_or_submultiple -> N37dedb899d094b609ce8c95a9f50bde6 [label=" definition 
+ «only»  " arrowhead=normal style=solid]
+}

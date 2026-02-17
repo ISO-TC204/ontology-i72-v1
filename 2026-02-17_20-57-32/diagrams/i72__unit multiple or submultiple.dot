@@ -1,0 +1,28 @@
+// Diagram for unit multiple or submultiple
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		"unit multiple or submultiple" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">unit multiple or submultiple</TD></TR></TABLE>> URL="../classes/i72__unit multiple or submultiple.md" margin=0]
+	}
+	Unit_of_measure [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Unit_of_measure</TD></TR></TABLE>> URL="../_counters/i72__Unit_of_measure.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Measure [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Measure</TD></TR></TABLE>> URL="../_counters/i72__Measure.md" margin=0]
+		Quantity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Quantity</TD></TR></TABLE>> URL="../_counters/i72__Quantity.md" margin=0]
+	}
+	"unit multiple or submultiple" -> Unit_of_measure [arrowhead=onormal style=solid]
+	"unit multiple or submultiple" -> Invis [style=invis]
+	Invis -> Measure [style=invis]
+	Measure -> Quantity [style=invis]
+	N267df467544f439296e4a1bcd6d9c535 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	N267df467544f439296e4a1bcd6d9c535 -> Measure [label=member arrowhead=normal style=dotted]
+	N267df467544f439296e4a1bcd6d9c535 -> Quantity [label=member arrowhead=normal style=dotted]
+	Unit_of_measure [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Unit_of_measure</TD></TR></TABLE>> URL="../_counters/i72__Unit_of_measure.md" margin=0]
+	N267df467544f439296e4a1bcd6d9c535 -> Unit_of_measure [label=member arrowhead=normal style=dotted]
+	"unit multiple or submultiple" -> N267df467544f439296e4a1bcd6d9c535 [label=" definition 
+ «only»  " arrowhead=normal style=solid]
+}

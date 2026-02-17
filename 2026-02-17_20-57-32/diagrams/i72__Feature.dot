@@ -1,0 +1,18 @@
+// Diagram for Feature
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Feature [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Feature</TD></TR></TABLE>> URL="../classes/i72__Feature.md" margin=0]
+	}
+	geo__Feature [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">geo::Feature</TD></TR></TABLE>> margin=0]
+	ISO21972Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ISO21972Thing</TD></TR></TABLE>> URL="../_counters/i72__ISO21972Thing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+	}
+	Feature -> geo__Feature [arrowhead=onormal style=solid]
+	Feature -> ISO21972Thing [arrowhead=onormal style=solid]
+}

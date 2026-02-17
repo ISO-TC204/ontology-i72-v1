@@ -1,0 +1,21 @@
+// Diagram for cardinal scale
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		"cardinal scale" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">cardinal scale</TD></TR></TABLE>> URL="../classes/i72__cardinal scale.md" margin=0]
+	}
+	Measurement_scale [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Measurement_scale</TD></TR></TABLE>> URL="../_counters/i72__Measurement_scale.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Fixed_point [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Fixed_point</TD></TR></TABLE>> URL="../_counters/i72__Fixed_point.md" margin=0]
+	}
+	"cardinal scale" -> Measurement_scale [arrowhead=onormal style=solid]
+	"cardinal scale" -> Invis [style=invis]
+	Invis -> Fixed_point [style=invis]
+	"cardinal scale" -> Fixed_point [label=" element 
+ «only»  " arrowhead=normal style=solid]
+}

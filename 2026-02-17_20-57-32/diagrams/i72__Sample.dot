@@ -1,0 +1,29 @@
+// Diagram for Sample
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Sample [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Sample</TD></TR></TABLE>> URL="../classes/i72__Sample.md" margin=0]
+	}
+	ISO21972Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ISO21972Thing</TD></TR></TABLE>> URL="../_counters/i72__ISO21972Thing.md" margin=0]
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Observation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Observation</TD></TR></TABLE>> URL="../_counters/i72__Observation.md" margin=0]
+		Population [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Population</TD></TR></TABLE>> URL="../_counters/i72__Population.md" margin=0]
+		Statistic [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Statistic</TD></TR></TABLE>> URL="../_counters/i72__Statistic.md" margin=0]
+	}
+	Sample -> ISO21972Thing [arrowhead=onormal style=solid]
+	Sample -> Invis [style=invis]
+	Invis -> Observation [style=invis]
+	Observation -> Population [style=invis]
+	Population -> Statistic [style=invis]
+	Observation -> Sample [label=" inverse member_of 
+ «only»  " arrowhead=inv style=solid]
+	Sample -> Statistic [label=" is_described_by 
+ «only»  " arrowhead=normal style=solid]
+	Sample -> Population [label=" is_part_of 
+ «exactly 1»  " arrowhead=normal style=solid]
+}
