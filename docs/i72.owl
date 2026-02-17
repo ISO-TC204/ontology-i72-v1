@@ -3,6 +3,7 @@
      xml:base="https://w3id.org/citydata/21972/v1/"
      xmlns:cc="http://creativecommons.org/ns#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:v1="https://w3id.org/citydata/21972/v1/"
      xmlns:geo="http://http://www.opengis.net/ont/geosparql#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -35,7 +36,7 @@ Rijgersberg, H., Wigham, M., and Top, J.L., (2011), “How Semantics can Improve
 and the GovStat ontology by:
 
 Pattuelli, M.C., (2003), “The GovStat Ontology: Technical Report”. The GovStat Project, Integration Design Laboratory, School of Information and Library Science, University of North Carolina at Chapel Hill, http://ils.unc.edu/govstat/papers/govstatontology.doc.</dc:description>
-        <dc:title xml:lang="en">ISO21972 Information technology — Upper level ontology for smart city indicators</dc:title>
+        <dcterms:title>ISO21972 Information technology — Upper level ontology for smart city indicators</dcterms:title>
         <vann:preferredNamespacePrefix>i72</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>http://ontology.eil.utoronto.ca/ISO21972/iso21972#</vann:preferredNamespaceUri>
         <owl:versionInfo xml:lang="en">0.1 8 November 2019</owl:versionInfo>
