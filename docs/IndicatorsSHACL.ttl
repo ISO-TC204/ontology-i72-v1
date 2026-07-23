@@ -1,0 +1,356 @@
+@prefix : <https://w3id.org/citydata/21972/v1/> .
+@prefix i72: <https://w3id.org/citydata/21972/v1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix schema: <http://schema.org/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix om-1: <http://www.wurvoc.org/vocabularies/om-1.8/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+:IndicatorsSHACL
+    rdf:type                      owl:Ontology ;
+    dcterms:title                 "SHACL constraints for the ISO 21972 Indicators pattern"@en ;
+    skos:definition               "Validation shapes derived from qualified cardinality restrictions in the Indicators pattern."@en ;
+    vann:preferredNamespaceUri    "https://w3id.org/citydata/21972/v1/" ;
+    vann:preferredNamespacePrefix "i72" ;
+    dcterms:license               <http://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:creator               "Mark S. Fox"@en ;
+    dcterms:creator               "Kenneth Vaughn"@en ;
+    dcterms:modified              "2026-07-23"^^xsd:date ;
+    owl:versionInfo               "1.1.0" ;
+    owl:imports                   :IndicatorsPattern .
+
+# ================================================
+#                Node Shapes
+# ================================================
+
+:Cardinal_scaleShape
+    rdf:type        sh:NodeShape ;
+    sh:targetClass  :Cardinal_scale ;
+    sh:property [
+        sh:path  :element ;
+        sh:class    :Fixed_point
+    ] .
+
+:CardinalityShape
+    rdf:type        sh:NodeShape ;
+    sh:targetClass  :Cardinality ;
+    sh:property [
+        sh:path  :cardinality_of ;
+        sh:class    :Population ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] .
+
+:DifferenceIndicatorShape
+    rdf:type        sh:NodeShape ;
+    sh:targetClass  :DifferenceIndicator ;
+    sh:property [
+        sh:path  :term_1 ;
+        sh:class    :Quantity ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] ;
+    sh:property [
+        sh:path  :term_2 ;
+        sh:class    :Quantity ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] .
+
+:Distinct_countShape
+    rdf:type        sh:NodeShape ;
+    sh:targetClass  :Distinct_count ;
+    sh:property [
+        sh:path  :distinct_count_of ;
+        sh:class    :Population ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] .
+
+:IndicatorShape
+    rdf:type        sh:NodeShape ;
+    sh:targetClass  :Indicator ;
+    sh:property [
+        sh:path  :for_time_interval ;
+        sh:class    time:DateTimeInterval ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] ;
+    sh:property [
+        sh:path  :for_city ;
+        sh:class    :City ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] .
+
+:MeanShape
+    rdf:type        sh:NodeShape ;
+    sh:targetClass  :Mean ;
+    sh:property [
+        sh:path  :mean_of ;
+        sh:class    :Population ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] .
+
+:MeasureShape
+    rdf:type        sh:NodeShape ;
+    sh:targetClass  :Measure ;
+    sh:property [
+        sh:path  :hasNumericalValue ;
+        sh:datatype xsd:string ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] ;
+    sh:property [
+        sh:path  :unit_of_measure ;
+        sh:class    :Unit_of_measure ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] ;
+    sh:property [
+        sh:path  :hasUnit ;
+        sh:class    :Unit_of_measure
+    ] ;
+    sh:property [
+        sh:path  :unit_of_measure ;
+        sh:class    :Unit_of_measure
+    ] ;
+    sh:property [
+        sh:path  :numerical_value ;
+        sh:datatype xsd:string
+    ] ;
+    sh:property [
+        sh:path  :hasNumericalValue ;
+        sh:datatype xsd:string
+    ] ;
+    sh:property [
+        sh:path  :numerical_value ;
+        sh:datatype xsd:string ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] ;
+    sh:property [
+        sh:path  :hasUnit ;
+        sh:class    :Unit_of_measure ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] .
+
+:Nominal_scaleShape
+    rdf:type        sh:NodeShape ;
+    sh:targetClass  :Nominal_scale ;
+    sh:property [
+        sh:path  :element ;
+        sh:class    :Measurement_scale_category
+    ] .
+
+:ObservationShape
+    rdf:type        sh:NodeShape ;
+    sh:targetClass  :Observation ;
+    sh:property [
+        sh:path  :member_of ;
+        sh:class    :Population
+    ] ;
+    sh:property [
+        sh:path  :has_characteristic ;
+        sh:class    :Variable ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] .
+
+:Ordinal_scaleShape
+    rdf:type        sh:NodeShape ;
+    sh:targetClass  :Ordinal_scale ;
+    sh:property [
+        sh:path  :element ;
+        sh:class    :Ordered_measurement_scale_category
+    ] .
+
+:ParameterShape
+    rdf:type        sh:NodeShape ;
+    sh:targetClass  :Parameter ;
+    sh:property [
+        sh:path  :parameter_of_var ;
+        sh:class    :Variable ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] .
+
+:PopulationShape
+    rdf:type        sh:NodeShape ;
+    sh:targetClass  :Population ;
+    sh:property [
+        sh:path  :defined_by ;
+        sh:class    owl:Thing
+    ] ;
+    sh:property [
+        sh:path  :is_described_by ;
+        sh:class    :Parameter
+    ] ;
+    sh:property [
+        sh:path  :for_time_interval ;
+        sh:class    time:DateTimeInterval
+    ] ;
+    sh:property [
+        sh:path  :definition ;
+        sh:class    :Feature ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] ;
+    sh:property [
+        sh:path  :is_composed_of ;
+        sh:class :Observation
+    ] .
+
+:QuantityShape
+    rdf:type        sh:NodeShape ;
+    sh:targetClass  :Quantity ;
+    sh:property [
+        sh:path  :unit_of_measure ;
+        sh:class    :Unit_of_measure ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] ;
+    sh:property [
+        sh:path  :value ;
+        sh:class    :Measure
+    ] ;
+    sh:property [
+        sh:path  :hasValue ;
+        sh:class    :Measure
+    ] ;
+    sh:property [
+        sh:path  :value ;
+        sh:class    :Measure ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] ;
+    sh:property [
+        sh:path  :unit_of_measure ;
+        sh:class    :Unit_of_measure
+    ] ;
+    sh:property [
+        sh:path  :hasValue ;
+        sh:class    :Measure ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] ;
+    sh:property [
+        sh:path  :hasUnit ;
+        sh:class    :Unit_of_measure ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] ;
+    sh:property [
+        sh:path  :hasUnit ;
+        sh:class    :Unit_of_measure
+    ] .
+
+:RatioIndicatorShape
+    rdf:type        sh:NodeShape ;
+    sh:targetClass  :RatioIndicator ;
+    sh:property [
+        sh:path  :unit_of_measure ;
+        sh:class    :Unit_division ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] ;
+    sh:property [
+        sh:path  :denominator ;
+        sh:class    :Quantity ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] ;
+    sh:property [
+        sh:path  :numerator ;
+        sh:class    :Quantity ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] .
+
+:SampleShape
+    rdf:type        sh:NodeShape ;
+    sh:targetClass  :Sample ;
+    sh:property [
+        sh:path  :is_described_by ;
+        sh:class    :Statistic
+    ] ;
+    sh:property [
+        sh:path  :is_composed_of ;
+        sh:class    :Observation
+    ] ;
+    sh:property [
+        sh:path  :is_part_of ;
+        sh:class    :Population ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] .
+
+:Standard_deviationShape
+    rdf:type        sh:NodeShape ;
+    sh:targetClass  :Standard_deviation ;
+    sh:property [
+        sh:path  :std_of ;
+        sh:class    :Population ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] .
+
+:StatisticShape
+    rdf:type        sh:NodeShape ;
+    sh:targetClass  :Statistic ;
+    sh:property [
+        sh:path  :is_an_estimate_of ;
+        sh:class    :Parameter
+    ] .
+
+:SumShape
+    rdf:type        sh:NodeShape ;
+    sh:targetClass  :Sum ;
+    sh:property [
+        sh:path  :sum_of ;
+        sh:class    :Population ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] .
+
+:SumIndicatorShape
+    rdf:type        sh:NodeShape ;
+    sh:targetClass  :SumIndicator ;
+    sh:property [
+        sh:path  :term_2 ;
+        sh:class    :Quantity ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] ;
+    sh:property [
+        sh:path  :term_1 ;
+        sh:class    :Quantity ;
+        sh:minCount "1"^^xsd:integer ;
+        sh:maxCount "1"^^xsd:integer
+    ] .
+
+:VariableShape
+    rdf:type        sh:NodeShape ;
+    sh:targetClass  :Variable ;
+    sh:property [
+        sh:path  :has_Name ;
+        sh:datatype xsd:string ;
+        sh:maxCount "1"^^xsd:integer
+    ] ;
+    sh:property [
+        sh:path  :is_characteristic_of ;
+        sh:class    :Observation
+    ] .
+

@@ -4,11 +4,18 @@ digraph {
 	node [fontname=Arial fontsize=12 margin=0 shape=none]
 	edge [fontname=Arial fontsize=11]
 	{
+		rank=source
+		geo_Feature [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">geo:Feature</TD></TR></TABLE>> URL="https://w3id.org/citydata/imported/geo/latest/Feature" margin=0]
+		ISO21972Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ISO21972Thing</TD></TR></TABLE>> URL="../ISO21972Thing" margin=0]
+	}
+	Feature [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Feature</TD></TR></TABLE>> URL="../Feature" margin=0]
+	{
 		rank=max
-		Feature [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Feature</TD></TR></TABLE>> URL="../Feature.md" margin=0]
 	}
 	subgraph cluster_associated {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
 	}
+	Feature -> geo_Feature [arrowhead=onormal style=solid]
+	Feature -> ISO21972Thing [arrowhead=onormal style=solid]
 }

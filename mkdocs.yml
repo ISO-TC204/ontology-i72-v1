@@ -3,61 +3,118 @@ site_description: This ontology enables the representation of smart city indicat
   definitions and the data used to derive them..
 repo_url: https://github.com/ISO-TC204/ontology-i72-v1
 nav:
-- Home: index.md
-- i72:
-  - i72: i72.md
-  - Application_area: Application_area.md
-  - Binary_prefix: Binary_prefix.md
-  - Cardinal_scale: Cardinal_scale.md
-  - Cardinality: Cardinality.md
-  - Cardinality_scale: Cardinality_scale.md
-  - Cardinality_unit: Cardinality_unit.md
-  - City: City.md
-  - Compound_unit: Compound_unit.md
-  - Difference Indicator: DifferenceIndicator.md
-  - Dimension: Dimension.md
-  - Distinct_count: Distinct_count.md
-  - Feature: Feature.md
-  - Fixed_point: Fixed_point.md
-  - Fixed_zero_point: Fixed_zero_point.md
-  - Indicator: Indicator.md
-  - Interval_scale: Interval_scale.md
-  - Mean: Mean.md
-  - Measure: Measure.md
-  - Measurement_scale: Measurement_scale.md
-  - Measurement_scale_category: Measurement_scale_category.md
-  - Monetary_unit: Monetary_unit.md
-  - Nominal_scale: Nominal_scale.md
-  - Observation: Observation.md
-  - Ordered_measurement_scale_category: Ordered_measurement_scale_category.md
-  - Ordinal_scale: Ordinal_scale.md
-  - Parameter: Parameter.md
-  - Phenomenon: Phenomenon.md
-  - Point: Point.md
-  - Population: Population.md
-  - Prefix: Prefix.md
-  - Quantity: Quantity.md
-  - Ratio_scale: Ratio_scale.md
-  - Ratio Indicator: RatioIndicator.md
-  - Sample: Sample.md
-  - Sample_cardinality: Sample_cardinality.md
-  - Sample_mean: Sample_mean.md
-  - Sample_standard_deviation: Sample_standard_deviation.md
-  - Sample_sum: Sample_sum.md
-  - SI_prefix: SI_prefix.md
-  - Singular_unit: Singular_unit.md
-  - Standard_deviation: Standard_deviation.md
-  - Statistic: Statistic.md
-  - Sum: Sum.md
-  - Sum Indicator: SumIndicator.md
-  - System_of_units: System_of_units.md
-  - Unit_division: Unit_division.md
-  - Unit_exponentiation: Unit_exponentiation.md
-  - Unit_multiple_or_submultiple: Unit_multiple_or_submultiple.md
-  - Unit_multiplication: Unit_multiplication.md
-  - Unit_of_measure: Unit_of_measure.md
-  - Variable: Variable.md
-  - Vectorial_or_tensorial_character: Vectorial_or_tensorial_character.md
+- TC204 on ISO.org: https://www.iso.org/committee/54706.html
+- TC 204 Home: https://isotc204.org/
+- RITSO Home: https://isotc204.org/ritso/
+- Upper level ontology for smart city indicators:
+  - Home: index.md
+  - Core Pattern:
+    - Core Pattern Overview: classes/CorePattern.md
+    - Classes:
+      - Iso21972 Thing: classes/ISO21972Thing.md
+    - Properties:
+      - iso21972DataProperty: properties/iso21972DataProperty.md
+      - iso21972ObjectProperty: properties/iso21972ObjectProperty.md
+  - Indicators Pattern:
+    - Indicators Pattern Overview: classes/IndicatorsPattern.md
+    - Classes:
+      - Application_area: classes/Application_area.md
+      - Binary_prefix: classes/Binary_prefix.md
+      - Cardinal_scale: classes/Cardinal_scale.md
+      - Cardinality: classes/Cardinality.md
+      - Cardinality_scale: classes/Cardinality_scale.md
+      - Cardinality_unit: classes/Cardinality_unit.md
+      - City: classes/City.md
+      - Compound_unit: classes/Compound_unit.md
+      - Difference Indicator: classes/DifferenceIndicator.md
+      - Dimension: classes/Dimension.md
+      - Distinct_count: classes/Distinct_count.md
+      - Feature: classes/Feature.md
+      - Fixed_point: classes/Fixed_point.md
+      - Fixed_zero_point: classes/Fixed_zero_point.md
+      - Indicator: classes/Indicator.md
+      - Interval_scale: classes/Interval_scale.md
+      - Mean: classes/Mean.md
+      - Measure: classes/Measure.md
+      - Measurement_scale: classes/Measurement_scale.md
+      - Measurement_scale_category: classes/Measurement_scale_category.md
+      - Monetary_unit: classes/Monetary_unit.md
+      - Nominal_scale: classes/Nominal_scale.md
+      - Observation: classes/Observation.md
+      - Ordered_measurement_scale_category: classes/Ordered_measurement_scale_category.md
+      - Ordinal_scale: classes/Ordinal_scale.md
+      - Parameter: classes/Parameter.md
+      - Phenomenon: classes/Phenomenon.md
+      - Point: classes/Point.md
+      - Population: classes/Population.md
+      - Prefix: classes/Prefix.md
+      - Quantity: classes/Quantity.md
+      - Ratio_scale: classes/Ratio_scale.md
+      - Ratio Indicator: classes/RatioIndicator.md
+      - Sample: classes/Sample.md
+      - Sample_cardinality: classes/Sample_cardinality.md
+      - Sample_mean: classes/Sample_mean.md
+      - Sample_standard_deviation: classes/Sample_standard_deviation.md
+      - Sample_sum: classes/Sample_sum.md
+      - Si_prefix: classes/SI_prefix.md
+      - Singular_unit: classes/Singular_unit.md
+      - Standard_deviation: classes/Standard_deviation.md
+      - Statistic: classes/Statistic.md
+      - Sum: classes/Sum.md
+      - Sum Indicator: classes/SumIndicator.md
+      - System_of_units: classes/System_of_units.md
+      - Unit_division: classes/Unit_division.md
+      - Unit_exponentiation: classes/Unit_exponentiation.md
+      - Unit_multiple_or_submultiple: classes/Unit_multiple_or_submultiple.md
+      - Unit_multiplication: classes/Unit_multiplication.md
+      - Unit_of_measure: classes/Unit_of_measure.md
+      - Variable: classes/Variable.md
+      - Vectorial_or_tensorial_character: classes/Vectorial_or_tensorial_character.md
+    - Properties:
+      - base: properties/base.md
+      - base_quantity: properties/base_quantity.md
+      - base_unit: properties/base_unit.md
+      - cardinality_of: properties/cardinality_of.md
+      - defined_by: properties/defined_by.md
+      - definition: properties/definition.md
+      - denominator: properties/denominator.md
+      - derived_quantity: properties/derived_quantity.md
+      - description_of: properties/description_of.md
+      - distinct_count_of: properties/distinct_count_of.md
+      - element: properties/element.md
+      - exponent: properties/exponent.md
+      - factor: properties/factor.md
+      - for_city: properties/for_city.md
+      - for_time_interval: properties/for_time_interval.md
+      - has_characteristic: properties/has_characteristic.md
+      - has_Name: properties/has_Name.md
+      - hasNumericalValue: properties/hasNumericalValue.md
+      - hasUnit: properties/hasUnit.md
+      - hasValue: properties/hasValue.md
+      - is_an_estimate_of: properties/is_an_estimate_of.md
+      - is_characteristic_of: properties/is_characteristic_of.md
+      - is_composed_of: properties/is_composed_of.md
+      - is_described_by: properties/is_described_by.md
+      - is_part_of: properties/is_part_of.md
+      - located_in: properties/located_in.md
+      - mean_of: properties/mean_of.md
+      - measurement_scale: properties/measurement_scale.md
+      - member_of: properties/member_of.md
+      - numerator: properties/numerator.md
+      - numerical_value: properties/numerical_value.md
+      - parameter_of_var: properties/parameter_of_var.md
+      - phenomenon: properties/phenomenon.md
+      - prefix: properties/prefix.md
+      - rank: properties/rank.md
+      - singular_unit: properties/singular_unit.md
+      - std_of: properties/std_of.md
+      - sum_of: properties/sum_of.md
+      - symbol: properties/symbol.md
+      - term_1: properties/term_1.md
+      - term_2: properties/term_2.md
+      - unit_of_measure: properties/unit_of_measure.md
+      - value: properties/value.md
+      - zero_element: properties/zero_element.md
 site_url: https://isotc204.org/ontology-i72-v1
 copyright: <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
   <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank"
@@ -73,6 +130,8 @@ theme:
   - content.tooltips
   - icons
   - navigation.path
+  - navigation.tabs
+  - navigation.tabs.sticky
   - navigation.top
   icon:
     repo: fontawesome/brands/github

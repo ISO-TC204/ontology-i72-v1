@@ -4,18 +4,21 @@ digraph {
 	node [fontname=Arial fontsize=12 margin=0 shape=none]
 	edge [fontname=Arial fontsize=11]
 	{
+		rank=source
+		Measurement_scale [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Measurement_scale</TD></TR></TABLE>> URL="../Measurement_scale" margin=0]
+	}
+	Cardinal_scale [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Cardinal_scale</TD></TR></TABLE>> URL="../Cardinal_scale" margin=0]
+	{
 		rank=max
-		Cardinal_scale [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Cardinal_scale</TD></TR></TABLE>> URL="../Cardinal_scale.md" margin=0]
 	}
 	subgraph cluster_associated {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
-		Fixed_point [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Fixed_point</TD></TR></TABLE>> URL="../Fixed_point.md" margin=0]
+		Fixed_point [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Fixed_point</TD></TR></TABLE>> URL="../Fixed_point" margin=0]
 	}
-	Measurement_scale [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Measurement_scale</TD></TR></TABLE>> URL="../Measurement_scale.md" margin=0]
 	Cardinal_scale -> Measurement_scale [arrowhead=onormal style=solid]
 	Cardinal_scale -> Invis [style=invis]
 	Invis -> Fixed_point [style=invis]
-	Cardinal_scale -> Fixed_point [label=" element 
- «only»  " arrowhead=normal style=solid]
+	Fixed_point [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Fixed_point</TD></TR></TABLE>> URL="../Fixed_point" margin=0]
+	Cardinal_scale -> Fixed_point [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">element</TD></TR></TABLE>> arrowhead=normal style=solid]
 }

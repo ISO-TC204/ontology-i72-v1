@@ -1,7 +1,10 @@
-# ISO21972 Information technology — Upper level ontology for smart city indicators
+# ISO 21972 Information technology — Upper level ontology for smart city indicators
 
-![Draft for review only](/assets/img/draft_for_review.svg)
+This ontology imports the ISO 21972 modules (core pattern, indicators pattern, and SHACL constraints).
 
-The ISO21972 Information technology — Upper level ontology for smart city indicators ontology consists of the following:
+The ISO 21972 Information technology — Upper level ontology for smart city indicators consists of the following patterns:
 
-- [i72](i72.md)
+- [Core](classes/CorePattern.md)
+- [Indicators](classes/IndicatorsPattern.md)
+
+The formal definition of this ontology is available in [TURTLE Syntax](i72.ttl).

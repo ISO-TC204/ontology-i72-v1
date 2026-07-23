@@ -1,3 +1,7 @@
+.cursor/
+.vscode/
+.venv/
 site/
 venv/
 ~/
+.DS_Store
