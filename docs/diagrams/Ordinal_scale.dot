@@ -4,18 +4,21 @@ digraph {
 	node [fontname=Arial fontsize=12 margin=0 shape=none]
 	edge [fontname=Arial fontsize=11]
 	{
+		rank=source
+		Measurement_scale [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Measurement_scale</TD></TR></TABLE>> URL="../Measurement_scale" margin=0]
+	}
+	Ordinal_scale [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Ordinal_scale</TD></TR></TABLE>> URL="../Ordinal_scale" margin=0]
+	{
 		rank=max
-		Ordinal_scale [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Ordinal_scale</TD></TR></TABLE>> URL="../Ordinal_scale.md" margin=0]
 	}
 	subgraph cluster_associated {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
-		Ordered_measurement_scale_category [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Ordered_measurement_scale_category</TD></TR></TABLE>> URL="../Ordered_measurement_scale_category.md" margin=0]
+		Ordered_measurement_scale_category [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Ordered_measurement_scale_category</TD></TR></TABLE>> URL="../Ordered_measurement_scale_category" margin=0]
 	}
-	Measurement_scale [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Measurement_scale</TD></TR></TABLE>> URL="../Measurement_scale.md" margin=0]
 	Ordinal_scale -> Measurement_scale [arrowhead=onormal style=solid]
 	Ordinal_scale -> Invis [style=invis]
 	Invis -> Ordered_measurement_scale_category [style=invis]
-	Ordinal_scale -> Ordered_measurement_scale_category [label=" element 
- «only»  " arrowhead=normal style=solid]
+	Ordered_measurement_scale_category [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Ordered_measurement_scale_category</TD></TR></TABLE>> URL="../Ordered_measurement_scale_category" margin=0]
+	Ordinal_scale -> Ordered_measurement_scale_category [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">element</TD></TR></TABLE>> arrowhead=normal style=solid]
 }

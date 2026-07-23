@@ -4,25 +4,29 @@ digraph {
 	node [fontname=Arial fontsize=12 margin=0 shape=none]
 	edge [fontname=Arial fontsize=11]
 	{
+		rank=source
+		Point [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Point</TD></TR></TABLE>> URL="../Point" margin=0]
+	}
+	Fixed_point [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Fixed_point</TD></TR></TABLE>> URL="../Fixed_point" margin=0]
+	{
 		rank=max
-		Fixed_point [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Fixed_point</TD></TR></TABLE>> URL="../Fixed_point.md" margin=0]
 	}
 	subgraph cluster_associated {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
-		Measure [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Measure</TD></TR></TABLE>> URL="../Measure.md" margin=0]
-		Quantity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Quantity</TD></TR></TABLE>> URL="../Quantity.md" margin=0]
+		Measure [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Measure</TD></TR></TABLE>> URL="../Measure" margin=0]
+		Quantity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Quantity</TD></TR></TABLE>> URL="../Quantity" margin=0]
 	}
-	Point [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Point</TD></TR></TABLE>> URL="../Point.md" margin=0]
 	Fixed_point -> Point [arrowhead=onormal style=solid]
 	Fixed_point -> Invis [style=invis]
 	Invis -> Measure [style=invis]
 	Measure -> Quantity [style=invis]
-	N70edf8ac19434678a0be742751e71d73 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
-	Fixed_point [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Fixed_point</TD></TR></TABLE>> URL="../Fixed_point.md" margin=0]
-	N70edf8ac19434678a0be742751e71d73 -> Fixed_point [label=member arrowhead=normal style=dotted]
-	N70edf8ac19434678a0be742751e71d73 -> Measure [label=member arrowhead=normal style=dotted]
-	N70edf8ac19434678a0be742751e71d73 -> Quantity [label=member arrowhead=normal style=dotted]
-	Fixed_point -> N70edf8ac19434678a0be742751e71d73 [label=" definition 
- «only»  " arrowhead=normal style=solid]
+	n49e7333729f74c3eb91b9b7c78626a1eb10 [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" BGCOLOR="lightyellow"><TR><TD ALIGN="CENTER">«unionOf»</TD></TR></TABLE>> margin=0]
+	Fixed_point [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Fixed_point</TD></TR></TABLE>> URL="../Fixed_point" margin=0]
+	n49e7333729f74c3eb91b9b7c78626a1eb10 -> Fixed_point [label=member arrowhead=normal style=dotted]
+	Measure [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Measure</TD></TR></TABLE>> URL="../Measure" margin=0]
+	n49e7333729f74c3eb91b9b7c78626a1eb10 -> Measure [label=member arrowhead=normal style=dotted]
+	Quantity [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Quantity</TD></TR></TABLE>> URL="../Quantity" margin=0]
+	n49e7333729f74c3eb91b9b7c78626a1eb10 -> Quantity [label=member arrowhead=normal style=dotted]
+	Fixed_point -> n49e7333729f74c3eb91b9b7c78626a1eb10 [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">definition</TD></TR></TABLE>> arrowhead=normal style=solid]
 }

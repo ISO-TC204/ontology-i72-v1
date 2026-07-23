@@ -4,18 +4,21 @@ digraph {
 	node [fontname=Arial fontsize=12 margin=0 shape=none]
 	edge [fontname=Arial fontsize=11]
 	{
+		rank=source
+		ISO21972Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ISO21972Thing</TD></TR></TABLE>> URL="../ISO21972Thing" margin=0]
+	}
+	Variable [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Variable</TD></TR><TR><TD ALIGN="LEFT">has_Name : xsd:string [0..1]</TD></TR></TABLE>> URL="../Variable" margin=0]
+	{
 		rank=max
-		Variable [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Variable</TD></TR><HR/><TR><TD ALIGN="LEFT">«max 1» has_Name: xsd:string</TD></TR></TABLE>> URL="../Variable.md" margin=0]
 	}
 	subgraph cluster_associated {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
-		Observation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Observation</TD></TR></TABLE>> URL="../Observation.md" margin=0]
+		Observation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Observation</TD></TR></TABLE>> URL="../Observation" margin=0]
 	}
-	ISO21972Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ISO21972Thing</TD></TR></TABLE>> URL="../ISO21972Thing.md" margin=0]
 	Variable -> ISO21972Thing [arrowhead=onormal style=solid]
 	Variable -> Invis [style=invis]
 	Invis -> Observation [style=invis]
-	Variable -> Observation [label=" is_characteristic_of 
- «only»  " arrowhead=normal style=solid]
+	Observation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Observation</TD></TR></TABLE>> URL="../Observation" margin=0]
+	Variable -> Observation [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">is_characteristic_of</TD></TR></TABLE>> arrowhead=normal style=solid]
 }

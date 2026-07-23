@@ -38,7 +38,7 @@ and the GovStat ontology by:
 Pattuelli, M.C., (2003), “The GovStat Ontology: Technical Report”. The GovStat Project, Integration Design Laboratory, School of Information and Library Science, University of North Carolina at Chapel Hill, http://ils.unc.edu/govstat/papers/govstatontology.doc.</dc:description>
         <dcterms:title>ISO21972 Information technology — Upper level ontology for smart city indicators</dcterms:title>
         <vann:preferredNamespacePrefix>i72</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>http://ontology.eil.utoronto.ca/ISO21972/iso21972#</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri>https://w3id.org/citydata/21972/v1/</vann:preferredNamespaceUri>
         <owl:versionInfo xml:lang="en">0.1 8 November 2019</owl:versionInfo>
         <adms:relatedDocumentation>ISO21972</adms:relatedDocumentation>
     </owl:Ontology>
@@ -564,7 +564,7 @@ Pattuelli, M.C., (2003), “The GovStat Ontology: Technical Report”. The GovSt
     <!-- https://w3id.org/citydata/21972/v1/exponent -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/citydata/21972/v1/exponent">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/21972/v1/iso21972DataProperties"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/21972/v1/iso21972DataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/citydata/21972/v1/Unit_exponentiation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
@@ -577,7 +577,7 @@ Pattuelli, M.C., (2003), “The GovStat Ontology: Technical Report”. The GovSt
     <!-- https://w3id.org/citydata/21972/v1/factor -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/citydata/21972/v1/factor">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/21972/v1/iso21972DataProperties"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/21972/v1/iso21972DataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/citydata/21972/v1/Prefix"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -590,7 +590,7 @@ Pattuelli, M.C., (2003), “The GovStat Ontology: Technical Report”. The GovSt
     <!-- https://w3id.org/citydata/21972/v1/hasNumericalValue -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/citydata/21972/v1/hasNumericalValue">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/21972/v1/iso21972DataProperties"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/21972/v1/iso21972DataProperty"/>
     </owl:DatatypeProperty>
     
 
@@ -598,21 +598,21 @@ Pattuelli, M.C., (2003), “The GovStat Ontology: Technical Report”. The GovSt
     <!-- https://w3id.org/citydata/21972/v1/has_Name -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/citydata/21972/v1/has_Name">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/21972/v1/iso21972DataProperties"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/21972/v1/iso21972DataProperty"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/citydata/21972/v1/iso21972DataProperties -->
+    <!-- https://w3id.org/citydata/21972/v1/iso21972DataProperty -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/citydata/21972/v1/iso21972DataProperties"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/citydata/21972/v1/iso21972DataProperty"/>
     
 
 
     <!-- https://w3id.org/citydata/21972/v1/numerical_value -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/citydata/21972/v1/numerical_value">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/21972/v1/iso21972DataProperties"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/21972/v1/iso21972DataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain>
             <owl:Class>
@@ -631,7 +631,7 @@ Pattuelli, M.C., (2003), “The GovStat Ontology: Technical Report”. The GovSt
     <!-- https://w3id.org/citydata/21972/v1/rank -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/citydata/21972/v1/rank">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/21972/v1/iso21972DataProperties"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/21972/v1/iso21972DataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/citydata/21972/v1/Ordered_measurement_scale_category"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
@@ -644,7 +644,7 @@ Pattuelli, M.C., (2003), “The GovStat Ontology: Technical Report”. The GovSt
     <!-- https://w3id.org/citydata/21972/v1/symbol -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/citydata/21972/v1/symbol">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/21972/v1/iso21972DataProperties"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/21972/v1/iso21972DataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:DatatypeProperty>
     

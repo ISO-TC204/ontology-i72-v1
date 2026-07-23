@@ -4,18 +4,21 @@ digraph {
 	node [fontname=Arial fontsize=12 margin=0 shape=none]
 	edge [fontname=Arial fontsize=11]
 	{
+		rank=source
+		Parameter [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Parameter</TD></TR></TABLE>> URL="../Parameter" margin=0]
+	}
+	Mean [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Mean</TD></TR></TABLE>> URL="../Mean" margin=0]
+	{
 		rank=max
-		Mean [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Mean</TD></TR></TABLE>> URL="../Mean.md" margin=0]
 	}
 	subgraph cluster_associated {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
-		Population [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Population</TD></TR></TABLE>> URL="../Population.md" margin=0]
+		Population [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Population</TD></TR></TABLE>> URL="../Population" margin=0]
 	}
-	Parameter [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Parameter</TD></TR></TABLE>> URL="../Parameter.md" margin=0]
 	Mean -> Parameter [arrowhead=onormal style=solid]
 	Mean -> Invis [style=invis]
 	Invis -> Population [style=invis]
-	Mean -> Population [label=" mean_of 
- «exactly 1»  " arrowhead=normal style=solid]
+	Population [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Population</TD></TR></TABLE>> URL="../Population" margin=0]
+	Mean -> Population [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">mean_of</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
 }
