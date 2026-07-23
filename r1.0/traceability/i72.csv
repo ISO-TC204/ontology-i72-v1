@@ -1,0 +1,105 @@
+id,qname,heading,text,type,diagram,website,updated
+,Ordered_measurement_scale_category,Ordered_measurement_scale_category,,Class,https://w3id.org/citydata/21972/v1/diagrams/Ordered_measurement_scale_category.dot.svg,https://w3id.org/citydata/21972/v1/Ordered_measurement_scale_category,2026-07-23T17:17:58.118619
+,Unit_exponentiation,Unit_exponentiation,,Class,https://w3id.org/citydata/21972/v1/diagrams/Unit_exponentiation.dot.svg,https://w3id.org/citydata/21972/v1/Unit_exponentiation,2026-07-23T17:17:58.118619
+,Measure,Measure,"A measure combines a number to a unit of measure or an interval or ratio scale. For example, ""3 m"" is a measure.",Class,https://w3id.org/citydata/21972/v1/diagrams/Measure.dot.svg,https://w3id.org/citydata/21972/v1/Measure,2026-07-23T17:17:58.118619
+,Measurement_scale_category,Measurement_scale_category,,Class,https://w3id.org/citydata/21972/v1/diagrams/Measurement_scale_category.dot.svg,https://w3id.org/citydata/21972/v1/Measurement_scale_category,2026-07-23T17:17:58.118619
+,SI_prefix,SI_prefix,,Class,https://w3id.org/citydata/21972/v1/diagrams/SI_prefix.dot.svg,https://w3id.org/citydata/21972/v1/SI_prefix,2026-07-23T17:17:58.118619
+,ISO21972Thing,ISO21972Thing,A class used to organise all classes defined in the ISO 21972 ontology.,Class,https://w3id.org/citydata/21972/v1/diagrams/ISO21972Thing.dot.svg,https://w3id.org/citydata/21972/v1/ISO21972Thing,2026-07-23T17:17:58.118619
+,Sample_standard_deviation,Sample_standard_deviation,,Class,https://w3id.org/citydata/21972/v1/diagrams/Sample_standard_deviation.dot.svg,https://w3id.org/citydata/21972/v1/Sample_standard_deviation,2026-07-23T17:17:58.118619
+,Sample,Sample,,Class,https://w3id.org/citydata/21972/v1/diagrams/Sample.dot.svg,https://w3id.org/citydata/21972/v1/Sample,2026-07-23T17:17:58.118619
+,Distinct_count,Distinct_count,"Distinct_count class that is a Parameter that represents
+         the number of distinct values of a property of the members of a
+         Population",Class,https://w3id.org/citydata/21972/v1/diagrams/Distinct_count.dot.svg,https://w3id.org/citydata/21972/v1/Distinct_count,2026-07-23T17:17:58.118619
+,City,City,,Class,https://w3id.org/citydata/21972/v1/diagrams/City.dot.svg,https://w3id.org/citydata/21972/v1/City,2026-07-23T17:17:58.118619
+,Measurement_scale,Measurement_scale,"Measurement scales are concepts used for the expression of quantities. Four types of measurement scales are: nominal scales, ordinal scales, interval scales and ratio scales. The latter two scales are also called cardinal scales. An example of a scale is the Celsius scale, a temperature scale.",Class,https://w3id.org/citydata/21972/v1/diagrams/Measurement_scale.dot.svg,https://w3id.org/citydata/21972/v1/Measurement_scale,2026-07-23T17:17:58.118619
+,Sample_sum,Sample_sum,,Class,https://w3id.org/citydata/21972/v1/diagrams/Sample_sum.dot.svg,https://w3id.org/citydata/21972/v1/Sample_sum,2026-07-23T17:17:58.118619
+,Observation,Observation,,Class,https://w3id.org/citydata/21972/v1/diagrams/Observation.dot.svg,https://w3id.org/citydata/21972/v1/Observation,2026-07-23T17:17:58.118619
+,Interval_scale,Interval_scale,,Class,https://w3id.org/citydata/21972/v1/diagrams/Interval_scale.dot.svg,https://w3id.org/citydata/21972/v1/Interval_scale,2026-07-23T17:17:58.118619
+,Sample_cardinality,Sample_cardinality,,Class,https://w3id.org/citydata/21972/v1/diagrams/Sample_cardinality.dot.svg,https://w3id.org/citydata/21972/v1/Sample_cardinality,2026-07-23T17:17:58.118619
+,Vectorial_or_tensorial_character,Vectorial_or_tensorial_character,,Class,https://w3id.org/citydata/21972/v1/diagrams/Vectorial_or_tensorial_character.dot.svg,https://w3id.org/citydata/21972/v1/Vectorial_or_tensorial_character,2026-07-23T17:17:58.118619
+,DifferenceIndicator,DifferenceIndicator,Difference between term_1 and term_2 (term_1 - term_2),Class,https://w3id.org/citydata/21972/v1/diagrams/DifferenceIndicator.dot.svg,https://w3id.org/citydata/21972/v1/DifferenceIndicator,2026-07-23T17:17:58.118619
+,Unit_division,Unit_division,,Class,https://w3id.org/citydata/21972/v1/diagrams/Unit_division.dot.svg,https://w3id.org/citydata/21972/v1/Unit_division,2026-07-23T17:17:58.118619
+,Unit_multiple_or_submultiple,Unit_multiple_or_submultiple,,Class,https://w3id.org/citydata/21972/v1/diagrams/Unit_multiple_or_submultiple.dot.svg,https://w3id.org/citydata/21972/v1/Unit_multiple_or_submultiple,2026-07-23T17:17:58.118619
+,Unit_multiplication,Unit_multiplication,,Class,https://w3id.org/citydata/21972/v1/diagrams/Unit_multiplication.dot.svg,https://w3id.org/citydata/21972/v1/Unit_multiplication,2026-07-23T17:17:58.118619
+,Cardinal_scale,Cardinal_scale,,Class,https://w3id.org/citydata/21972/v1/diagrams/Cardinal_scale.dot.svg,https://w3id.org/citydata/21972/v1/Cardinal_scale,2026-07-23T17:17:58.118619
+,Quantity,Quantity,"A quantity is a representation of a quantifiable (standardized) aspect (such as length, mass, and time) of a phenomenon (e.g., a star, food, or a molecule). Quantities are classified according to similarity in (implicit) metrological aspect, e.g. the length of my speedboat and the length of my racing car are classified as length.",Class,https://w3id.org/citydata/21972/v1/diagrams/Quantity.dot.svg,https://w3id.org/citydata/21972/v1/Quantity,2026-07-23T17:17:58.118619
+,Fixed_zero_point,Fixed_zero_point,,Class,https://w3id.org/citydata/21972/v1/diagrams/Fixed_zero_point.dot.svg,https://w3id.org/citydata/21972/v1/Fixed_zero_point,2026-07-23T17:17:58.118619
+,Population,Population,"The core class is the Population to be measured. A Population is linked to a parameter (e.g., mean, standard deviation, cardinality) by the is_described_by property, and the parameter is a sub class of Parameter. Depending on the subclass of Parameter, there is a reverse link back to the Population.
+  
+parameter links back to the using cardinality_of. parameter links back using the   property. parameter links back using the mean_of property.",Class,https://w3id.org/citydata/21972/v1/diagrams/Population.dot.svg,https://w3id.org/citydata/21972/v1/Population,2026-07-23T17:17:58.118619
+,Prefix,Prefix,"A prefix is a name that precedes a basic unit of measure to indicate a decimal multiple or fraction of the unit. Each prefix has a unique symbol that is prepended to the unit symbol. For example, an electric current of 0.000 000 001 ampere is written by using the SI-prefix nano as 1 nanoampere or 1 nA.",Class,https://w3id.org/citydata/21972/v1/diagrams/Prefix.dot.svg,https://w3id.org/citydata/21972/v1/Prefix,2026-07-23T17:17:58.118619
+,RatioIndicator,RatioIndicator,,Class,https://w3id.org/citydata/21972/v1/diagrams/RatioIndicator.dot.svg,https://w3id.org/citydata/21972/v1/RatioIndicator,2026-07-23T17:17:58.118619
+,Cardinality_unit,Cardinality_unit,,Class,https://w3id.org/citydata/21972/v1/diagrams/Cardinality_unit.dot.svg,https://w3id.org/citydata/21972/v1/Cardinality_unit,2026-07-23T17:17:58.118619
+,Nominal_scale,Nominal_scale,,Class,https://w3id.org/citydata/21972/v1/diagrams/Nominal_scale.dot.svg,https://w3id.org/citydata/21972/v1/Nominal_scale,2026-07-23T17:17:58.118619
+,Sample_mean,Sample_mean,,Class,https://w3id.org/citydata/21972/v1/diagrams/Sample_mean.dot.svg,https://w3id.org/citydata/21972/v1/Sample_mean,2026-07-23T17:17:58.118619
+,Cardinality,Cardinality,"Cardinality of the Population.
+Note that there is no property that links Cardinality to a Variable.",Class,https://w3id.org/citydata/21972/v1/diagrams/Cardinality.dot.svg,https://w3id.org/citydata/21972/v1/Cardinality,2026-07-23T17:17:58.118619
+,Standard_deviation,Standard_deviation,,Class,https://w3id.org/citydata/21972/v1/diagrams/Standard_deviation.dot.svg,https://w3id.org/citydata/21972/v1/Standard_deviation,2026-07-23T17:17:58.118619
+,Singular_unit,Singular_unit,,Class,https://w3id.org/citydata/21972/v1/diagrams/Singular_unit.dot.svg,https://w3id.org/citydata/21972/v1/Singular_unit,2026-07-23T17:17:58.118619
+,Phenomenon,Phenomenon,"A phenomenon is the qualitative object (e.g., food, star, molecule) that has quantifiable (standardized) aspects (e.g, length, mass, time).",Class,https://w3id.org/citydata/21972/v1/diagrams/Phenomenon.dot.svg,https://w3id.org/citydata/21972/v1/Phenomenon,2026-07-23T17:17:58.118619
+,Ratio_scale,Ratio_scale,,Class,https://w3id.org/citydata/21972/v1/diagrams/Ratio_scale.dot.svg,https://w3id.org/citydata/21972/v1/Ratio_scale,2026-07-23T17:17:58.118619
+,Statistic,Statistic,,Class,https://w3id.org/citydata/21972/v1/diagrams/Statistic.dot.svg,https://w3id.org/citydata/21972/v1/Statistic,2026-07-23T17:17:58.118619
+,Cardinality_scale,Cardinality_scale,,Class,https://w3id.org/citydata/21972/v1/diagrams/Cardinality_scale.dot.svg,https://w3id.org/citydata/21972/v1/Cardinality_scale,2026-07-23T17:17:58.118619
+,Monetary_unit,Monetary_unit,,Class,https://w3id.org/citydata/21972/v1/diagrams/Monetary_unit.dot.svg,https://w3id.org/citydata/21972/v1/Monetary_unit,2026-07-23T17:17:58.118619
+,Mean,Mean,Mean represents the mean value of a property all members of the Population have and is specified by the parameter_of_var property.,Class,https://w3id.org/citydata/21972/v1/diagrams/Mean.dot.svg,https://w3id.org/citydata/21972/v1/Mean,2026-07-23T17:17:58.118619
+,Application_area,Application_area,,Class,https://w3id.org/citydata/21972/v1/diagrams/Application_area.dot.svg,https://w3id.org/citydata/21972/v1/Application_area,2026-07-23T17:17:58.118619
+,Unit_of_measure,Unit_of_measure,"A unit of measure is a definite magnitude of a quantity, defined and adopted by convention and/or by law. It is used as a standard for measurement of the same quantity, where any other value of the quantity can be expressed as a simple multiple of the unit of measure. For example, length is a quantity; the metre is a unit of length that represents a definite predetermined length. When we say 10 metre (or 10 m), we actually mean 10 times the definite predetermined length called ""metre"".",Class,https://w3id.org/citydata/21972/v1/diagrams/Unit_of_measure.dot.svg,https://w3id.org/citydata/21972/v1/Unit_of_measure,2026-07-23T17:17:58.118619
+,Sum,Sum,Sum defines the sum over a variable possessed by members of the Population.,Class,https://w3id.org/citydata/21972/v1/diagrams/Sum.dot.svg,https://w3id.org/citydata/21972/v1/Sum,2026-07-23T17:17:58.118619
+,Binary_prefix,Binary_prefix,,Class,https://w3id.org/citydata/21972/v1/diagrams/Binary_prefix.dot.svg,https://w3id.org/citydata/21972/v1/Binary_prefix,2026-07-23T17:17:58.118619
+,Compound_unit,Compound_unit,,Class,https://w3id.org/citydata/21972/v1/diagrams/Compound_unit.dot.svg,https://w3id.org/citydata/21972/v1/Compound_unit,2026-07-23T17:17:58.118619
+,Parameter,Parameter,"Parameter is the Class of all  measures that can be made of a Population, both statistical, e.g., Mean, Starndard_devation, and others, e.g., Cardinality, Sum.",Class,https://w3id.org/citydata/21972/v1/diagrams/Parameter.dot.svg,https://w3id.org/citydata/21972/v1/Parameter,2026-07-23T17:17:58.118619
+,Feature,Feature,,Class,https://w3id.org/citydata/21972/v1/diagrams/Feature.dot.svg,https://w3id.org/citydata/21972/v1/Feature,2026-07-23T17:17:58.118619
+,Dimension,Dimension,,Class,https://w3id.org/citydata/21972/v1/diagrams/Dimension.dot.svg,https://w3id.org/citydata/21972/v1/Dimension,2026-07-23T17:17:58.118619
+,Point,Point,"A point is an element of an interval scale or a ratio scale, for example, 273.16 on the Kelvin scale indicates the triple point of water thermodynamic temperature.",Class,https://w3id.org/citydata/21972/v1/diagrams/Point.dot.svg,https://w3id.org/citydata/21972/v1/Point,2026-07-23T17:17:58.118619
+,SumIndicator,SumIndicator,Sum of term_1 and term_2 (term_1 + term_2),Class,https://w3id.org/citydata/21972/v1/diagrams/SumIndicator.dot.svg,https://w3id.org/citydata/21972/v1/SumIndicator,2026-07-23T17:17:58.118619
+,Ordinal_scale,Ordinal_scale,,Class,https://w3id.org/citydata/21972/v1/diagrams/Ordinal_scale.dot.svg,https://w3id.org/citydata/21972/v1/Ordinal_scale,2026-07-23T17:17:58.118619
+,Indicator,Indicator,An indicator is a quantity that is a ratio of a numerator and denominator that are also quantities. It has a city and time period associated with it. The numerator and denominator quantities can have different units of measure. One example of a unit of measure is the size of a population. A population_cardinality_unit is defined to be an individual of a Cardinality_unit that is a subclass of a Singular_unit.,Class,https://w3id.org/citydata/21972/v1/diagrams/Indicator.dot.svg,https://w3id.org/citydata/21972/v1/Indicator,2026-07-23T17:17:58.118619
+,Fixed_point,Fixed_point,,Class,https://w3id.org/citydata/21972/v1/diagrams/Fixed_point.dot.svg,https://w3id.org/citydata/21972/v1/Fixed_point,2026-07-23T17:17:58.118619
+,System_of_units,System_of_units,,Class,https://w3id.org/citydata/21972/v1/diagrams/System_of_units.dot.svg,https://w3id.org/citydata/21972/v1/System_of_units,2026-07-23T17:17:58.118619
+,Variable,Variable,"The property that is being measured in the population.  Since Protege is not Full DL, cannot make the property a subclass of Variable, so have to specify it as a string name using has_Name.",Class,https://w3id.org/citydata/21972/v1/diagrams/Variable.dot.svg,https://w3id.org/citydata/21972/v1/Variable,2026-07-23T17:17:58.118619
+,iso21972ObjectProperty,iso21972ObjectProperty,An object property used to organise all object properties defined in the ISO 21972 ontology.,ObjectProperty,,https://w3id.org/citydata/21972/v1/iso21972ObjectProperty,2026-07-23T17:17:58.118619
+,base,base,,ObjectProperty,,https://w3id.org/citydata/21972/v1/base,2026-07-23T17:17:58.118619
+,base_quantity,base_quantity,,ObjectProperty,,https://w3id.org/citydata/21972/v1/base_quantity,2026-07-23T17:17:58.118619
+,base_unit,base_unit,,ObjectProperty,,https://w3id.org/citydata/21972/v1/base_unit,2026-07-23T17:17:58.118619
+,cardinality_of,cardinality_of,,ObjectProperty,,https://w3id.org/citydata/21972/v1/cardinality_of,2026-07-23T17:17:58.118619
+,defined_by,defined_by,,ObjectProperty,,https://w3id.org/citydata/21972/v1/defined_by,2026-07-23T17:17:58.118619
+,definition,definition,,ObjectProperty,,https://w3id.org/citydata/21972/v1/definition,2026-07-23T17:17:58.118619
+,denominator,denominator,,ObjectProperty,,https://w3id.org/citydata/21972/v1/denominator,2026-07-23T17:17:58.118619
+,derived_quantity,derived_quantity,,ObjectProperty,,https://w3id.org/citydata/21972/v1/derived_quantity,2026-07-23T17:17:58.118619
+,description_of,description_of,,ObjectProperty,,https://w3id.org/citydata/21972/v1/description_of,2026-07-23T17:17:58.118619
+,distinct_count_of,distinct_count_of,,ObjectProperty,,https://w3id.org/citydata/21972/v1/distinct_count_of,2026-07-23T17:17:58.118619
+,element,element,,ObjectProperty,,https://w3id.org/citydata/21972/v1/element,2026-07-23T17:17:58.118619
+,for_city,for_city,,ObjectProperty,,https://w3id.org/citydata/21972/v1/for_city,2026-07-23T17:17:58.118619
+,for_time_interval,for_time_interval,,ObjectProperty,,https://w3id.org/citydata/21972/v1/for_time_interval,2026-07-23T17:17:58.118619
+,hasUnit,hasUnit,,ObjectProperty,,https://w3id.org/citydata/21972/v1/hasUnit,2026-07-23T17:17:58.118619
+,hasValue,hasValue,,ObjectProperty,,https://w3id.org/citydata/21972/v1/hasValue,2026-07-23T17:17:58.118619
+,has_characteristic,has_characteristic,,ObjectProperty,,https://w3id.org/citydata/21972/v1/has_characteristic,2026-07-23T17:17:58.118619
+,is_an_estimate_of,is_an_estimate_of,,ObjectProperty,,https://w3id.org/citydata/21972/v1/is_an_estimate_of,2026-07-23T17:17:58.118619
+,is_characteristic_of,is_characteristic_of,,ObjectProperty,,https://w3id.org/citydata/21972/v1/is_characteristic_of,2026-07-23T17:17:58.118619
+,is_composed_of,is_composed_of,,ObjectProperty,,https://w3id.org/citydata/21972/v1/is_composed_of,2026-07-23T17:17:58.118619
+,is_described_by,is_described_by,,ObjectProperty,,https://w3id.org/citydata/21972/v1/is_described_by,2026-07-23T17:17:58.118619
+,is_part_of,is_part_of,,ObjectProperty,,https://w3id.org/citydata/21972/v1/is_part_of,2026-07-23T17:17:58.118619
+,located_in,located_in,,ObjectProperty,,https://w3id.org/citydata/21972/v1/located_in,2026-07-23T17:17:58.118619
+,mean_of,mean_of,,ObjectProperty,,https://w3id.org/citydata/21972/v1/mean_of,2026-07-23T17:17:58.118619
+,measurement_scale,measurement_scale,,ObjectProperty,,https://w3id.org/citydata/21972/v1/measurement_scale,2026-07-23T17:17:58.118619
+,member_of,member_of,,ObjectProperty,,https://w3id.org/citydata/21972/v1/member_of,2026-07-23T17:17:58.118619
+,numerator,numerator,,ObjectProperty,,https://w3id.org/citydata/21972/v1/numerator,2026-07-23T17:17:58.118619
+,parameter_of_var,parameter_of_var,,ObjectProperty,,https://w3id.org/citydata/21972/v1/parameter_of_var,2026-07-23T17:17:58.118619
+,phenomenon,phenomenon,,ObjectProperty,,https://w3id.org/citydata/21972/v1/phenomenon,2026-07-23T17:17:58.118619
+,prefix,prefix,,ObjectProperty,,https://w3id.org/citydata/21972/v1/prefix,2026-07-23T17:17:58.118619
+,singular_unit,singular_unit,,ObjectProperty,,https://w3id.org/citydata/21972/v1/singular_unit,2026-07-23T17:17:58.118619
+,std_of,std_of,,ObjectProperty,,https://w3id.org/citydata/21972/v1/std_of,2026-07-23T17:17:58.118619
+,sum_of,sum_of,,ObjectProperty,,https://w3id.org/citydata/21972/v1/sum_of,2026-07-23T17:17:58.118619
+,term_1,term_1,,ObjectProperty,,https://w3id.org/citydata/21972/v1/term_1,2026-07-23T17:17:58.118619
+,term_2,term_2,,ObjectProperty,,https://w3id.org/citydata/21972/v1/term_2,2026-07-23T17:17:58.118619
+,unit_of_measure,unit_of_measure,For quantity classes this property indicates a commonly-used unit.,ObjectProperty,,https://w3id.org/citydata/21972/v1/unit_of_measure,2026-07-23T17:17:58.118619
+,value,value,,ObjectProperty,,https://w3id.org/citydata/21972/v1/value,2026-07-23T17:17:58.118619
+,zero_element,zero_element,,ObjectProperty,,https://w3id.org/citydata/21972/v1/zero_element,2026-07-23T17:17:58.118619
+,iso21972DataProperty,iso21972DataProperty,A data property used to organise all data properties defined in the ISO 21972 ontology.,DatatypeProperty,,https://w3id.org/citydata/21972/v1/iso21972DataProperty,2026-07-23T17:17:58.118619
+,exponent,exponent,,DatatypeProperty,,https://w3id.org/citydata/21972/v1/exponent,2026-07-23T17:17:58.118619
+,factor,factor,,DatatypeProperty,,https://w3id.org/citydata/21972/v1/factor,2026-07-23T17:17:58.118619
+,hasNumericalValue,hasNumericalValue,,DatatypeProperty,,https://w3id.org/citydata/21972/v1/hasNumericalValue,2026-07-23T17:17:58.118619
+,has_Name,has_Name,,DatatypeProperty,,https://w3id.org/citydata/21972/v1/has_Name,2026-07-23T17:17:58.118619
+,numerical_value,numerical_value,,DatatypeProperty,,https://w3id.org/citydata/21972/v1/numerical_value,2026-07-23T17:17:58.118619
+,rank,rank,,DatatypeProperty,,https://w3id.org/citydata/21972/v1/rank,2026-07-23T17:17:58.118619
+,symbol,symbol,,DatatypeProperty,,https://w3id.org/citydata/21972/v1/symbol,2026-07-23T17:17:58.118619
