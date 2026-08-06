@@ -18,8 +18,7 @@
 
 <https://w3id.org/citydata/21972/v1/IndicatorsPattern> rdf:type owl:Ontology ;
                                                         owl:versionIRI <https://w3id.org/citydata/21972/v1/IndicatorsPattern/r1.2.0-alpha> ;
-                                                        owl:imports <http://www.w3.org/2006/time#2016> ,
-                                                                    <https://w3id.org/citydata/21972/v1/CorePattern/r1.2.0-alpha> ;
+                                                        owl:imports <https://w3id.org/citydata/21972/v1/CorePattern/r1.2.0-alpha> ;
                                                         dcterms:bibliographicCitation "ISO 21972 Information technology — Upper level ontology for smart city indicators" ;
                                                         dcterms:creator "Kenneth Vaughn"@en ,
                                                                         "Mark S. Fox"@en ,
@@ -44,6 +43,30 @@ Includes a subset of: W3C Owl-Time, GeoSPARQL, and Geonames ontologies""" .
 dcterms:bibliographicCitation rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
 ###  http://schema.org/domainIncludes
 schema:domainIncludes rdf:type owl:AnnotationProperty .
 
@@ -52,8 +75,20 @@ schema:domainIncludes rdf:type owl:AnnotationProperty .
 schema:rangeIncludes rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/ns/adms#relatedDocumentation
 adms:relatedDocumentation rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
 
 
 #################################################################
@@ -145,6 +180,10 @@ i72:isEstimateOf rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/citydata/21972/v1/isPartOf
 i72:isPartOf rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf i72:iso21972ObjectProperty .
+
+
+###  https://w3id.org/citydata/21972/v1/iso21972ObjectProperty
+i72:iso21972ObjectProperty rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/citydata/21972/v1/locatedIn
@@ -246,6 +285,10 @@ i72:hasNumericalValue rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf i72:hasLiteralValue .
 
 
+###  https://w3id.org/citydata/21972/v1/iso21972DataProperty
+i72:iso21972DataProperty rdf:type owl:DatatypeProperty .
+
+
 ###  https://w3id.org/citydata/21972/v1/symbol
 i72:symbol rdf:type owl:DatatypeProperty ;
            rdfs:subPropertyOf i72:iso21972DataProperty .
@@ -257,6 +300,10 @@ i72:symbol rdf:type owl:DatatypeProperty ;
 
 ###  http://www.opengis.net/ont/geosparql#Feature
 geo:Feature rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#DateTimeInterval
+time:DateTimeInterval rdf:type owl:Class .
 
 
 ###  https://w3id.org/citydata/21972/v1/Cardinality
@@ -399,6 +446,10 @@ i72:FixedZeroPoint rdf:type owl:Class ;
                                      owl:hasValue 0
                                    ] ;
                    rdfs:comment "FixedZeroPoint is a Measure with a value of 0." .
+
+
+###  https://w3id.org/citydata/21972/v1/ISO21972Thing
+i72:ISO21972Thing rdf:type owl:Class .
 
 
 ###  https://w3id.org/citydata/21972/v1/Indicator
