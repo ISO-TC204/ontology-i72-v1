@@ -2,6 +2,8 @@
 
 Difference between term_1 and term_2 (term_1 - term_2)
 
+**IRI**: `https://w3id.org/citydata/21972/v1/DifferenceIndicator`
+
 
 ## Diagram
 

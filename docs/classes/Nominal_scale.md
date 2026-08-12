@@ -1,5 +1,7 @@
 # Nominal_scale
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Nominal_scale`
+
 
 ## Diagram
 
@@ -76,6 +78,7 @@
 
 | Property | Constraint |
 |----------|------------|
+| [element](../properties/element.md) | only [Measurement_scale_category](Measurement_scale_category.md) |
 | [element](../properties/element.md) | only [Measurement_scale_category](https://w3id.org/citydata/21972/v1/Measurement_scale_category) |
 | subClassOf | [Measurement_scale](Measurement_scale.md) |
 

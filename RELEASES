@@ -1,0 +1,4 @@
+# version date type
+# type is 'ontology' or 'doc-only'
+# SemVer ordering determines the latest ontology version; dates are YYYY-MM-DD.
+1.1.0 2026-07-26 ontology

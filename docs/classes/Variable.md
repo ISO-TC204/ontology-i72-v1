@@ -2,6 +2,8 @@
 
 The property that is being measured in the population.  Since Protege is not Full DL, cannot make the property a subclass of Variable, so have to specify it as a string name using has_Name.
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Variable`
+
 
 ## Diagram
 
@@ -81,6 +83,7 @@ The property that is being measured in the population.  Since Protege is not Ful
 |----------|------------|
 | [has_Name](../properties/has_Name.md) | max 1 |
 | [has_Name](../properties/has_Name.md) | max 1 xsd:string |
+| [is_characteristic_of](../properties/is_characteristic_of.md) | only [Observation](Observation.md) |
 | [is_characteristic_of](../properties/is_characteristic_of.md) | only [Observation](https://w3id.org/citydata/21972/v1/Observation) |
 | subClassOf | [ISO21972Thing](ISO21972Thing.md) |
 

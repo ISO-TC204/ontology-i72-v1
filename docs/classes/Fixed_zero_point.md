@@ -1,5 +1,7 @@
 # Fixed_zero_point
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Fixed_zero_point`
+
 
 ## Diagram
 

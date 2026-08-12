@@ -2,6 +2,8 @@
 
 A class used to organise all classes defined in the ISO 21972 ontology.
 
+**IRI**: `https://w3id.org/citydata/21972/v1/ISO21972Thing`
+
 
 ## Diagram
 
@@ -72,8 +74,8 @@ Note that there is no property that links Cardinality to a Variable. |
 | [Observation](Observation.md) |  |
 | [Ordered_measurement_scale_category](Ordered_measurement_scale_category.md) |  |
 | [Ordinal Scale](Ordinal_scale.md) |  |
-| [Parameter](Parameter.md) | Parameter is the Class of all  measures that can be made of a Population, both statistical, e.g., Mean, Starndard_devation, and others, e.g., Cardinality, Sum. |
-| [Parameter](Parameter.md) | Parameter is the Class of all  measures that can be made of a Population, both statistical, e.g., Mean, Starndard_devation, and others, e.g., Cardinality, Sum. |
+| [Parameter](Parameter.md) | Parameter is the Class of all  measures that can be made of a Population, both statistical, e.g., Mean, Standard_devation, and others, e.g., Cardinality, Sum. |
+| [Parameter](Parameter.md) | Parameter is the Class of all  measures that can be made of a Population, both statistical, e.g., Mean, Standard_devation, and others, e.g., Cardinality, Sum. |
 | [Phenomenon](Phenomenon.md) | A phenomenon is the qualitative object (e.g., food, star, molecule) that has quantifiable (standardized) aspects (e.g, length, mass, time). |
 | [Point](Point.md) | A point is an element of an interval scale or a ratio scale, for example, 273.16 on the Kelvin scale indicates the triple point of water thermodynamic temperature. |
 | [Population](Population.md) | The core class is the Population to be measured. A Population is linked to a parameter (e.g., mean, standard deviation, cardinality) by the is_described_by property, and the parameter is a sub class of Parameter. Depending on the subclass of Parameter, there is a reverse link back to the Population.

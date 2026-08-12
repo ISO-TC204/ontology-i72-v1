@@ -1,1201 +1,1293 @@
 @prefix : <https://w3id.org/citydata/21972/v1/> .
-@prefix i72: <https://w3id.org/citydata/21972/v1/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix vann: <http://purl.org/vocab/vann/> .
-@prefix cc: <http://creativecommons.org/ns#> .
-@prefix dash: <http://datashapes.org/dash#> .
-@prefix schema: <http://schema.org/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@prefix time: <http://www.w3.org/2006/time#> .
-@prefix om-1: <http://www.wurvoc.org/vocabularies/om-1.8/> .
+@prefix i72: <https://w3id.org/citydata/21972/v1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix om-1: <http://www.wurvoc.org/vocabularies/om-1.8/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://w3id.org/citydata/21972/v1/> .
 
-:IndicatorsPattern
-    rdf:type                      owl:Ontology ;
-    dcterms:title                 "ISO 21972 Ontology - Indicators Pattern"@en ;
-    skos:definition               "Concepts for quantities, units of measure, measurement scales, statistics, and smart city indicators from ISO 21972."@en ;
-    vann:preferredNamespaceUri    "https://w3id.org/citydata/21972/v1/" ;
-    vann:preferredNamespacePrefix "i72" ;
-    dcterms:license               <http://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:creator               "Mark S. Fox"@en ;
-    dcterms:creator               "Kenneth Vaughn"@en ;
-    dcterms:modified              "2026-07-23"^^xsd:date ;
-    owl:versionInfo               "1.1.0" ;
-    owl:versionIRI                <https://w3id.org/citydata/21972/v1/IndicatorsPattern/r1.1.0> ;
-    owl:imports                   :CorePattern ;
-    dcterms:bibliographicCitation "ISO 21972 Information technology — Upper level ontology for smart city indicators" ;
-    adms:relatedDocumentation    "ISO21972" ;
-    owl:priorVersion             <https://w3id.org/citydata/21972/v1/1.1.0> ;
-    rdfs:comment                 "Archived import of iso21972.owl; converted to modular RITSO Turtle."@en .
+<https://w3id.org/citydata/21972/v1/IndicatorsPattern> rdf:type owl:Ontology ;
+                                                        owl:imports i72:CorePattern ;
+                                                        dcterms:bibliographicCitation "ISO 21972 Information technology — Upper level ontology for smart city indicators" ;
+                                                        dcterms:creator "Kenneth Vaughn"@en ,
+                                                                        "Mark S. Fox"@en ;
+                                                        dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
+                                                        dcterms:modified "2026-07-23"^^xsd:date ;
+                                                        dcterms:title "ISO 21972 Ontology - Indicators Pattern"@en ;
+                                                        vann:preferredNamespacePrefix "i72" ;
+                                                        vann:preferredNamespaceUri "https://w3id.org/citydata/21972/v1/" ;
+                                                        rdfs:comment "Archived import of iso21972.owl; converted to modular RITSO Turtle."@en ;
+                                                        owl:priorVersion <https://w3id.org/citydata/21972/v1/1.1.0> ;
+                                                        owl:versionInfo "1.1.0" ;
+                                                        skos:definition "Concepts for quantities, units of measure, measurement scales, statistics, and smart city indicators from ISO 21972."@en ;
+                                                        adms:relatedDocumentation "ISO21972" .
 
-# ================================================
-#                Object Properties
-# ================================================
+#################################################################
+#    Annotation properties
+#################################################################
 
-:base
-    rdf:type                owl:ObjectProperty ;
-    rdf:type                owl:FunctionalProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty ;
-    rdfs:domain             :Unit_exponentiation ;
-    rdfs:range              :Unit_of_measure ;
-    rdfs:label              "base"@en ;
-    om-1:alternative_label  "has base"@en .
-
-:base_quantity
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty ;
-    rdfs:domain             :System_of_units ;
-    rdfs:range              :Quantity ;
-    rdfs:label              "base quantity"@en ;
-    om-1:alternative_label  "has base quantity"@en .
-
-:base_unit
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty ;
-    rdfs:domain             :System_of_units ;
-    rdfs:range              :Unit_of_measure ;
-    rdfs:label              "base unit"@en ;
-    om-1:alternative_label  "has base unit"@en .
-
-:cardinality_of
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :description_of ;
-    rdfs:domain             :Cardinality ;
-    rdfs:range              :Population .
-
-:defined_by
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty .
-
-:definition
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty .
-
-:denominator
-    rdf:type                owl:ObjectProperty ;
-    rdf:type                owl:FunctionalProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty ;
-    rdfs:label              "denominator"@en ;
-    om-1:alternative_label  "has denominatot"@en .
-
-:derived_quantity
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty ;
-    rdfs:domain             :System_of_units ;
-    rdfs:range              :Quantity ;
-    rdfs:label              "derived quantity"@en ;
-    om-1:alternative_label  "has derived quantity"@en .
-
-:description_of
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty ;
-    owl:inverseOf           :is_described_by .
-
-:distinct_count_of
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :description_of .
-
-:element
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty .
-
-:for_city
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty .
-
-:for_time_interval
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty .
-
-:hasUnit
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty .
-
-:hasValue
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty .
-
-:has_characteristic
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty ;
-    owl:inverseOf           :is_characteristic_of .
-
-:is_an_estimate_of
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty ;
-    rdfs:domain             :Statistic ;
-    rdfs:range              :Parameter .
-
-:is_characteristic_of
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty ;
-    rdfs:domain             :Variable ;
-    rdfs:range              :Observation .
-
-:is_composed_of
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty ;
-    owl:inverseOf           :member_of ;
-    schema:domainIncludes   :Population ;
-    schema:domainIncludes   :Sample ;
-    schema:rangeIncludes    :Observation .
-
-:is_described_by
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty ;
-    schema:domainIncludes   :Population ;
-    schema:domainIncludes   :Sample ;
-    schema:rangeIncludes    :Parameter ;
-    schema:rangeIncludes    :Statistic .
-
-:is_part_of
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty ;
-    rdfs:domain             :Sample ;
-    rdfs:range              :Population .
-
-:located_in
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty .
-
-:mean_of
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :description_of ;
-    rdfs:domain             :Mean ;
-    rdfs:range              :Population .
-
-:measurement_scale
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty ;
-    schema:domainIncludes   :Application_area ;
-    schema:domainIncludes   :Point ;
-    schema:domainIncludes   :Quantity ;
-    schema:rangeIncludes    :Measurement_scale ;
-    rdfs:label              "measurement scale"@en ;
-    om-1:alternative_label  "has measurement scale"@en .
-
-:member_of
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty .
-
-:numerator
-    rdf:type                owl:ObjectProperty ;
-    rdf:type                owl:FunctionalProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty ;
-    rdfs:label              "numerator"@en ;
-    om-1:alternative_label  "has numerator"@en .
-
-:parameter_of_var
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty ;
-    rdfs:domain             :Parameter ;
-    rdfs:range              :Variable .
-
-:phenomenon
-    rdf:type                owl:ObjectProperty ;
-    rdf:type                owl:FunctionalProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty ;
-    rdfs:domain             :Quantity ;
-    rdfs:label              "phenomenon"@en ;
-    om-1:alternative_label  "has phenomenon"@en .
-
-:prefix
-    rdf:type                owl:ObjectProperty ;
-    rdf:type                owl:FunctionalProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty ;
-    rdfs:domain             :Unit_multiple_or_submultiple ;
-    rdfs:range              :Prefix ;
-    rdfs:label              "prefix"@en ;
-    om-1:alternative_label  "has prefix"@en .
-
-:singular_unit
-    rdf:type                owl:ObjectProperty ;
-    rdf:type                owl:FunctionalProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty ;
-    rdfs:domain             :Unit_multiple_or_submultiple ;
-    rdfs:range              :Singular_unit ;
-    rdfs:label              "singular unit"@en ;
-    om-1:alternative_label  "has singular unit"@en .
-
-:std_of
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :description_of ;
-    rdfs:domain             :Standard_deviation ;
-    rdfs:range              :Population .
-
-:sum_of
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :description_of ;
-    rdfs:domain             :Sum ;
-    rdfs:range              :Population .
-
-:term_1
-    rdf:type                owl:ObjectProperty ;
-    rdf:type                owl:FunctionalProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty ;
-    rdfs:domain             :Unit_multiplication ;
-    rdfs:range              :Unit_of_measure ;
-    rdfs:label              "term 1"@en ;
-    om-1:alternative_label  "has term 1"@en .
-
-:term_2
-    rdf:type                owl:ObjectProperty ;
-    rdf:type                owl:FunctionalProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty ;
-    rdfs:domain             :Unit_multiplication ;
-    rdfs:range              :Unit_of_measure ;
-    rdfs:label              "term 2"@en ;
-    om-1:alternative_label  "has term 2"@en .
-
-:unit_of_measure
-    rdf:type                owl:ObjectProperty ;
-    rdf:type                owl:FunctionalProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty ;
-    schema:domainIncludes   :Application_area ;
-    schema:domainIncludes   :Cardinal_scale ;
-    schema:domainIncludes   :Quantity ;
-    schema:rangeIncludes    :Unit_of_measure ;
-    skos:definition         "For quantity classes this property indicates a commonly-used unit."@en ;
-    rdfs:label              "unit of measure"@en ;
-    om-1:alternative_label  "has unit of measure"@en .
-
-:value
-    rdf:type                owl:ObjectProperty ;
-    rdf:type                owl:FunctionalProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty ;
-    rdfs:domain             :Quantity ;
-    rdfs:range              :Measure ;
-    rdfs:label              "value"@en .
-
-:zero_element
-    rdf:type                owl:ObjectProperty ;
-    rdfs:subPropertyOf      :iso21972ObjectProperty .
+###  http://purl.org/dc/terms/bibliographicCitation
+dcterms:bibliographicCitation rdf:type owl:AnnotationProperty .
 
 
-# ================================================
-#                Data Properties
-# ================================================
-
-:exponent
-    rdf:type                owl:DatatypeProperty ;
-    rdf:type                owl:FunctionalProperty ;
-    rdfs:subPropertyOf      :iso21972DataProperty ;
-    rdfs:domain             :Unit_exponentiation ;
-    rdfs:range              xsd:integer ;
-    rdfs:label              "exponent"@en ;
-    om-1:alternative_label  "has exponent"@en .
-
-:factor
-    rdf:type                owl:DatatypeProperty ;
-    rdf:type                owl:FunctionalProperty ;
-    rdfs:subPropertyOf      :iso21972DataProperty ;
-    rdfs:domain             :Prefix ;
-    rdfs:range              xsd:decimal ;
-    rdfs:label              "factor"@en ;
-    om-1:alternative_label  "has factor"@en .
-
-:hasNumericalValue
-    rdf:type                owl:DatatypeProperty ;
-    rdfs:subPropertyOf      :iso21972DataProperty .
-
-:has_Name
-    rdf:type                owl:DatatypeProperty ;
-    rdfs:subPropertyOf      :iso21972DataProperty .
-
-:numerical_value
-    rdf:type                owl:DatatypeProperty ;
-    rdf:type                owl:FunctionalProperty ;
-    rdfs:subPropertyOf      :iso21972DataProperty ;
-    schema:domainIncludes   :Measure ;
-    schema:domainIncludes   :Point ;
-    rdfs:label              "numerical value"@en ;
-    om-1:alternative_label  "has numerical value"@en .
-
-:rank
-    rdf:type                owl:DatatypeProperty ;
-    rdf:type                owl:FunctionalProperty ;
-    rdfs:subPropertyOf      :iso21972DataProperty ;
-    rdfs:domain             :Ordered_measurement_scale_category ;
-    rdfs:range              xsd:integer ;
-    rdfs:label              "rank"@en ;
-    om-1:alternative_label  "has rank"@en .
-
-:symbol
-    rdf:type                owl:DatatypeProperty ;
-    rdf:type                owl:FunctionalProperty ;
-    rdfs:subPropertyOf      :iso21972DataProperty .
+###  http://schema.org/domainIncludes
+schema:domainIncludes rdf:type owl:AnnotationProperty .
 
 
-# ================================================
-#                Classes
-# ================================================
+###  http://schema.org/rangeIncludes
+schema:rangeIncludes rdf:type owl:AnnotationProperty .
 
-:Application_area
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing .
 
-:Binary_prefix
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing .
+###  http://www.w3.org/ns/adms#relatedDocumentation
+adms:relatedDocumentation rdf:type owl:AnnotationProperty .
 
-:Cardinal_scale
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Measurement_scale ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :element ;
-        owl:onClass                 :Fixed_point
-    ] ;
-    rdfs:label              "cardinal scale"@en .
 
-:Cardinality
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Parameter ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :cardinality_of ;
-        owl:onClass                 :Population ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    skos:definition         """Cardinality of the Population.
+###  http://www.wurvoc.org/vocabularies/om-1.8/alternative_label
+om-1:alternative_label rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/citydata/21972/v1/base
+i72:base rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf i72:iso21972ObjectProperty ;
+         rdf:type owl:FunctionalProperty ;
+         rdfs:domain i72:Unit_exponentiation ;
+         rdfs:range i72:Unit_of_measure ;
+         rdfs:label "base"@en ;
+         om-1:alternative_label "has base"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/base_quantity
+i72:base_quantity rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf i72:iso21972ObjectProperty ;
+                  rdfs:domain i72:System_of_units ;
+                  rdfs:range i72:Quantity ;
+                  rdfs:label "base quantity"@en ;
+                  om-1:alternative_label "has base quantity"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/base_unit
+i72:base_unit rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf i72:iso21972ObjectProperty ;
+              rdfs:domain i72:System_of_units ;
+              rdfs:range i72:Unit_of_measure ;
+              rdfs:label "base unit"@en ;
+              om-1:alternative_label "has base unit"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/cardinality_of
+i72:cardinality_of rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf i72:description_of ;
+                   rdfs:domain i72:Cardinality ;
+                   rdfs:range i72:Population .
+
+
+###  https://w3id.org/citydata/21972/v1/defined_by
+i72:defined_by rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf i72:iso21972ObjectProperty .
+
+
+###  https://w3id.org/citydata/21972/v1/definition
+i72:definition rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf i72:iso21972ObjectProperty .
+
+
+###  https://w3id.org/citydata/21972/v1/denominator
+i72:denominator rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf i72:iso21972ObjectProperty ;
+                rdf:type owl:FunctionalProperty ;
+                rdfs:label "denominator"@en ;
+                om-1:alternative_label "has denominator"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/derived_quantity
+i72:derived_quantity rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf i72:iso21972ObjectProperty ;
+                     rdfs:domain i72:System_of_units ;
+                     rdfs:range i72:Quantity ;
+                     rdfs:label "derived quantity"@en ;
+                     om-1:alternative_label "has derived quantity"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/description_of
+i72:description_of rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf i72:iso21972ObjectProperty ;
+                   owl:inverseOf i72:is_described_by .
+
+
+###  https://w3id.org/citydata/21972/v1/distinct_count_of
+i72:distinct_count_of rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf i72:description_of .
+
+
+###  https://w3id.org/citydata/21972/v1/element
+i72:element rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf i72:iso21972ObjectProperty .
+
+
+###  https://w3id.org/citydata/21972/v1/for_city
+i72:for_city rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf i72:iso21972ObjectProperty .
+
+
+###  https://w3id.org/citydata/21972/v1/for_time_interval
+i72:for_time_interval rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf i72:iso21972ObjectProperty .
+
+
+###  https://w3id.org/citydata/21972/v1/hasUnit
+i72:hasUnit rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf i72:iso21972ObjectProperty .
+
+
+###  https://w3id.org/citydata/21972/v1/hasValue
+i72:hasValue rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf i72:iso21972ObjectProperty .
+
+
+###  https://w3id.org/citydata/21972/v1/has_characteristic
+i72:has_characteristic rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf i72:iso21972ObjectProperty ;
+                       owl:inverseOf i72:is_characteristic_of .
+
+
+###  https://w3id.org/citydata/21972/v1/is_an_estimate_of
+i72:is_an_estimate_of rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf i72:iso21972ObjectProperty ;
+                      rdfs:domain i72:Statistic ;
+                      rdfs:range i72:Parameter .
+
+
+###  https://w3id.org/citydata/21972/v1/is_characteristic_of
+i72:is_characteristic_of rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf i72:iso21972ObjectProperty ;
+                         rdfs:domain i72:Variable ;
+                         rdfs:range i72:Observation .
+
+
+###  https://w3id.org/citydata/21972/v1/is_composed_of
+i72:is_composed_of rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf i72:iso21972ObjectProperty ;
+                   owl:inverseOf i72:member_of ;
+                   schema:domainIncludes i72:Population ,
+                                         i72:Sample ;
+                   schema:rangeIncludes i72:Observation .
+
+
+###  https://w3id.org/citydata/21972/v1/is_described_by
+i72:is_described_by rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf i72:iso21972ObjectProperty ;
+                    schema:domainIncludes i72:Population ,
+                                          i72:Sample ;
+                    schema:rangeIncludes i72:Parameter ,
+                                         i72:Statistic .
+
+
+###  https://w3id.org/citydata/21972/v1/is_part_of
+i72:is_part_of rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf i72:iso21972ObjectProperty ;
+               rdfs:domain i72:Sample ;
+               rdfs:range i72:Population .
+
+
+###  https://w3id.org/citydata/21972/v1/located_in
+i72:located_in rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf i72:iso21972ObjectProperty .
+
+
+###  https://w3id.org/citydata/21972/v1/mean_of
+i72:mean_of rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf i72:description_of ;
+            rdfs:domain i72:Mean ;
+            rdfs:range i72:Population .
+
+
+###  https://w3id.org/citydata/21972/v1/measurement_scale
+i72:measurement_scale rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf i72:iso21972ObjectProperty ;
+                      schema:domainIncludes i72:Application_area ,
+                                            i72:Point ,
+                                            i72:Quantity ;
+                      schema:rangeIncludes i72:Measurement_scale ;
+                      rdfs:label "measurement scale"@en ;
+                      om-1:alternative_label "has measurement scale"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/member_of
+i72:member_of rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf i72:iso21972ObjectProperty .
+
+
+###  https://w3id.org/citydata/21972/v1/numerator
+i72:numerator rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf i72:iso21972ObjectProperty ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:label "numerator"@en ;
+              om-1:alternative_label "has numerator"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/parameter_of_var
+i72:parameter_of_var rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf i72:iso21972ObjectProperty ;
+                     rdfs:domain i72:Parameter ;
+                     rdfs:range i72:Variable .
+
+
+###  https://w3id.org/citydata/21972/v1/phenomenon
+i72:phenomenon rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf i72:iso21972ObjectProperty ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain i72:Quantity ;
+               rdfs:label "phenomenon"@en ;
+               om-1:alternative_label "has phenomenon"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/prefix
+i72:prefix rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf i72:iso21972ObjectProperty ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain i72:Unit_multiple_or_submultiple ;
+           rdfs:range i72:Prefix ;
+           rdfs:label "prefix"@en ;
+           om-1:alternative_label "has prefix"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/singular_unit
+i72:singular_unit rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf i72:iso21972ObjectProperty ;
+                  rdf:type owl:FunctionalProperty ;
+                  rdfs:domain i72:Unit_multiple_or_submultiple ;
+                  rdfs:range i72:Singular_unit ;
+                  rdfs:label "singular unit"@en ;
+                  om-1:alternative_label "has singular unit"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/std_of
+i72:std_of rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf i72:description_of ;
+           rdfs:domain i72:Standard_deviation ;
+           rdfs:range i72:Population .
+
+
+###  https://w3id.org/citydata/21972/v1/sum_of
+i72:sum_of rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf i72:description_of ;
+           rdfs:domain i72:Sum ;
+           rdfs:range i72:Population .
+
+
+###  https://w3id.org/citydata/21972/v1/term_1
+i72:term_1 rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf i72:iso21972ObjectProperty ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain i72:Unit_multiplication ;
+           rdfs:range i72:Unit_of_measure ;
+           rdfs:label "term 1"@en ;
+           om-1:alternative_label "has term 1"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/term_2
+i72:term_2 rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf i72:iso21972ObjectProperty ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain i72:Unit_multiplication ;
+           rdfs:range i72:Unit_of_measure ;
+           rdfs:label "term 2"@en ;
+           om-1:alternative_label "has term 2"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/unit_of_measure
+i72:unit_of_measure rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf i72:iso21972ObjectProperty ;
+                    rdf:type owl:FunctionalProperty ;
+                    schema:domainIncludes i72:Application_area ,
+                                          i72:Cardinal_scale ,
+                                          i72:Quantity ;
+                    schema:rangeIncludes i72:Unit_of_measure ;
+                    rdfs:label "unit of measure"@en ;
+                    skos:definition "For quantity classes this property indicates a commonly-used unit."@en ;
+                    om-1:alternative_label "has unit of measure"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/value
+i72:value rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf i72:iso21972ObjectProperty ;
+          rdf:type owl:FunctionalProperty ;
+          rdfs:domain i72:Quantity ;
+          rdfs:range i72:Measure ;
+          rdfs:label "value"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/zero_element
+i72:zero_element rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf i72:iso21972ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/citydata/21972/v1/exponent
+i72:exponent rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf i72:iso21972DataProperty ;
+             rdf:type owl:FunctionalProperty ;
+             rdfs:domain i72:Unit_exponentiation ;
+             rdfs:range xsd:integer ;
+             rdfs:label "exponent"@en ;
+             om-1:alternative_label "has exponent"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/factor
+i72:factor rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf i72:iso21972DataProperty ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain i72:Prefix ;
+           rdfs:range xsd:decimal ;
+           rdfs:label "factor"@en ;
+           om-1:alternative_label "has factor"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/hasNumericalValue
+i72:hasNumericalValue rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf i72:iso21972DataProperty .
+
+
+###  https://w3id.org/citydata/21972/v1/has_Name
+i72:has_Name rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf i72:iso21972DataProperty .
+
+
+###  https://w3id.org/citydata/21972/v1/numerical_value
+i72:numerical_value rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf i72:iso21972DataProperty ;
+                    rdf:type owl:FunctionalProperty ;
+                    schema:domainIncludes i72:Measure ,
+                                          i72:Point ;
+                    rdfs:label "numerical value"@en ;
+                    om-1:alternative_label "has numerical value"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/rank
+i72:rank rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf i72:iso21972DataProperty ;
+         rdf:type owl:FunctionalProperty ;
+         rdfs:domain i72:Ordered_measurement_scale_category ;
+         rdfs:range xsd:integer ;
+         rdfs:label "rank"@en ;
+         om-1:alternative_label "has rank"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/symbol
+i72:symbol rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf i72:iso21972DataProperty ;
+           rdf:type owl:FunctionalProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://schema.org/City
+schema:City rdf:type owl:Class .
+
+
+###  http://www.opengis.net/ont/geosparql#Feature
+geo:Feature rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#DateTimeInterval
+time:DateTimeInterval rdf:type owl:Class .
+
+
+###  https://w3id.org/citydata/21972/v1/Application_area
+i72:Application_area rdf:type owl:Class ;
+                     rdfs:subClassOf i72:ISO21972Thing .
+
+
+###  https://w3id.org/citydata/21972/v1/Binary_prefix
+i72:Binary_prefix rdf:type owl:Class ;
+                  rdfs:subClassOf i72:ISO21972Thing .
+
+
+###  https://w3id.org/citydata/21972/v1/Cardinal_scale
+i72:Cardinal_scale rdf:type owl:Class ;
+                   rdfs:subClassOf i72:Measurement_scale ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty i72:element ;
+                                     owl:allValuesFrom i72:Fixed_point
+                                   ] ;
+                   rdfs:label "cardinal scale"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/Cardinality
+i72:Cardinality rdf:type owl:Class ;
+                rdfs:subClassOf i72:Parameter ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty i72:cardinality_of ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass i72:Population
+                                ] ;
+                skos:definition """Cardinality of the Population.
 Note that there is no property that links Cardinality to a Variable."""@en .
 
-:Cardinality_scale
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Ratio_scale ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :zero_element ;
-        owl:hasValue                :fixed_zero_cardinality
-    ] .
 
-:Cardinality_unit
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Singular_unit ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              [ owl:inverseOf :unit_of_measure ] ;
-        owl:onClass                 :Cardinality_scale ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] .
+###  https://w3id.org/citydata/21972/v1/Cardinality_scale
+i72:Cardinality_scale rdf:type owl:Class ;
+                      rdfs:subClassOf i72:Ratio_scale ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty i72:zero_element ;
+                                        owl:hasValue i72:fixed_zero_cardinality
+                                      ] .
 
-:City
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         schema:City ;
-    rdfs:subClassOf         :ISO21972Thing .
 
-:Compound_unit
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Unit_of_measure ;
-    rdfs:label              "compound unit"@en .
+###  https://w3id.org/citydata/21972/v1/Cardinality_unit
+i72:Cardinality_unit rdf:type owl:Class ;
+                     rdfs:subClassOf i72:Singular_unit ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty [ owl:inverseOf i72:unit_of_measure
+                                                      ] ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass i72:Cardinality_scale
+                                     ] .
 
-:DifferenceIndicator
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Indicator ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :term_1 ;
-        owl:onClass                 :Quantity ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :term_2 ;
-        owl:onClass                 :Quantity ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    skos:definition         "Difference between term_1 and term_2 (term_1 - term_2)"@en .
 
-:Dimension
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing .
+###  https://w3id.org/citydata/21972/v1/City
+i72:City rdf:type owl:Class ;
+         rdfs:subClassOf schema:City ,
+                         i72:ISO21972Thing .
 
-:Distinct_count
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Parameter ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :distinct_count_of ;
-        owl:onClass                 :Population ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    skos:definition         """Distinct_count class that is a Parameter that represents
+
+###  https://w3id.org/citydata/21972/v1/Compound_unit
+i72:Compound_unit rdf:type owl:Class ;
+                  rdfs:subClassOf i72:Unit_of_measure ;
+                  rdfs:label "compound unit"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/DifferenceIndicator
+i72:DifferenceIndicator rdf:type owl:Class ;
+                        rdfs:subClassOf i72:Indicator ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty i72:term_1 ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass i72:Quantity
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty i72:term_2 ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass i72:Quantity
+                                        ] ;
+                        skos:definition "Difference between term_1 and term_2 (term_1 - term_2)"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/Dimension
+i72:Dimension rdf:type owl:Class ;
+              rdfs:subClassOf i72:ISO21972Thing .
+
+
+###  https://w3id.org/citydata/21972/v1/Distinct_count
+i72:Distinct_count rdf:type owl:Class ;
+                   rdfs:subClassOf i72:Parameter ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty i72:distinct_count_of ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass i72:Population
+                                   ] ;
+                   skos:definition """Distinct_count class that is a Parameter that represents
          the number of distinct values of a property of the members of a
          Population"""@en .
 
-:Feature
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         geo:Feature ;
-    rdfs:subClassOf         :ISO21972Thing .
 
-:Fixed_point
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Point ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :definition ;
-        owl:onClass                 [
-            rdf:type                    owl:Class ;
-            owl:unionOf                 (
-                :Fixed_point
-                :Measure
-                :Quantity
-            )
-        ]
-    ] ;
-    rdfs:label              "fixed point"@en .
+###  https://w3id.org/citydata/21972/v1/Feature
+i72:Feature rdf:type owl:Class ;
+            rdfs:subClassOf geo:Feature ,
+                            i72:ISO21972Thing .
 
-:Fixed_zero_point
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Fixed_point ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :numerical_value ;
-        owl:hasValue                "0"
-    ] ;
-    rdfs:label              "fixed zero point"@en .
 
-:Indicator
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing ;
-    rdfs:subClassOf         :Quantity ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :for_time_interval ;
-        owl:onClass                 time:DateTimeInterval ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :for_city ;
-        owl:onClass                 :City ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    skos:definition         "An indicator is a quantity that is a ratio of a numerator and denominator that are also quantities. It has a city and time period associated with it. The numerator and denominator quantities can have different units of measure. One example of a unit of measure is the size of a population. A population_cardinality_unit is defined to be an individual of a Cardinality_unit that is a subclass of a Singular_unit."@en .
+###  https://w3id.org/citydata/21972/v1/Fixed_point
+i72:Fixed_point rdf:type owl:Class ;
+                rdfs:subClassOf i72:Point ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty i72:definition ;
+                                  owl:allValuesFrom [ rdf:type owl:Class ;
+                                                      owl:unionOf ( i72:Fixed_point
+                                                                    i72:Measure
+                                                                    i72:Quantity
+                                                                  )
+                                                    ]
+                                ] ;
+                rdfs:label "fixed point"@en .
 
-:Interval_scale
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Cardinal_scale ;
-    rdfs:label              "interval scale"@en .
 
-:Mean
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Parameter ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :mean_of ;
-        owl:onClass                 :Population ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    owl:disjointWith        :Standard_deviation ;
-    skos:definition         "Mean represents the mean value of a property all members of the Population have and is specified by the parameter_of_var property."@en .
+###  https://w3id.org/citydata/21972/v1/Fixed_zero_point
+i72:Fixed_zero_point rdf:type owl:Class ;
+                     rdfs:subClassOf i72:Fixed_point ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty i72:numerical_value ;
+                                       owl:hasValue "0"
+                                     ] ;
+                     rdfs:label "fixed zero point"@en .
 
-:Measure
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :hasNumericalValue ;
-        owl:onDataRange             xsd:string ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :unit_of_measure ;
-        owl:onClass                 :Unit_of_measure ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :hasUnit ;
-        owl:onClass                 :Unit_of_measure
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :unit_of_measure ;
-        owl:onClass                 :Unit_of_measure
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :numerical_value ;
-        owl:allValuesFrom           xsd:string
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :hasNumericalValue ;
-        owl:allValuesFrom           xsd:string
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :numerical_value ;
-        owl:onDataRange             xsd:string ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :hasUnit ;
-        owl:onClass                 :Unit_of_measure ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    skos:definition         "A measure combines a number to a unit of measure or an interval or ratio scale. For example, \"3 m\" is a measure."@en ;
-    rdfs:label              "measure"@en .
 
-:Measurement_scale
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing ;
-    owl:disjointUnionOf     (
-        :Interval_scale
-        :Nominal_scale
-        :Ordinal_scale
-        :Ratio_scale
-    ) ;
-    skos:definition         "Measurement scales are concepts used for the expression of quantities. Four types of measurement scales are: nominal scales, ordinal scales, interval scales and ratio scales. The latter two scales are also called cardinal scales. An example of a scale is the Celsius scale, a temperature scale."@en ;
-    rdfs:label              "measurement scale"@en ;
-    om-1:alternative_label  "scale"@en .
+###  https://w3id.org/citydata/21972/v1/Indicator
+i72:Indicator rdf:type owl:Class ;
+              rdfs:subClassOf i72:ISO21972Thing ,
+                              i72:Quantity ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty i72:for_city ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass i72:City
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty i72:for_time_interval ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass time:DateTimeInterval
+                              ] ;
+              skos:definition "An indicator is a quantity that is a ratio of a numerator and denominator that are also quantities. It has a city and time period associated with it. The numerator and denominator quantities can have different units of measure. One example of a unit of measure is the size of a population. A population_cardinality_unit is defined to be an individual of a Cardinality_unit that is a subclass of a Singular_unit."@en .
 
-:Measurement_scale_category
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing .
 
-:Monetary_unit
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing ;
-    rdfs:subClassOf         :Singular_unit .
+###  https://w3id.org/citydata/21972/v1/Interval_scale
+i72:Interval_scale rdf:type owl:Class ;
+                   rdfs:subClassOf i72:Cardinal_scale ;
+                   rdfs:label "interval scale"@en .
 
-:Nominal_scale
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Measurement_scale ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :element ;
-        owl:onClass                 :Measurement_scale_category
-    ] ;
-    rdfs:label              "nominal scale"@en .
 
-:Observation
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :member_of ;
-        owl:onClass                 :Population
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :has_characteristic ;
-        owl:onClass                 :Variable ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:label              "Observation"@en .
+###  https://w3id.org/citydata/21972/v1/Mean
+i72:Mean rdf:type owl:Class ;
+         rdfs:subClassOf i72:Parameter ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty i72:mean_of ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass i72:Population
+                         ] ;
+         owl:disjointWith i72:Standard_deviation ;
+         skos:definition "Mean represents the mean value of a property all members of the Population have and is specified by the parameter_of_var property."@en .
 
-:Ordered_measurement_scale_category
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing .
 
-:Ordinal_scale
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Measurement_scale ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :element ;
-        owl:onClass                 :Ordered_measurement_scale_category
-    ] ;
-    rdfs:label              "ordinal scale"@en .
+###  https://w3id.org/citydata/21972/v1/Measure
+i72:Measure rdf:type owl:Class ;
+            rdfs:subClassOf i72:ISO21972Thing ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty i72:hasUnit ;
+                              owl:allValuesFrom i72:Unit_of_measure
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty i72:unit_of_measure ;
+                              owl:allValuesFrom i72:Unit_of_measure
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty i72:hasUnit ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass i72:Unit_of_measure
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty i72:unit_of_measure ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass i72:Unit_of_measure
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty i72:hasNumericalValue ;
+                              owl:allValuesFrom xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty i72:numerical_value ;
+                              owl:allValuesFrom xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty i72:hasNumericalValue ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty i72:numerical_value ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:string
+                            ] ;
+            rdfs:label "measure"@en ;
+            skos:definition "A measure combines a number to a unit of measure or an interval or ratio scale. For example, \"3 m\" is a measure."@en .
 
-:Parameter
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing ;
-    rdfs:subClassOf         :Quantity ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :parameter_of_var ;
-        owl:onClass                 :Variable ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    skos:definition         "Parameter is the Class of all  measures that can be made of a Population, both statistical, e.g., Mean, Starndard_devation, and others, e.g., Cardinality, Sum."@en .
 
-:Phenomenon
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing ;
-    skos:definition         "A phenomenon is the qualitative object (e.g., food, star, molecule) that has quantifiable (standardized) aspects (e.g, length, mass, time)."@en ;
-    rdfs:label              "phenomenon"@en .
+###  https://w3id.org/citydata/21972/v1/Measurement_scale
+i72:Measurement_scale rdf:type owl:Class ;
+                      rdfs:subClassOf i72:ISO21972Thing ;
+                      owl:disjointUnionOf ( i72:Interval_scale
+                                            i72:Nominal_scale
+                                            i72:Ordinal_scale
+                                            i72:Ratio_scale
+                                          ) ;
+                      rdfs:label "measurement scale"@en ;
+                      skos:definition "Measurement scales are concepts used for the expression of quantities. Four types of measurement scales are: nominal scales, ordinal scales, interval scales and ratio scales. The latter two scales are also called cardinal scales. An example of a scale is the Celsius scale, a temperature scale."@en ;
+                      om-1:alternative_label "scale"@en .
 
-:Point
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing ;
-    skos:definition         "A point is an element of an interval scale or a ratio scale, for example, 273.16 on the Kelvin scale indicates the triple point of water thermodynamic temperature."@en ;
-    rdfs:label              "point"@en .
 
-:Population
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :defined_by ;
-        owl:onClass                 owl:Thing
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :is_described_by ;
-        owl:onClass                 :Parameter
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :for_time_interval ;
-        owl:onClass                 time:DateTimeInterval
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :definition ;
-        owl:onClass                 :Feature ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :is_composed_of ;
-        owl:onClass                 :Observation
-    ] ;
-    skos:definition         """The core class is the Population to be measured. A Population is linked to a parameter (e.g., mean, standard deviation, cardinality) by the is_described_by property, and the parameter is a sub class of Parameter. Depending on the subclass of Parameter, there is a reverse link back to the Population.
+###  https://w3id.org/citydata/21972/v1/Measurement_scale_category
+i72:Measurement_scale_category rdf:type owl:Class ;
+                               rdfs:subClassOf i72:ISO21972Thing .
+
+
+###  https://w3id.org/citydata/21972/v1/Monetary_unit
+i72:Monetary_unit rdf:type owl:Class ;
+                  rdfs:subClassOf i72:ISO21972Thing ,
+                                  i72:Singular_unit .
+
+
+###  https://w3id.org/citydata/21972/v1/Nominal_scale
+i72:Nominal_scale rdf:type owl:Class ;
+                  rdfs:subClassOf i72:Measurement_scale ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty i72:element ;
+                                    owl:allValuesFrom i72:Measurement_scale_category
+                                  ] ;
+                  rdfs:label "nominal scale"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/Observation
+i72:Observation rdf:type owl:Class ;
+                rdfs:subClassOf i72:ISO21972Thing ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty i72:member_of ;
+                                  owl:allValuesFrom i72:Population
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty i72:has_characteristic ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass i72:Variable
+                                ] ;
+                rdfs:label "Observation"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/Ordered_measurement_scale_category
+i72:Ordered_measurement_scale_category rdf:type owl:Class ;
+                                       rdfs:subClassOf i72:ISO21972Thing .
+
+
+###  https://w3id.org/citydata/21972/v1/Ordinal_scale
+i72:Ordinal_scale rdf:type owl:Class ;
+                  rdfs:subClassOf i72:Measurement_scale ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty i72:element ;
+                                    owl:allValuesFrom i72:Ordered_measurement_scale_category
+                                  ] ;
+                  rdfs:label "ordinal scale"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/Parameter
+i72:Parameter rdf:type owl:Class ;
+              rdfs:subClassOf i72:ISO21972Thing ,
+                              i72:Quantity ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty i72:parameter_of_var ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass i72:Variable
+                              ] ;
+              skos:definition "Parameter is the Class of all  measures that can be made of a Population, both statistical, e.g., Mean, Standard_devation, and others, e.g., Cardinality, Sum."@en .
+
+
+###  https://w3id.org/citydata/21972/v1/Phenomenon
+i72:Phenomenon rdf:type owl:Class ;
+               rdfs:subClassOf i72:ISO21972Thing ;
+               rdfs:label "phenomenon"@en ;
+               skos:definition "A phenomenon is the qualitative object (e.g., food, star, molecule) that has quantifiable (standardized) aspects (e.g, length, mass, time)."@en .
+
+
+###  https://w3id.org/citydata/21972/v1/Point
+i72:Point rdf:type owl:Class ;
+          rdfs:subClassOf i72:ISO21972Thing ;
+          rdfs:label "point"@en ;
+          skos:definition "A point is an element of an interval scale or a ratio scale, for example, 273.16 on the Kelvin scale indicates the triple point of water thermodynamic temperature."@en .
+
+
+###  https://w3id.org/citydata/21972/v1/Population
+i72:Population rdf:type owl:Class ;
+               rdfs:subClassOf i72:ISO21972Thing ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty i72:defined_by ;
+                                 owl:allValuesFrom owl:Thing
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty i72:for_time_interval ;
+                                 owl:allValuesFrom time:DateTimeInterval
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty i72:is_composed_of ;
+                                 owl:allValuesFrom i72:Observation
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty i72:is_described_by ;
+                                 owl:allValuesFrom i72:Parameter
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty i72:definition ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass i72:Feature
+                               ] ;
+               rdfs:label "Population"@en ;
+               skos:definition """The core class is the Population to be measured. A Population is linked to a parameter (e.g., mean, standard deviation, cardinality) by the is_described_by property, and the parameter is a sub class of Parameter. Depending on the subclass of Parameter, there is a reverse link back to the Population.
   
-parameter links back to the using cardinality_of. parameter links back using the   property. parameter links back using the mean_of property."""@en ;
-    rdfs:label              "Population"@en .
-
-:Prefix
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing ;
-    owl:disjointUnionOf     (
-        :Binary_prefix
-        :SI_prefix
-    ) ;
-    skos:definition         "A prefix is a name that precedes a basic unit of measure to indicate a decimal multiple or fraction of the unit. Each prefix has a unique symbol that is prepended to the unit symbol. For example, an electric current of 0.000 000 001 ampere is written by using the SI-prefix nano as 1 nanoampere or 1 nA."@en ;
-    rdfs:label              "prefix"@en .
-
-:Quantity
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :unit_of_measure ;
-        owl:onClass                 :Unit_of_measure ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :value ;
-        owl:onClass                 :Measure
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :hasValue ;
-        owl:onClass                 :Measure
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :value ;
-        owl:onClass                 :Measure ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :unit_of_measure ;
-        owl:onClass                 :Unit_of_measure
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :hasValue ;
-        owl:onClass                 :Measure ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :hasUnit ;
-        owl:onClass                 :Unit_of_measure ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :hasUnit ;
-        owl:onClass                 :Unit_of_measure
-    ] ;
-    skos:definition         "A quantity is a representation of a quantifiable (standardized) aspect (such as length, mass, and time) of a phenomenon (e.g., a star, food, or a molecule). Quantities are classified according to similarity in (implicit) metrological aspect, e.g. the length of my speedboat and the length of my racing car are classified as length."@en ;
-    rdfs:label              "quantity"@en .
-
-:RatioIndicator
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Indicator ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :unit_of_measure ;
-        owl:onClass                 :Unit_division ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :denominator ;
-        owl:onClass                 :Quantity ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :numerator ;
-        owl:onClass                 :Quantity ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] .
-
-:Ratio_scale
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Cardinal_scale ;
-    rdfs:label              "ratio scale"@en .
-
-:SI_prefix
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Prefix ;
-    rdfs:label              "SI prefix"@en .
-
-:Sample
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :is_described_by ;
-        owl:onClass                 :Statistic
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :is_composed_of ;
-        owl:onClass                 :Observation
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :is_part_of ;
-        owl:onClass                 :Population ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] .
-
-:Sample_cardinality
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Statistic .
-
-:Sample_mean
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Statistic ;
-    owl:disjointWith        :Sample_standard_deviation .
-
-:Sample_standard_deviation
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Statistic .
-
-:Sample_sum
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Statistic .
-
-:Singular_unit
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing .
-
-:Standard_deviation
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Parameter ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :std_of ;
-        owl:onClass                 :Population ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] .
-
-:Statistic
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :is_an_estimate_of ;
-        owl:onClass                 :Parameter
-    ] .
-
-:Sum
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Parameter ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :sum_of ;
-        owl:onClass                 :Population ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    skos:definition         "Sum defines the sum over a variable possessed by members of the Population."@en .
-
-:SumIndicator
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Indicator ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :term_2 ;
-        owl:onClass                 :Quantity ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :term_1 ;
-        owl:onClass                 :Quantity ;
-        owl:qualifiedCardinality    "1"^^xsd:nonNegativeInteger
-    ] ;
-    skos:definition         "Sum of term_1 and term_2 (term_1 + term_2)"@en .
-
-:System_of_units
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing .
-
-:Unit_division
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Compound_unit ;
-    owl:equivalentClass     [
-        rdf:type                    owl:Class ;
-        owl:intersectionOf          (
-            [
-                rdf:type                    owl:Restriction ;
-                owl:onProperty              :denominator ;
-                owl:cardinality             "1"^^xsd:nonNegativeInteger
-            ]
-            [
-                rdf:type                    owl:Restriction ;
-                owl:onProperty              :numerator ;
-                owl:cardinality             "1"^^xsd:nonNegativeInteger
-            ]
-        )
-    ] ;
-    rdfs:label              "unit division"@en .
-
-:Unit_exponentiation
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Compound_unit ;
-    owl:equivalentClass     [
-        rdf:type                    owl:Class ;
-        owl:intersectionOf          (
-            [
-                rdf:type                    owl:Restriction ;
-                owl:onProperty              :base ;
-                owl:cardinality             "1"^^xsd:nonNegativeInteger
-            ]
-            [
-                rdf:type                    owl:Restriction ;
-                owl:onProperty              :exponent ;
-                owl:cardinality             "1"^^xsd:nonNegativeInteger
-            ]
-        )
-    ] ;
-    rdfs:label              "unit exponentiation"@en .
-
-:Unit_multiple_or_submultiple
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Unit_of_measure ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :definition ;
-        owl:onClass                 [
-            rdf:type                    owl:Class ;
-            owl:unionOf                 (
-                :Measure
-                :Quantity
-                :Unit_of_measure
-            )
-        ]
-    ] ;
-    rdfs:label              "unit multiple or submultiple"@en .
-
-:Unit_multiplication
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :Compound_unit ;
-    owl:equivalentClass     [
-        rdf:type                    owl:Class ;
-        owl:intersectionOf          (
-            [
-                rdf:type                    owl:Restriction ;
-                owl:onProperty              :term_1 ;
-                owl:cardinality             "1"^^xsd:nonNegativeInteger
-            ]
-            [
-                rdf:type                    owl:Restriction ;
-                owl:onProperty              :term_2 ;
-                owl:cardinality             "1"^^xsd:nonNegativeInteger
-            ]
-        )
-    ] ;
-    rdfs:label              "unit multiplication"@en .
-
-:Unit_of_measure
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing ;
-    owl:disjointUnionOf     (
-        :Singular_unit
-        :Unit_division
-        :Unit_exponentiation
-        :Unit_multiple_or_submultiple
-        :Unit_multiplication
-    ) ;
-    skos:definition         "A unit of measure is a definite magnitude of a quantity, defined and adopted by convention and/or by law. It is used as a standard for measurement of the same quantity, where any other value of the quantity can be expressed as a simple multiple of the unit of measure. For example, length is a quantity; the metre is a unit of length that represents a definite predetermined length. When we say 10 metre (or 10 m), we actually mean 10 times the definite predetermined length called \"metre\"."@en ;
-    rdfs:label              "unit of measure"@en ;
-    om-1:alternative_label  "unit"@en ;
-    om-1:alternative_label  "unit of measurement"@en .
-
-:Variable
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :has_Name ;
-        owl:onDataRange             xsd:string ;
-        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
-    ] ;
-    rdfs:subClassOf         [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :is_characteristic_of ;
-        owl:onClass                 :Observation
-    ] ;
-    skos:definition         "The property that is being measured in the population.  Since Protege is not Full DL, cannot make the property a subclass of Variable, so have to specify it as a string name using has_Name."@en ;
-    rdfs:label              "Variable"@en .
-
-:Vectorial_or_tensorial_character
-    rdf:type                owl:Class ;
-    rdfs:subClassOf         :ISO21972Thing .
+parameter links back to the using cardinality_of. parameter links back using the   property. parameter links back using the mean_of property."""@en .
 
 
-# ================================================
-#                Individuals
-# ================================================
+###  https://w3id.org/citydata/21972/v1/Prefix
+i72:Prefix rdf:type owl:Class ;
+           rdfs:subClassOf i72:ISO21972Thing ;
+           owl:disjointUnionOf ( i72:Binary_prefix
+                                 i72:SI_prefix
+                               ) ;
+           rdfs:label "prefix"@en ;
+           skos:definition "A prefix is a name that precedes a basic unit of measure to indicate a decimal multiple or fraction of the unit. Each prefix has a unique symbol that is prepended to the unit symbol. For example, an electric current of 0.000 000 001 ampere is written by using the SI-prefix nano as 1 nanoampere or 1 nA."@en .
 
-:cubic_metre
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Unit_exponentiation ;
-    :base                   :metre ;
-    :exponent               "3"^^xsd:integer .
 
-:decibel
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Singular_unit .
+###  https://w3id.org/citydata/21972/v1/Quantity
+i72:Quantity rdf:type owl:Class ;
+             rdfs:subClassOf i72:ISO21972Thing ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty i72:hasUnit ;
+                               owl:allValuesFrom i72:Unit_of_measure
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty i72:hasValue ;
+                               owl:allValuesFrom i72:Measure
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty i72:unit_of_measure ;
+                               owl:allValuesFrom i72:Unit_of_measure
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty i72:value ;
+                               owl:allValuesFrom i72:Measure
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty i72:hasUnit ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass i72:Unit_of_measure
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty i72:hasValue ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass i72:Measure
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty i72:unit_of_measure ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass i72:Unit_of_measure
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty i72:value ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass i72:Measure
+                             ] ;
+             rdfs:label "quantity"@en ;
+             skos:definition "A quantity is a representation of a quantifiable (standardized) aspect (such as length, mass, and time) of a phenomenon (e.g., a star, food, or a molecule). Quantities are classified according to similarity in (implicit) metrological aspect, e.g. the length of my speedboat and the length of my racing car are classified as length."@en .
 
-:fixed_zero_cardinality
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Point ;
-    :numerical_value        "0"^^xsd:integer .
 
-:giga
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :SI_prefix ;
-    :factor                 "1000000000"^^xsd:integer .
+###  https://w3id.org/citydata/21972/v1/RatioIndicator
+i72:RatioIndicator rdf:type owl:Class ;
+                   rdfs:subClassOf i72:Indicator ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty i72:denominator ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass i72:Quantity
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty i72:numerator ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass i72:Quantity
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty i72:unit_of_measure ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass i72:Unit_division
+                                   ] .
 
-:gigapc
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Unit_multiple_or_submultiple ;
-    :prefix                 :giga ;
-    :singular_unit          :population_cardinality_unit ;
-    :symbol                 "gigapc" .
 
-:gram
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Singular_unit .
+###  https://w3id.org/citydata/21972/v1/Ratio_scale
+i72:Ratio_scale rdf:type owl:Class ;
+                rdfs:subClassOf i72:Cardinal_scale ;
+                rdfs:label "ratio scale"@en .
 
-:hecto_kilo
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :SI_prefix ;
-    :factor                 "100000"^^xsd:integer .
 
-:hecto_kilo_pc
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Unit_multiple_or_submultiple ;
-    :prefix                 :hecto_kilo ;
-    :singular_unit          :population_cardinality_unit ;
-    :symbol                 "hecto_kilo_pc" .
+###  https://w3id.org/citydata/21972/v1/SI_prefix
+i72:SI_prefix rdf:type owl:Class ;
+              rdfs:subClassOf i72:Prefix ;
+              rdfs:label "SI prefix"@en .
 
-:hour
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Singular_unit .
 
-:hour_per_interruption
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Unit_division ;
-    :denominator            :interruption ;
-    :numerator              :hour .
+###  https://w3id.org/citydata/21972/v1/Sample
+i72:Sample rdf:type owl:Class ;
+           rdfs:subClassOf i72:ISO21972Thing ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty i72:is_composed_of ;
+                             owl:allValuesFrom i72:Observation
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty i72:is_described_by ;
+                             owl:allValuesFrom i72:Statistic
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty i72:is_part_of ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass i72:Population
+                           ] .
 
-:interruption
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Singular_unit .
 
-:interruption_per_year
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Unit_division ;
-    :denominator            :year ;
-    :numerator              :interruption .
+###  https://w3id.org/citydata/21972/v1/Sample_cardinality
+i72:Sample_cardinality rdf:type owl:Class ;
+                       rdfs:subClassOf i72:Statistic .
 
-:kilo
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :SI_prefix ;
-    :factor                 "1000"^^xsd:integer .
 
-:kilopc
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Unit_multiple_or_submultiple ;
-    :singular_unit          :population_cardinality_unit ;
-    :symbol                 "kilopc" .
+###  https://w3id.org/citydata/21972/v1/Sample_mean
+i72:Sample_mean rdf:type owl:Class ;
+                rdfs:subClassOf i72:Statistic ;
+                owl:disjointWith i72:Sample_standard_deviation .
 
-:kilowatt
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Unit_multiple_or_submultiple ;
-    :prefix                 :kilo ;
-    :singular_unit          :watt ;
-    :symbol                 "kwh" .
 
-:kilowatt_hour
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Unit_division ;
-    :denominator            :hour ;
-    :numerator              :kilowatt .
+###  https://w3id.org/citydata/21972/v1/Sample_standard_deviation
+i72:Sample_standard_deviation rdf:type owl:Class ;
+                              rdfs:subClassOf i72:Statistic .
 
-:kwh_per_pc
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Unit_division ;
-    :denominator            :square_metre ;
-    :numerator              :population_cardinality_unit ;
-    :symbol                 "kwh_per_pc" .
 
-:kwh_per_square_metre
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Unit_division ;
-    :denominator            :square_metre ;
-    :numerator              :kilowatt_hour ;
-    :symbol                 "kwh_per_m2" .
+###  https://w3id.org/citydata/21972/v1/Sample_sum
+i72:Sample_sum rdf:type owl:Class ;
+               rdfs:subClassOf i72:Statistic .
 
-:kwh_per_year
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Unit_division ;
-    :denominator            :year ;
-    :numerator              :kilowatt ;
-    :symbol                 "kwh_per_year" .
 
-:mega
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :SI_prefix ;
-    :factor                 "1000000"^^xsd:integer .
+###  https://w3id.org/citydata/21972/v1/Singular_unit
+i72:Singular_unit rdf:type owl:Class ;
+                  rdfs:subClassOf i72:ISO21972Thing .
 
-:megapc
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Unit_multiple_or_submultiple ;
-    :prefix                 :mega ;
-    :singular_unit          :population_cardinality_unit ;
-    :symbol                 "megapc" .
 
-:metre
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Singular_unit ;
-    :symbol                 "m2" .
+###  https://w3id.org/citydata/21972/v1/Standard_deviation
+i72:Standard_deviation rdf:type owl:Class ;
+                       rdfs:subClassOf i72:Parameter ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty i72:std_of ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass i72:Population
+                                       ] .
 
-:micro
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :SI_prefix ;
-    :factor                 "0.000001"^^xsd:decimal .
 
-:microgram
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Unit_multiple_or_submultiple ;
-    :prefix                 :micro ;
-    :singular_unit          :gram .
+###  https://w3id.org/citydata/21972/v1/Statistic
+i72:Statistic rdf:type owl:Class ;
+              rdfs:subClassOf i72:ISO21972Thing ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty i72:is_an_estimate_of ;
+                                owl:allValuesFrom i72:Parameter
+                              ] .
 
-:microgram_per_cubic_metre
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Unit_division ;
-    :denominator            :cubic_metre ;
-    :numerator              :microgram .
 
-:minute-time
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Singular_unit .
+###  https://w3id.org/citydata/21972/v1/Sum
+i72:Sum rdf:type owl:Class ;
+        rdfs:subClassOf i72:Parameter ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty i72:sum_of ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass i72:Population
+                        ] ;
+        skos:definition "Sum defines the sum over a variable possessed by members of the Population."@en .
 
-:minute-time_per_occurence
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Unit_division ;
-    :denominator            :occurrence ;
-    :numerator              :minute-time .
 
-:occurence_per_hecto_kilo_pc
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Unit_division ;
-    :denominator            :hecto_kilo_pc ;
-    :numerator              :occurrence .
+###  https://w3id.org/citydata/21972/v1/SumIndicator
+i72:SumIndicator rdf:type owl:Class ;
+                 rdfs:subClassOf i72:Indicator ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty i72:term_1 ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass i72:Quantity
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty i72:term_2 ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass i72:Quantity
+                                 ] ;
+                 skos:definition "Sum of term_1 and term_2 (term_1 + term_2)"@en .
 
-:occurrence
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Singular_unit .
 
-:pc_per_hecto_kilo_pc
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Unit_division ;
-    :denominator            :hecto_kilo_pc ;
-    :numerator              :population_cardinality_unit .
+###  https://w3id.org/citydata/21972/v1/System_of_units
+i72:System_of_units rdf:type owl:Class ;
+                    rdfs:subClassOf i72:ISO21972Thing .
 
-:population_cardinality_unit
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Cardinality_unit ;
-    skos:definition         "population_cardinality_unit is depicted to be an instance of Cardinality_unit, which is the unit of measure for the cardinality of a set defined by a Population (defined in the next clause), and is associated with the symbol “pc”. For example, 1100pc represents a population cardinality (or size) of 1100. This document takes advantage of prefix notations to scale the numbers by defining units of measures: kilopc, megapc and gigapc, which are multiples of population_cardinality_unit. 1.1 kilopc represents 1100 pc."@en ;
-    :symbol                 "pc" .
 
-:population_ratio_unit
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Unit_division ;
-    skos:definition         """population_ratio_unit is defined to be an instance of Unit_division. It has two properties:
+###  https://w3id.org/citydata/21972/v1/Unit_division
+i72:Unit_division rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                               owl:onProperty i72:denominator ;
+                                                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                             ]
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty i72:numerator ;
+                                                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:subClassOf i72:Compound_unit ;
+                  rdfs:label "unit division"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/Unit_exponentiation
+i72:Unit_exponentiation rdf:type owl:Class ;
+                        owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty i72:base ;
+                                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                   ]
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty i72:exponent ;
+                                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                   ]
+                                                                 ) ;
+                                              rdf:type owl:Class
+                                            ] ;
+                        rdfs:subClassOf i72:Compound_unit ;
+                        rdfs:label "unit exponentiation"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/Unit_multiple_or_submultiple
+i72:Unit_multiple_or_submultiple rdf:type owl:Class ;
+                                 rdfs:subClassOf i72:Unit_of_measure ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty i72:definition ;
+                                                   owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                       owl:unionOf ( i72:Measure
+                                                                                     i72:Quantity
+                                                                                     i72:Unit_of_measure
+                                                                                   )
+                                                                     ]
+                                                 ] ;
+                                 rdfs:label "unit multiple or submultiple"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/Unit_multiplication
+i72:Unit_multiplication rdf:type owl:Class ;
+                        owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty i72:term_1 ;
+                                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                   ]
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty i72:term_2 ;
+                                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                   ]
+                                                                 ) ;
+                                              rdf:type owl:Class
+                                            ] ;
+                        rdfs:subClassOf i72:Compound_unit ;
+                        rdfs:label "unit multiplication"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/Unit_of_measure
+i72:Unit_of_measure rdf:type owl:Class ;
+                    rdfs:subClassOf i72:ISO21972Thing ;
+                    owl:disjointUnionOf ( i72:Singular_unit
+                                          i72:Unit_division
+                                          i72:Unit_exponentiation
+                                          i72:Unit_multiple_or_submultiple
+                                          i72:Unit_multiplication
+                                        ) ;
+                    rdfs:label "unit of measure"@en ;
+                    skos:definition "A unit of measure is a definite magnitude of a quantity, defined and adopted by convention and/or by law. It is used as a standard for measurement of the same quantity, where any other value of the quantity can be expressed as a simple multiple of the unit of measure. For example, length is a quantity; the metre is a unit of length that represents a definite predetermined length. When we say 10 metre (or 10 m), we actually mean 10 times the definite predetermined length called \"metre\"."@en ;
+                    om-1:alternative_label "unit"@en ,
+                                           "unit of measurement"@en .
+
+
+###  https://w3id.org/citydata/21972/v1/Variable
+i72:Variable rdf:type owl:Class ;
+             rdfs:subClassOf i72:ISO21972Thing ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty i72:is_characteristic_of ;
+                               owl:allValuesFrom i72:Observation
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty i72:has_Name ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ;
+             rdfs:label "Variable"@en ;
+             skos:definition "The property that is being measured in the population.  Since Protege is not Full DL, cannot make the property a subclass of Variable, so have to specify it as a string name using has_Name."@en .
+
+
+###  https://w3id.org/citydata/21972/v1/Vectorial_or_tensorial_character
+i72:Vectorial_or_tensorial_character rdf:type owl:Class ;
+                                     rdfs:subClassOf i72:ISO21972Thing .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/citydata/21972/v1/cubic_metre
+i72:cubic_metre rdf:type owl:NamedIndividual ,
+                         i72:Unit_exponentiation ;
+                i72:base i72:metre ;
+                i72:exponent 3 .
+
+
+###  https://w3id.org/citydata/21972/v1/decibel
+i72:decibel rdf:type owl:NamedIndividual ,
+                     i72:Singular_unit .
+
+
+###  https://w3id.org/citydata/21972/v1/fixed_zero_cardinality
+i72:fixed_zero_cardinality rdf:type owl:NamedIndividual ,
+                                    i72:Point ;
+                           i72:numerical_value 0 .
+
+
+###  https://w3id.org/citydata/21972/v1/giga
+i72:giga rdf:type owl:NamedIndividual ,
+                  i72:SI_prefix ;
+         i72:factor 1000000000 .
+
+
+###  https://w3id.org/citydata/21972/v1/gigapc
+i72:gigapc rdf:type owl:NamedIndividual ,
+                    i72:Unit_multiple_or_submultiple ;
+           i72:prefix i72:giga ;
+           i72:singular_unit i72:population_cardinality_unit ;
+           i72:symbol "gigapc" .
+
+
+###  https://w3id.org/citydata/21972/v1/gram
+i72:gram rdf:type owl:NamedIndividual ,
+                  i72:Singular_unit .
+
+
+###  https://w3id.org/citydata/21972/v1/hecto_kilo
+i72:hecto_kilo rdf:type owl:NamedIndividual ,
+                        i72:SI_prefix ;
+               i72:factor 100000 .
+
+
+###  https://w3id.org/citydata/21972/v1/hecto_kilo_pc
+i72:hecto_kilo_pc rdf:type owl:NamedIndividual ,
+                           i72:Unit_multiple_or_submultiple ;
+                  i72:prefix i72:hecto_kilo ;
+                  i72:singular_unit i72:population_cardinality_unit ;
+                  i72:symbol "hecto_kilo_pc" .
+
+
+###  https://w3id.org/citydata/21972/v1/hour
+i72:hour rdf:type owl:NamedIndividual ,
+                  i72:Singular_unit .
+
+
+###  https://w3id.org/citydata/21972/v1/hour_per_interruption
+i72:hour_per_interruption rdf:type owl:NamedIndividual ,
+                                   i72:Unit_division ;
+                          i72:denominator i72:interruption ;
+                          i72:numerator i72:hour .
+
+
+###  https://w3id.org/citydata/21972/v1/interruption
+i72:interruption rdf:type owl:NamedIndividual ,
+                          i72:Singular_unit .
+
+
+###  https://w3id.org/citydata/21972/v1/interruption_per_year
+i72:interruption_per_year rdf:type owl:NamedIndividual ,
+                                   i72:Unit_division ;
+                          i72:denominator i72:year ;
+                          i72:numerator i72:interruption .
+
+
+###  https://w3id.org/citydata/21972/v1/kilo
+i72:kilo rdf:type owl:NamedIndividual ,
+                  i72:SI_prefix ;
+         i72:factor 1000 .
+
+
+###  https://w3id.org/citydata/21972/v1/kilopc
+i72:kilopc rdf:type owl:NamedIndividual ,
+                    i72:Unit_multiple_or_submultiple ;
+           i72:singular_unit i72:population_cardinality_unit ;
+           i72:symbol "kilopc" .
+
+
+###  https://w3id.org/citydata/21972/v1/kilowatt
+i72:kilowatt rdf:type owl:NamedIndividual ,
+                      i72:Unit_multiple_or_submultiple ;
+             i72:prefix i72:kilo ;
+             i72:singular_unit i72:watt ;
+             i72:symbol "kwh" .
+
+
+###  https://w3id.org/citydata/21972/v1/kilowatt_hour
+i72:kilowatt_hour rdf:type owl:NamedIndividual ,
+                           i72:Unit_division ;
+                  i72:denominator i72:hour ;
+                  i72:numerator i72:kilowatt .
+
+
+###  https://w3id.org/citydata/21972/v1/kwh_per_pc
+i72:kwh_per_pc rdf:type owl:NamedIndividual ,
+                        i72:Unit_division ;
+               i72:denominator i72:square_metre ;
+               i72:numerator i72:population_cardinality_unit ;
+               i72:symbol "kwh_per_pc" .
+
+
+###  https://w3id.org/citydata/21972/v1/kwh_per_square_metre
+i72:kwh_per_square_metre rdf:type owl:NamedIndividual ,
+                                  i72:Unit_division ;
+                         i72:denominator i72:square_metre ;
+                         i72:numerator i72:kilowatt_hour ;
+                         i72:symbol "kwh_per_m2" .
+
+
+###  https://w3id.org/citydata/21972/v1/kwh_per_year
+i72:kwh_per_year rdf:type owl:NamedIndividual ,
+                          i72:Unit_division ;
+                 i72:denominator i72:year ;
+                 i72:numerator i72:kilowatt ;
+                 i72:symbol "kwh_per_year" .
+
+
+###  https://w3id.org/citydata/21972/v1/mega
+i72:mega rdf:type owl:NamedIndividual ,
+                  i72:SI_prefix ;
+         i72:factor 1000000 .
+
+
+###  https://w3id.org/citydata/21972/v1/megapc
+i72:megapc rdf:type owl:NamedIndividual ,
+                    i72:Unit_multiple_or_submultiple ;
+           i72:prefix i72:mega ;
+           i72:singular_unit i72:population_cardinality_unit ;
+           i72:symbol "megapc" .
+
+
+###  https://w3id.org/citydata/21972/v1/metre
+i72:metre rdf:type owl:NamedIndividual ,
+                   i72:Singular_unit ;
+          i72:symbol "m2" .
+
+
+###  https://w3id.org/citydata/21972/v1/micro
+i72:micro rdf:type owl:NamedIndividual ,
+                   i72:SI_prefix ;
+          i72:factor 0.000001 .
+
+
+###  https://w3id.org/citydata/21972/v1/microgram
+i72:microgram rdf:type owl:NamedIndividual ,
+                       i72:Unit_multiple_or_submultiple ;
+              i72:prefix i72:micro ;
+              i72:singular_unit i72:gram .
+
+
+###  https://w3id.org/citydata/21972/v1/microgram_per_cubic_metre
+i72:microgram_per_cubic_metre rdf:type owl:NamedIndividual ,
+                                       i72:Unit_division ;
+                              i72:denominator i72:cubic_metre ;
+                              i72:numerator i72:microgram .
+
+
+###  https://w3id.org/citydata/21972/v1/minute-time
+i72:minute-time rdf:type owl:NamedIndividual ,
+                         i72:Singular_unit .
+
+
+###  https://w3id.org/citydata/21972/v1/minute-time_per_occurence
+i72:minute-time_per_occurence rdf:type owl:NamedIndividual ,
+                                       i72:Unit_division ;
+                              i72:denominator i72:occurrence ;
+                              i72:numerator i72:minute-time .
+
+
+###  https://w3id.org/citydata/21972/v1/occurence_per_hecto_kilo_pc
+i72:occurence_per_hecto_kilo_pc rdf:type owl:NamedIndividual ,
+                                         i72:Unit_division ;
+                                i72:denominator i72:hecto_kilo_pc ;
+                                i72:numerator i72:occurrence .
+
+
+###  https://w3id.org/citydata/21972/v1/occurrence
+i72:occurrence rdf:type owl:NamedIndividual ,
+                        i72:Singular_unit .
+
+
+###  https://w3id.org/citydata/21972/v1/pc_per_hecto_kilo_pc
+i72:pc_per_hecto_kilo_pc rdf:type owl:NamedIndividual ,
+                                  i72:Unit_division ;
+                         i72:denominator i72:hecto_kilo_pc ;
+                         i72:numerator i72:population_cardinality_unit .
+
+
+###  https://w3id.org/citydata/21972/v1/population_cardinality_unit
+i72:population_cardinality_unit rdf:type owl:NamedIndividual ,
+                                         i72:Cardinality_unit ;
+                                i72:symbol "pc" ;
+                                skos:definition "population_cardinality_unit is depicted to be an instance of Cardinality_unit, which is the unit of measure for the cardinality of a set defined by a Population (defined in the next clause), and is associated with the symbol “pc”. For example, 1100pc represents a population cardinality (or size) of 1100. This document takes advantage of prefix notations to scale the numbers by defining units of measures: kilopc, megapc and gigapc, which are multiples of population_cardinality_unit. 1.1 kilopc represents 1100 pc."@en .
+
+
+###  https://w3id.org/citydata/21972/v1/population_ratio_unit
+i72:population_ratio_unit rdf:type owl:NamedIndividual ,
+                                   i72:Unit_division ;
+                          i72:denominator i72:population_cardinality_unit ;
+                          i72:numerator i72:population_cardinality_unit ;
+                          skos:definition """population_ratio_unit is defined to be an instance of Unit_division. It has two properties:
 • whose range is restricted to being a population_cardinality_unit;
 • whose range is restricted to being a population_cardinality_unit.
 
-In other words, a population ratio is the ratio of two population cardinalities (i.e., number of members/elements in each population)"""@en ;
-    :denominator            :population_cardinality_unit ;
-    :numerator              :population_cardinality_unit .
-
-:square_metre
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Unit_exponentiation ;
-    :base                   :metre ;
-    :exponent               "2"^^xsd:integer .
-
-:watt
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Singular_unit .
-
-:year
-    rdf:type                owl:NamedIndividual ;
-    rdf:type                :Singular_unit .
+In other words, a population ratio is the ratio of two population cardinalities (i.e., number of members/elements in each population)"""@en .
 
 
-# ================================================
-#                General Axioms
-# ================================================
+###  https://w3id.org/citydata/21972/v1/square_metre
+i72:square_metre rdf:type owl:NamedIndividual ,
+                          i72:Unit_exponentiation ;
+                 i72:base i72:metre ;
+                 i72:exponent 2 .
 
-[]
-    rdf:type     owl:AllDisjointClasses ;
-    owl:members  (
-            :Application_area
-            :Dimension
-            :Measure
-            :Measurement_scale
-            :Measurement_scale_category
-            :Phenomenon
-            :Point
-            :Prefix
-            :Quantity
-            :System_of_units
-            :Unit_of_measure
-            :Vectorial_or_tensorial_character
-        ) .
 
-[]
-    rdf:type     owl:AllDisjointClasses ;
-    owl:members  (
-            :Observation
-            :Parameter
-            :Population
-            :Sample
-            :Statistic
-            :Variable
-        ) .
+###  https://w3id.org/citydata/21972/v1/watt
+i72:watt rdf:type owl:NamedIndividual ,
+                  i72:Singular_unit .
 
+
+###  https://w3id.org/citydata/21972/v1/year
+i72:year rdf:type owl:NamedIndividual ,
+                  i72:Singular_unit .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( i72:Application_area
+                i72:Dimension
+                i72:Measure
+                i72:Measurement_scale
+                i72:Measurement_scale_category
+                i72:Phenomenon
+                i72:Point
+                i72:Prefix
+                i72:Quantity
+                i72:System_of_units
+                i72:Unit_of_measure
+                i72:Vectorial_or_tensorial_character
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( i72:Observation
+                i72:Parameter
+                i72:Population
+                i72:Sample
+                i72:Statistic
+                i72:Variable
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

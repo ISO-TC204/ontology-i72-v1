@@ -1,8 +1,24 @@
 # mean_of
 
-**Domain**: [Mean](../classes/Mean.md)
+**IRI**: `https://w3id.org/citydata/21972/v1/mean_of`
 
-**Range**: [Population](../classes/Population.md)
+## Domain
+
+| Class |
+|-------|
+| [Mean](../classes/Mean.md) |
+
+## Range
+
+| Class |
+|-------|
+| [Population](../classes/Population.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [description_of](description_of.md) |
 
 ## Used in classes
 
@@ -10,4 +26,3 @@
 |-------|
 | [Mean](../classes/Mean.md) |
 
-**IRI**: `https://w3id.org/citydata/21972/v1/mean_of`

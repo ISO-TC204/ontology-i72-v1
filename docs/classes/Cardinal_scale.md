@@ -1,5 +1,7 @@
 # Cardinal_scale
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Cardinal_scale`
+
 
 ## Diagram
 
@@ -84,6 +86,7 @@
 
 | Property | Constraint |
 |----------|------------|
+| [element](../properties/element.md) | only [Fixed_point](Fixed_point.md) |
 | [element](../properties/element.md) | only [Fixed_point](https://w3id.org/citydata/21972/v1/Fixed_point) |
 | subClassOf | [Measurement_scale](Measurement_scale.md) |
 

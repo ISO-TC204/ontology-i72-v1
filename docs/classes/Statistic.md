@@ -1,5 +1,7 @@
 # Statistic
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Statistic`
+
 
 ## Diagram
 
@@ -85,6 +87,13 @@
 
 | Property | Constraint |
 |----------|------------|
+| [is_an_estimate_of](../properties/is_an_estimate_of.md) | only [Parameter](Parameter.md) |
 | [is_an_estimate_of](../properties/is_an_estimate_of.md) | only [Parameter](https://w3id.org/citydata/21972/v1/Parameter) |
 | subClassOf | [ISO21972Thing](ISO21972Thing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Sample](Sample.md) | [is_described_by](../properties/is_described_by.md) |
 

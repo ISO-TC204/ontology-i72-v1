@@ -1,5 +1,7 @@
 # Vectorial_or_tensorial_character
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Vectorial_or_tensorial_character`
+
 
 ## Diagram
 

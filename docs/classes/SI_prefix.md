@@ -1,5 +1,7 @@
 # SI_prefix
 
+**IRI**: `https://w3id.org/citydata/21972/v1/SI_prefix`
+
 
 ## Diagram
 

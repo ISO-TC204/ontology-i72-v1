@@ -2,6 +2,8 @@
 
 Mean represents the mean value of a property all members of the Population have and is specified by the parameter_of_var property.
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Mean`
+
 
 ## Diagram
 

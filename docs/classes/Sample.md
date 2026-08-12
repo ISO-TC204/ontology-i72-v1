@@ -1,5 +1,7 @@
 # Sample
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Sample`
+
 
 ## Diagram
 
@@ -54,7 +56,7 @@
     </g>
     </g>
     <!-- Sample&#45;&gt;Observation -->
-    <g id="edge7" class="edge">
+    <g id="edge6" class="edge">
     <title>Sample&#45;&gt;Observation</title>
     <path fill="none" stroke="black" d="M144.98,-350.12C136.75,-341.83 127.24,-331.41 120,-321 94.66,-284.56 73.16,-237.64 60.92,-208.44"/>
     <polygon fill="black" stroke="black" points="64.16,-207.12 57.12,-199.21 57.69,-209.79 64.16,-207.12"/>
@@ -91,7 +93,7 @@
     </g>
     </g>
     <!-- Sample&#45;&gt;Statistic -->
-    <g id="edge6" class="edge">
+    <g id="edge7" class="edge">
     <title>Sample&#45;&gt;Statistic</title>
     <path fill="none" stroke="black" d="M189.93,-363.96C227.21,-358.1 290,-341.47 290,-296 290,-296 290,-296 290,-106 290,-65.39 159.79,-45.9 93.22,-38.59"/>
     <polygon fill="black" stroke="black" points="93.77,-35.13 83.46,-37.56 93.04,-42.09 93.77,-35.13"/>
@@ -115,7 +117,9 @@
 
 | Property | Constraint |
 |----------|------------|
+| [is_composed_of](../properties/is_composed_of.md) | only [Observation](Observation.md) |
 | [is_composed_of](../properties/is_composed_of.md) | only [Observation](https://w3id.org/citydata/21972/v1/Observation) |
+| [is_described_by](../properties/is_described_by.md) | only [Statistic](Statistic.md) |
 | [is_described_by](../properties/is_described_by.md) | only [Statistic](https://w3id.org/citydata/21972/v1/Statistic) |
 | [is_part_of](../properties/is_part_of.md) | exactly 1 |
 | [is_part_of](../properties/is_part_of.md) | exactly 1 [Population](https://w3id.org/citydata/21972/v1/Population) |

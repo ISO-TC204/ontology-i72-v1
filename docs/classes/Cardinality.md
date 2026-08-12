@@ -3,6 +3,8 @@
 Cardinality of the Population.
 Note that there is no property that links Cardinality to a Variable.
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Cardinality`
+
 
 ## Diagram
 

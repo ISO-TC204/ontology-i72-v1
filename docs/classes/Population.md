@@ -4,6 +4,8 @@ The core class is the Population to be measured. A Population is linked to a par
   
 parameter links back to the using cardinality_of. parameter links back using the   property. parameter links back using the mean_of property.
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Population`
+
 
 ## Diagram
 
@@ -58,7 +60,7 @@ parameter links back to the using cardinality_of. parameter links back using the
     </g>
     </g>
     <!-- Population&#45;&gt;Feature -->
-    <g id="edge10" class="edge">
+    <g id="edge12" class="edge">
     <title>Population&#45;&gt;Feature</title>
     <path fill="none" stroke="black" d="M181.53,-509.5C161.43,-501.75 136,-488.88 120.25,-469.5 98.26,-442.44 89.6,-402.37 86.2,-375.62"/>
     <polygon fill="black" stroke="black" points="89.7,-375.43 85.14,-365.87 82.74,-376.19 89.7,-375.43"/>
@@ -77,7 +79,7 @@ parameter links back to the using cardinality_of. parameter links back using the
     </g>
     </g>
     <!-- Population&#45;&gt;Observation -->
-    <g id="edge11" class="edge">
+    <g id="edge10" class="edge">
     <title>Population&#45;&gt;Observation</title>
     <path fill="none" stroke="black" d="M208.37,-502.14C203.15,-481.27 191.79,-445.59 171,-422 160.47,-410.05 149.6,-416.72 140,-404 138.13,-401.53 119.19,-324.59 108.78,-281.89"/>
     <polygon fill="black" stroke="black" points="112.21,-281.2 106.44,-272.32 105.41,-282.86 112.21,-281.2"/>
@@ -95,7 +97,7 @@ parameter links back to the using cardinality_of. parameter links back using the
     </g>
     </g>
     <!-- Population&#45;&gt;owl_Thing -->
-    <g id="edge12" class="edge">
+    <g id="edge8" class="edge">
     <title>Population&#45;&gt;owl_Thing</title>
     <path fill="none" stroke="black" d="M219.21,-502.06C229.45,-475.24 244.99,-422.01 226,-382.5 220.45,-370.96 211.35,-374.62 203.5,-364.5 164.77,-314.61 177.3,-289.27 145,-235 139.25,-225.34 132.09,-215.38 125.37,-206.68"/>
     <polygon fill="black" stroke="black" points="128.23,-204.66 119.27,-199 122.75,-209.01 128.23,-204.66"/>
@@ -113,7 +115,7 @@ parameter links back to the using cardinality_of. parameter links back using the
     </g>
     </g>
     <!-- Population&#45;&gt;Parameter -->
-    <g id="edge8" class="edge">
+    <g id="edge11" class="edge">
     <title>Population&#45;&gt;Parameter</title>
     <path fill="none" stroke="black" d="M239.99,-502.16C257.98,-488.99 278,-468.86 278,-444.5 278,-444.5 278,-444.5 278,-179 278,-121.79 196.37,-109.64 144.93,-107.67"/>
     <polygon fill="black" stroke="black" points="145.12,-104.17 135.03,-107.41 144.94,-111.17 145.12,-104.17"/>
@@ -157,11 +159,21 @@ parameter links back to the using cardinality_of. parameter links back using the
 
 | Property | Constraint |
 |----------|------------|
+| [defined_by](../properties/defined_by.md) | only [owl:Thing](https://w3id.org/citydata/imported/owl/Thing) |
 | [defined_by](../properties/defined_by.md) | only [owl:Thing](http://www.w3.org/2002/07/owl#Thing) |
 | [definition](../properties/definition.md) | exactly 1 |
 | [definition](../properties/definition.md) | exactly 1 [Feature](https://w3id.org/citydata/21972/v1/Feature) |
+| [for_time_interval](../properties/for_time_interval.md) | only [time:DateTimeInterval](https://w3id.org/citydata/imported/time/DateTimeInterval) |
 | [for_time_interval](../properties/for_time_interval.md) | only [time:DateTimeInterval](http://www.w3.org/2006/time#DateTimeInterval) |
+| [is_composed_of](../properties/is_composed_of.md) | only [Observation](Observation.md) |
 | [is_composed_of](../properties/is_composed_of.md) | only [Observation](https://w3id.org/citydata/21972/v1/Observation) |
+| [is_described_by](../properties/is_described_by.md) | only [Parameter](Parameter.md) |
 | [is_described_by](../properties/is_described_by.md) | only [Parameter](https://w3id.org/citydata/21972/v1/Parameter) |
 | subClassOf | [ISO21972Thing](ISO21972Thing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Observation](Observation.md) | [member_of](../properties/member_of.md) |
 

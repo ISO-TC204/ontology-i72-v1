@@ -1,52 +1,98 @@
 @prefix : <https://w3id.org/citydata/21972/v1/> .
 @prefix i72: <https://w3id.org/citydata/21972/v1/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix vann: <http://purl.org/vocab/vann/> .
-@prefix cc: <http://creativecommons.org/ns#> .
 @prefix dash: <http://datashapes.org/dash#> .
-@prefix schema: <http://schema.org/> .
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@prefix time: <http://www.w3.org/2006/time#> .
-@prefix om-1: <http://www.wurvoc.org/vocabularies/om-1.8/> .
-@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://w3id.org/citydata/21972/v1/> .
 
-:CorePattern
-    rdf:type                      owl:Ontology ;
-    dcterms:title                 "ISO 21972 Ontology - Core Pattern"@en ;
-    skos:definition               "Core organisational concepts for the ISO 21972 upper-level ontology for smart city indicators."@en ;
-    vann:preferredNamespaceUri    "https://w3id.org/citydata/21972/v1/" ;
-    vann:preferredNamespacePrefix "i72" ;
-    dcterms:license               <http://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:creator               "Mark S. Fox"@en ;
-    dcterms:creator               "Kenneth Vaughn"@en ;
-    dcterms:modified              "2026-07-23"^^xsd:date ;
-    owl:versionInfo               "1.1.0" ;
-    owl:versionIRI                <https://w3id.org/citydata/21972/v1/CorePattern/r1.1.0> .
+<https://w3id.org/citydata/21972/v1/CorePattern> rdf:type owl:Ontology ;
+                                                  dcterms:creator "Kenneth Vaughn"@en ,
+                                                                  "Mark S. Fox"@en ;
+                                                  dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
+                                                  dcterms:modified "2026-07-23"^^xsd:date ;
+                                                  dcterms:title "ISO 21972 Ontology - Core Pattern"@en ;
+                                                  vann:preferredNamespacePrefix "i72" ;
+                                                  vann:preferredNamespaceUri "https://w3id.org/citydata/21972/v1/" ;
+                                                  skos:definition "Core organisational concepts for the ISO 21972 upper-level ontology for smart city indicators."@en .
 
-# ================================================
-#                Core Classes
-# ================================================
+#################################################################
+#    Annotation properties
+#################################################################
 
-:ISO21972Thing
-    rdf:type        owl:Class ;
-    dash:abstract   true ;
-    skos:definition "A class used to organise all classes defined in the ISO 21972 ontology."@en .
+###  http://datashapes.org/dash#abstract
+dash:abstract rdf:type owl:AnnotationProperty .
 
-# ================================================
-#                Core Properties
-# ================================================
 
-:iso21972ObjectProperty
-    rdf:type           owl:ObjectProperty ;
-    dash:abstract      true ;
-    skos:definition    "An object property used to organise all object properties defined in the ISO 21972 ontology."@en .
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
 
-:iso21972DataProperty
-    rdf:type           owl:DatatypeProperty ;
-    dash:abstract      true ;
-    skos:definition    "A data property used to organise all data properties defined in the ISO 21972 ontology."@en .
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/citydata/21972/v1/iso21972ObjectProperty
+i72:iso21972ObjectProperty rdf:type owl:ObjectProperty ;
+                           dash:abstract "true"^^xsd:boolean ;
+                           skos:definition "An object property used to organise all object properties defined in the ISO 21972 ontology."@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/citydata/21972/v1/iso21972DataProperty
+i72:iso21972DataProperty rdf:type owl:DatatypeProperty ;
+                         dash:abstract "true"^^xsd:boolean ;
+                         skos:definition "A data property used to organise all data properties defined in the ISO 21972 ontology."@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/citydata/21972/v1/ISO21972Thing
+i72:ISO21972Thing rdf:type owl:Class ;
+                  dash:abstract "true"^^xsd:boolean ;
+                  skos:definition "A class used to organise all classes defined in the ISO 21972 ontology."@en .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

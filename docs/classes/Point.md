@@ -2,6 +2,8 @@
 
 A point is an element of an interval scale or a ratio scale, for example, 273.16 on the Kelvin scale indicates the triple point of water thermodynamic temperature.
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Point`
+
 
 ## Diagram
 

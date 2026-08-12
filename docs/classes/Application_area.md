@@ -1,5 +1,7 @@
 # Application_area
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Application_area`
+
 
 ## Diagram
 

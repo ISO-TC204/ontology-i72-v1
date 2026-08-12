@@ -60,6 +60,7 @@ This pattern consists of the following classes:
 - [Unit_of_measure](Unit_of_measure.md)
 - [Variable](Variable.md)
 - [Vectorial_or_tensorial_character](Vectorial_or_tensorial_character.md)
+
 This module defines the following properties:
 
 - [base](../properties/base.md)

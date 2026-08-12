@@ -1,5 +1,7 @@
 # Monetary_unit
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Monetary_unit`
+
 
 ## Diagram
 

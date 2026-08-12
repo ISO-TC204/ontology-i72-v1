@@ -1,5 +1,7 @@
 # Measurement_scale_category
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Measurement_scale_category`
+
 
 ## Diagram
 

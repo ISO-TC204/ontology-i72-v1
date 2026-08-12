@@ -1,5 +1,7 @@
 # Ratio_scale
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Ratio_scale`
+
 
 ## Diagram
 

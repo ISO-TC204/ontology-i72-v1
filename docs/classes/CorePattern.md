@@ -5,6 +5,7 @@ Core organisational concepts for the ISO 21972 upper-level ontology for smart ci
 This pattern consists of the following classes:
 
 - [Iso21972 Thing](ISO21972Thing.md)
+
 This module defines the following properties:
 
 - [iso21972DataProperty](../properties/iso21972DataProperty.md)
