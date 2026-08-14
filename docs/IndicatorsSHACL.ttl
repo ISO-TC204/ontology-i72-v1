@@ -23,7 +23,7 @@
                                                       dcterms:creator "Kenneth Vaughn"@en ,
                                                                       "Mark S. Fox"@en ;
                                                       dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
-                                                      dcterms:modified "2026-07-23"^^xsd:date ;
+                                                      dcterms:modified "2026-08-14"^^xsd:date ;
                                                       dcterms:title "SHACL constraints for the ISO 21972 Indicators pattern"@en ;
                                                       vann:preferredNamespacePrefix "i72" ;
                                                       vann:preferredNamespaceUri "https://w3id.org/citydata/21972/v1/" ;

@@ -21,13 +21,14 @@
                                                         dcterms:creator "Kenneth Vaughn"@en ,
                                                                         "Mark S. Fox"@en ;
                                                         dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
-                                                        dcterms:modified "2026-07-23"^^xsd:date ;
+                                                        dcterms:modified "2026-08-14"^^xsd:date ;
                                                         dcterms:title "ISO 21972 Ontology - Indicators Pattern"@en ;
                                                         vann:preferredNamespacePrefix "i72" ;
                                                         vann:preferredNamespaceUri "https://w3id.org/citydata/21972/v1/" ;
                                                         rdfs:comment "Archived import of iso21972.owl; converted to modular RITSO Turtle."@en ;
                                                         owl:priorVersion <https://w3id.org/citydata/21972/v1/1.1.0> ;
-                                                        owl:versionInfo "1.1.0" ;
+                                                        owl:versionInfo "1.1.1-alpha.1" ;
+    owl:versionIRI                 <https://w3id.org/citydata/21972/v1/1.1.1-alpha.1> ;
                                                         skos:definition "Concepts for quantities, units of measure, measurement scales, statistics, and smart city indicators from ISO 21972."@en ;
                                                         adms:relatedDocumentation "ISO21972" .
 
