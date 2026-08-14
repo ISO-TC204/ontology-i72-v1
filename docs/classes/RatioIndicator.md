@@ -1,5 +1,7 @@
 # RatioIndicator
 
+**IRI**: `https://w3id.org/citydata/21972/v1/RatioIndicator`
+
 
 ## Diagram
 
@@ -54,7 +56,7 @@
     </g>
     </g>
     <!-- RatioIndicator&#45;&gt;Quantity -->
-    <g id="edge6" class="edge">
+    <g id="edge5" class="edge">
     <title>RatioIndicator&#45;&gt;Quantity</title>
     <path fill="none" stroke="black" d="M142.94,-305.51C135.35,-296.34 126.42,-284.55 120,-273 94.61,-227.29 75.49,-169.1 65.59,-135.45"/>
     <polygon fill="black" stroke="black" points="69.02,-134.72 62.89,-126.08 62.29,-136.66 69.02,-134.72"/>
@@ -63,7 +65,7 @@
     <text xml:space="preserve" text-anchor="start" x="151" y="-232.5" font-family="Arial" font-size="11.00">1</text>
     </g>
     <!-- RatioIndicator&#45;&gt;Quantity -->
-    <g id="edge7" class="edge">
+    <g id="edge6" class="edge">
     <title>RatioIndicator&#45;&gt;Quantity</title>
     <path fill="none" stroke="black" d="M171.34,-305.72C177.73,-296.6 184.7,-284.81 188,-273 193.68,-252.67 196.57,-244.79 188,-225.5 169,-182.72 125.89,-148.92 94.5,-128.76"/>
     <polygon fill="black" stroke="black" points="96.4,-125.82 86.06,-123.5 92.69,-131.76 96.4,-125.82"/>
@@ -82,7 +84,7 @@
     </g>
     </g>
     <!-- RatioIndicator&#45;&gt;Unit_division -->
-    <g id="edge5" class="edge">
+    <g id="edge7" class="edge">
     <title>RatioIndicator&#45;&gt;Unit_division</title>
     <path fill="none" stroke="black" stroke-dasharray="5,2" d="M197.02,-313.23C218.11,-306.01 242.36,-293.64 255,-273 266.02,-255 263.36,-244.88 255,-225.5 221.95,-148.9 141.26,-88.8 92.45,-57.9"/>
     <polygon fill="black" stroke="black" points="94.47,-55.04 84.13,-52.74 90.78,-60.98 94.47,-55.04"/>

@@ -2,6 +2,8 @@
 
 A phenomenon is the qualitative object (e.g., food, star, molecule) that has quantifiable (standardized) aspects (e.g, length, mass, time).
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Phenomenon`
+
 
 ## Diagram
 

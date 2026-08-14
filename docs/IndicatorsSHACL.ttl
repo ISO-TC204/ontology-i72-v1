@@ -1,356 +1,390 @@
 @prefix : <https://w3id.org/citydata/21972/v1/> .
-@prefix i72: <https://w3id.org/citydata/21972/v1/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix cc: <http://creativecommons.org/ns#> .
-@prefix dash: <http://datashapes.org/dash#> .
-@prefix schema: <http://schema.org/> .
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@prefix time: <http://www.w3.org/2006/time#> .
-@prefix om-1: <http://www.wurvoc.org/vocabularies/om-1.8/> .
-@prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix i72: <https://w3id.org/citydata/21972/v1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix om-1: <http://www.wurvoc.org/vocabularies/om-1.8/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://w3id.org/citydata/21972/v1/> .
 
-:IndicatorsSHACL
-    rdf:type                      owl:Ontology ;
-    dcterms:title                 "SHACL constraints for the ISO 21972 Indicators pattern"@en ;
-    skos:definition               "Validation shapes derived from qualified cardinality restrictions in the Indicators pattern."@en ;
-    vann:preferredNamespaceUri    "https://w3id.org/citydata/21972/v1/" ;
-    vann:preferredNamespacePrefix "i72" ;
-    dcterms:license               <http://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:creator               "Mark S. Fox"@en ;
-    dcterms:creator               "Kenneth Vaughn"@en ;
-    dcterms:modified              "2026-07-23"^^xsd:date ;
-    owl:versionInfo               "1.1.0" ;
-    owl:imports                   :IndicatorsPattern .
+<https://w3id.org/citydata/21972/v1/IndicatorsSHACL> rdf:type owl:Ontology ;
+                                                      owl:imports i72:IndicatorsPattern ;
+                                                      dcterms:creator "Kenneth Vaughn"@en ,
+                                                                      "Mark S. Fox"@en ;
+                                                      dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
+                                                      dcterms:modified "2026-07-23"^^xsd:date ;
+                                                      dcterms:title "SHACL constraints for the ISO 21972 Indicators pattern"@en ;
+                                                      vann:preferredNamespacePrefix "i72" ;
+                                                      vann:preferredNamespaceUri "https://w3id.org/citydata/21972/v1/" ;
+                                                      skos:definition "Validation shapes derived from qualified cardinality restrictions in the Indicators pattern."@en .
 
-# ================================================
-#                Node Shapes
-# ================================================
+#################################################################
+#    Annotation properties
+#################################################################
 
-:Cardinal_scaleShape
-    rdf:type        sh:NodeShape ;
-    sh:targetClass  :Cardinal_scale ;
-    sh:property [
-        sh:path  :element ;
-        sh:class    :Fixed_point
-    ] .
+###  http://www.w3.org/ns/shacl#class
+sh:class rdf:type owl:AnnotationProperty .
 
-:CardinalityShape
-    rdf:type        sh:NodeShape ;
-    sh:targetClass  :Cardinality ;
-    sh:property [
-        sh:path  :cardinality_of ;
-        sh:class    :Population ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] .
 
-:DifferenceIndicatorShape
-    rdf:type        sh:NodeShape ;
-    sh:targetClass  :DifferenceIndicator ;
-    sh:property [
-        sh:path  :term_1 ;
-        sh:class    :Quantity ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] ;
-    sh:property [
-        sh:path  :term_2 ;
-        sh:class    :Quantity ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] .
+###  http://www.w3.org/ns/shacl#datatype
+sh:datatype rdf:type owl:AnnotationProperty .
 
-:Distinct_countShape
-    rdf:type        sh:NodeShape ;
-    sh:targetClass  :Distinct_count ;
-    sh:property [
-        sh:path  :distinct_count_of ;
-        sh:class    :Population ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] .
 
-:IndicatorShape
-    rdf:type        sh:NodeShape ;
-    sh:targetClass  :Indicator ;
-    sh:property [
-        sh:path  :for_time_interval ;
-        sh:class    time:DateTimeInterval ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] ;
-    sh:property [
-        sh:path  :for_city ;
-        sh:class    :City ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] .
+###  http://www.w3.org/ns/shacl#maxCount
+sh:maxCount rdf:type owl:AnnotationProperty .
 
-:MeanShape
-    rdf:type        sh:NodeShape ;
-    sh:targetClass  :Mean ;
-    sh:property [
-        sh:path  :mean_of ;
-        sh:class    :Population ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] .
 
-:MeasureShape
-    rdf:type        sh:NodeShape ;
-    sh:targetClass  :Measure ;
-    sh:property [
-        sh:path  :hasNumericalValue ;
-        sh:datatype xsd:string ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] ;
-    sh:property [
-        sh:path  :unit_of_measure ;
-        sh:class    :Unit_of_measure ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] ;
-    sh:property [
-        sh:path  :hasUnit ;
-        sh:class    :Unit_of_measure
-    ] ;
-    sh:property [
-        sh:path  :unit_of_measure ;
-        sh:class    :Unit_of_measure
-    ] ;
-    sh:property [
-        sh:path  :numerical_value ;
-        sh:datatype xsd:string
-    ] ;
-    sh:property [
-        sh:path  :hasNumericalValue ;
-        sh:datatype xsd:string
-    ] ;
-    sh:property [
-        sh:path  :numerical_value ;
-        sh:datatype xsd:string ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] ;
-    sh:property [
-        sh:path  :hasUnit ;
-        sh:class    :Unit_of_measure ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] .
+###  http://www.w3.org/ns/shacl#minCount
+sh:minCount rdf:type owl:AnnotationProperty .
 
-:Nominal_scaleShape
-    rdf:type        sh:NodeShape ;
-    sh:targetClass  :Nominal_scale ;
-    sh:property [
-        sh:path  :element ;
-        sh:class    :Measurement_scale_category
-    ] .
 
-:ObservationShape
-    rdf:type        sh:NodeShape ;
-    sh:targetClass  :Observation ;
-    sh:property [
-        sh:path  :member_of ;
-        sh:class    :Population
-    ] ;
-    sh:property [
-        sh:path  :has_characteristic ;
-        sh:class    :Variable ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] .
+###  http://www.w3.org/ns/shacl#path
+sh:path rdf:type owl:AnnotationProperty .
 
-:Ordinal_scaleShape
-    rdf:type        sh:NodeShape ;
-    sh:targetClass  :Ordinal_scale ;
-    sh:property [
-        sh:path  :element ;
-        sh:class    :Ordered_measurement_scale_category
-    ] .
 
-:ParameterShape
-    rdf:type        sh:NodeShape ;
-    sh:targetClass  :Parameter ;
-    sh:property [
-        sh:path  :parameter_of_var ;
-        sh:class    :Variable ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] .
+###  http://www.w3.org/ns/shacl#property
+sh:property rdf:type owl:AnnotationProperty .
 
-:PopulationShape
-    rdf:type        sh:NodeShape ;
-    sh:targetClass  :Population ;
-    sh:property [
-        sh:path  :defined_by ;
-        sh:class    owl:Thing
-    ] ;
-    sh:property [
-        sh:path  :is_described_by ;
-        sh:class    :Parameter
-    ] ;
-    sh:property [
-        sh:path  :for_time_interval ;
-        sh:class    time:DateTimeInterval
-    ] ;
-    sh:property [
-        sh:path  :definition ;
-        sh:class    :Feature ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] ;
-    sh:property [
-        sh:path  :is_composed_of ;
-        sh:class :Observation
-    ] .
 
-:QuantityShape
-    rdf:type        sh:NodeShape ;
-    sh:targetClass  :Quantity ;
-    sh:property [
-        sh:path  :unit_of_measure ;
-        sh:class    :Unit_of_measure ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] ;
-    sh:property [
-        sh:path  :value ;
-        sh:class    :Measure
-    ] ;
-    sh:property [
-        sh:path  :hasValue ;
-        sh:class    :Measure
-    ] ;
-    sh:property [
-        sh:path  :value ;
-        sh:class    :Measure ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] ;
-    sh:property [
-        sh:path  :unit_of_measure ;
-        sh:class    :Unit_of_measure
-    ] ;
-    sh:property [
-        sh:path  :hasValue ;
-        sh:class    :Measure ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] ;
-    sh:property [
-        sh:path  :hasUnit ;
-        sh:class    :Unit_of_measure ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] ;
-    sh:property [
-        sh:path  :hasUnit ;
-        sh:class    :Unit_of_measure
-    ] .
+###  http://www.w3.org/ns/shacl#targetClass
+sh:targetClass rdf:type owl:AnnotationProperty .
 
-:RatioIndicatorShape
-    rdf:type        sh:NodeShape ;
-    sh:targetClass  :RatioIndicator ;
-    sh:property [
-        sh:path  :unit_of_measure ;
-        sh:class    :Unit_division ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] ;
-    sh:property [
-        sh:path  :denominator ;
-        sh:class    :Quantity ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] ;
-    sh:property [
-        sh:path  :numerator ;
-        sh:class    :Quantity ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] .
 
-:SampleShape
-    rdf:type        sh:NodeShape ;
-    sh:targetClass  :Sample ;
-    sh:property [
-        sh:path  :is_described_by ;
-        sh:class    :Statistic
-    ] ;
-    sh:property [
-        sh:path  :is_composed_of ;
-        sh:class    :Observation
-    ] ;
-    sh:property [
-        sh:path  :is_part_of ;
-        sh:class    :Population ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] .
+#################################################################
+#    Classes
+#################################################################
 
-:Standard_deviationShape
-    rdf:type        sh:NodeShape ;
-    sh:targetClass  :Standard_deviation ;
-    sh:property [
-        sh:path  :std_of ;
-        sh:class    :Population ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] .
+###  http://www.w3.org/ns/shacl#NodeShape
+sh:NodeShape rdf:type owl:Class .
 
-:StatisticShape
-    rdf:type        sh:NodeShape ;
-    sh:targetClass  :Statistic ;
-    sh:property [
-        sh:path  :is_an_estimate_of ;
-        sh:class    :Parameter
-    ] .
 
-:SumShape
-    rdf:type        sh:NodeShape ;
-    sh:targetClass  :Sum ;
-    sh:property [
-        sh:path  :sum_of ;
-        sh:class    :Population ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] .
+#################################################################
+#    Individuals
+#################################################################
 
-:SumIndicatorShape
-    rdf:type        sh:NodeShape ;
-    sh:targetClass  :SumIndicator ;
-    sh:property [
-        sh:path  :term_2 ;
-        sh:class    :Quantity ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] ;
-    sh:property [
-        sh:path  :term_1 ;
-        sh:class    :Quantity ;
-        sh:minCount "1"^^xsd:integer ;
-        sh:maxCount "1"^^xsd:integer
-    ] .
+###  https://w3id.org/citydata/21972/v1/Cardinal_scaleShape
+i72:Cardinal_scaleShape rdf:type owl:NamedIndividual ,
+                                 sh:NodeShape ;
+                        sh:property [ sh:class i72:Fixed_point ;
+                                      sh:path i72:element
+                                    ] ;
+                        sh:targetClass i72:Cardinal_scale .
 
-:VariableShape
-    rdf:type        sh:NodeShape ;
-    sh:targetClass  :Variable ;
-    sh:property [
-        sh:path  :has_Name ;
-        sh:datatype xsd:string ;
-        sh:maxCount "1"^^xsd:integer
-    ] ;
-    sh:property [
-        sh:path  :is_characteristic_of ;
-        sh:class    :Observation
-    ] .
 
+###  https://w3id.org/citydata/21972/v1/CardinalityShape
+i72:CardinalityShape rdf:type owl:NamedIndividual ,
+                              sh:NodeShape ;
+                     sh:property [ sh:class i72:Population ;
+                                   sh:maxCount 1 ;
+                                   sh:minCount 1 ;
+                                   sh:path i72:cardinality_of
+                                 ] ;
+                     sh:targetClass i72:Cardinality .
+
+
+###  https://w3id.org/citydata/21972/v1/DifferenceIndicatorShape
+i72:DifferenceIndicatorShape rdf:type owl:NamedIndividual ,
+                                      sh:NodeShape ;
+                             sh:property [ sh:class i72:Quantity ;
+                                           sh:maxCount 1 ;
+                                           sh:minCount 1 ;
+                                           sh:path i72:term_2
+                                         ] ,
+                                         [ sh:class i72:Quantity ;
+                                           sh:maxCount 1 ;
+                                           sh:minCount 1 ;
+                                           sh:path i72:term_1
+                                         ] ;
+                             sh:targetClass i72:DifferenceIndicator .
+
+
+###  https://w3id.org/citydata/21972/v1/Distinct_countShape
+i72:Distinct_countShape rdf:type owl:NamedIndividual ,
+                                 sh:NodeShape ;
+                        sh:property [ sh:class i72:Population ;
+                                      sh:maxCount 1 ;
+                                      sh:minCount 1 ;
+                                      sh:path i72:distinct_count_of
+                                    ] ;
+                        sh:targetClass i72:Distinct_count .
+
+
+###  https://w3id.org/citydata/21972/v1/IndicatorShape
+i72:IndicatorShape rdf:type owl:NamedIndividual ,
+                            sh:NodeShape ;
+                   sh:property [ sh:class i72:City ;
+                                 sh:maxCount 1 ;
+                                 sh:minCount 1 ;
+                                 sh:path i72:for_city
+                               ] ,
+                               [ sh:class time:DateTimeInterval ;
+                                 sh:maxCount 1 ;
+                                 sh:minCount 1 ;
+                                 sh:path i72:for_time_interval
+                               ] ;
+                   sh:targetClass i72:Indicator .
+
+
+###  https://w3id.org/citydata/21972/v1/MeanShape
+i72:MeanShape rdf:type owl:NamedIndividual ,
+                       sh:NodeShape ;
+              sh:property [ sh:class i72:Population ;
+                            sh:maxCount 1 ;
+                            sh:minCount 1 ;
+                            sh:path i72:mean_of
+                          ] ;
+              sh:targetClass i72:Mean .
+
+
+###  https://w3id.org/citydata/21972/v1/MeasureShape
+i72:MeasureShape rdf:type owl:NamedIndividual ,
+                          sh:NodeShape ;
+                 sh:property [ sh:class i72:Unit_of_measure ;
+                               sh:maxCount 1 ;
+                               sh:minCount 1 ;
+                               sh:path i72:hasUnit
+                             ] ,
+                             [ sh:class i72:Unit_of_measure ;
+                               sh:path i72:hasUnit
+                             ] ,
+                             [ sh:class i72:Unit_of_measure ;
+                               sh:maxCount 1 ;
+                               sh:minCount 1 ;
+                               sh:path i72:unit_of_measure
+                             ] ,
+                             [ sh:datatype xsd:string ;
+                               sh:path i72:numerical_value
+                             ] ,
+                             [ sh:class i72:Unit_of_measure ;
+                               sh:path i72:unit_of_measure
+                             ] ,
+                             [ sh:datatype xsd:string ;
+                               sh:maxCount 1 ;
+                               sh:minCount 1 ;
+                               sh:path i72:numerical_value
+                             ] ,
+                             [ sh:datatype xsd:string ;
+                               sh:path i72:hasNumericalValue
+                             ] ,
+                             [ sh:datatype xsd:string ;
+                               sh:maxCount 1 ;
+                               sh:minCount 1 ;
+                               sh:path i72:hasNumericalValue
+                             ] ;
+                 sh:targetClass i72:Measure .
+
+
+###  https://w3id.org/citydata/21972/v1/Nominal_scaleShape
+i72:Nominal_scaleShape rdf:type owl:NamedIndividual ,
+                                sh:NodeShape ;
+                       sh:property [ sh:class i72:Measurement_scale_category ;
+                                     sh:path i72:element
+                                   ] ;
+                       sh:targetClass i72:Nominal_scale .
+
+
+###  https://w3id.org/citydata/21972/v1/ObservationShape
+i72:ObservationShape rdf:type owl:NamedIndividual ,
+                              sh:NodeShape ;
+                     sh:property [ sh:class i72:Population ;
+                                   sh:path i72:member_of
+                                 ] ,
+                                 [ sh:class i72:Variable ;
+                                   sh:maxCount 1 ;
+                                   sh:minCount 1 ;
+                                   sh:path i72:has_characteristic
+                                 ] ;
+                     sh:targetClass i72:Observation .
+
+
+###  https://w3id.org/citydata/21972/v1/Ordinal_scaleShape
+i72:Ordinal_scaleShape rdf:type owl:NamedIndividual ,
+                                sh:NodeShape ;
+                       sh:property [ sh:class i72:Ordered_measurement_scale_category ;
+                                     sh:path i72:element
+                                   ] ;
+                       sh:targetClass i72:Ordinal_scale .
+
+
+###  https://w3id.org/citydata/21972/v1/ParameterShape
+i72:ParameterShape rdf:type owl:NamedIndividual ,
+                            sh:NodeShape ;
+                   sh:property [ sh:class i72:Variable ;
+                                 sh:maxCount 1 ;
+                                 sh:minCount 1 ;
+                                 sh:path i72:parameter_of_var
+                               ] ;
+                   sh:targetClass i72:Parameter .
+
+
+###  https://w3id.org/citydata/21972/v1/PopulationShape
+i72:PopulationShape rdf:type owl:NamedIndividual ,
+                             sh:NodeShape ;
+                    sh:property [ sh:class owl:Thing ;
+                                  sh:path i72:defined_by
+                                ] ,
+                                [ sh:class time:DateTimeInterval ;
+                                  sh:path i72:for_time_interval
+                                ] ,
+                                [ sh:class i72:Parameter ;
+                                  sh:path i72:is_described_by
+                                ] ,
+                                [ sh:class i72:Feature ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:path i72:definition
+                                ] ,
+                                [ sh:class i72:Observation ;
+                                  sh:path i72:is_composed_of
+                                ] ;
+                    sh:targetClass i72:Population .
+
+
+###  https://w3id.org/citydata/21972/v1/QuantityShape
+i72:QuantityShape rdf:type owl:NamedIndividual ,
+                           sh:NodeShape ;
+                  sh:property [ sh:class i72:Unit_of_measure ;
+                                sh:maxCount 1 ;
+                                sh:minCount 1 ;
+                                sh:path i72:hasUnit
+                              ] ,
+                              [ sh:class i72:Measure ;
+                                sh:maxCount 1 ;
+                                sh:minCount 1 ;
+                                sh:path i72:hasValue
+                              ] ,
+                              [ sh:class i72:Unit_of_measure ;
+                                sh:path i72:hasUnit
+                              ] ,
+                              [ sh:class i72:Unit_of_measure ;
+                                sh:maxCount 1 ;
+                                sh:minCount 1 ;
+                                sh:path i72:unit_of_measure
+                              ] ,
+                              [ sh:class i72:Measure ;
+                                sh:path i72:hasValue
+                              ] ,
+                              [ sh:class i72:Measure ;
+                                sh:path i72:value
+                              ] ,
+                              [ sh:class i72:Unit_of_measure ;
+                                sh:path i72:unit_of_measure
+                              ] ,
+                              [ sh:class i72:Measure ;
+                                sh:maxCount 1 ;
+                                sh:minCount 1 ;
+                                sh:path i72:value
+                              ] ;
+                  sh:targetClass i72:Quantity .
+
+
+###  https://w3id.org/citydata/21972/v1/RatioIndicatorShape
+i72:RatioIndicatorShape rdf:type owl:NamedIndividual ,
+                                 sh:NodeShape ;
+                        sh:property [ sh:class i72:Unit_division ;
+                                      sh:maxCount 1 ;
+                                      sh:minCount 1 ;
+                                      sh:path i72:unit_of_measure
+                                    ] ,
+                                    [ sh:class i72:Quantity ;
+                                      sh:maxCount 1 ;
+                                      sh:minCount 1 ;
+                                      sh:path i72:denominator
+                                    ] ,
+                                    [ sh:class i72:Quantity ;
+                                      sh:maxCount 1 ;
+                                      sh:minCount 1 ;
+                                      sh:path i72:numerator
+                                    ] ;
+                        sh:targetClass i72:RatioIndicator .
+
+
+###  https://w3id.org/citydata/21972/v1/SampleShape
+i72:SampleShape rdf:type owl:NamedIndividual ,
+                         sh:NodeShape ;
+                sh:property [ sh:class i72:Statistic ;
+                              sh:path i72:is_described_by
+                            ] ,
+                            [ sh:class i72:Population ;
+                              sh:maxCount 1 ;
+                              sh:minCount 1 ;
+                              sh:path i72:is_part_of
+                            ] ,
+                            [ sh:class i72:Observation ;
+                              sh:path i72:is_composed_of
+                            ] ;
+                sh:targetClass i72:Sample .
+
+
+###  https://w3id.org/citydata/21972/v1/Standard_deviationShape
+i72:Standard_deviationShape rdf:type owl:NamedIndividual ,
+                                     sh:NodeShape ;
+                            sh:property [ sh:class i72:Population ;
+                                          sh:maxCount 1 ;
+                                          sh:minCount 1 ;
+                                          sh:path i72:std_of
+                                        ] ;
+                            sh:targetClass i72:Standard_deviation .
+
+
+###  https://w3id.org/citydata/21972/v1/StatisticShape
+i72:StatisticShape rdf:type owl:NamedIndividual ,
+                            sh:NodeShape ;
+                   sh:property [ sh:class i72:Parameter ;
+                                 sh:path i72:is_an_estimate_of
+                               ] ;
+                   sh:targetClass i72:Statistic .
+
+
+###  https://w3id.org/citydata/21972/v1/SumIndicatorShape
+i72:SumIndicatorShape rdf:type owl:NamedIndividual ,
+                               sh:NodeShape ;
+                      sh:property [ sh:class i72:Quantity ;
+                                    sh:maxCount 1 ;
+                                    sh:minCount 1 ;
+                                    sh:path i72:term_2
+                                  ] ,
+                                  [ sh:class i72:Quantity ;
+                                    sh:maxCount 1 ;
+                                    sh:minCount 1 ;
+                                    sh:path i72:term_1
+                                  ] ;
+                      sh:targetClass i72:SumIndicator .
+
+
+###  https://w3id.org/citydata/21972/v1/SumShape
+i72:SumShape rdf:type owl:NamedIndividual ,
+                      sh:NodeShape ;
+             sh:property [ sh:class i72:Population ;
+                           sh:maxCount 1 ;
+                           sh:minCount 1 ;
+                           sh:path i72:sum_of
+                         ] ;
+             sh:targetClass i72:Sum .
+
+
+###  https://w3id.org/citydata/21972/v1/VariableShape
+i72:VariableShape rdf:type owl:NamedIndividual ,
+                           sh:NodeShape ;
+                  sh:property [ sh:class i72:Observation ;
+                                sh:path i72:is_characteristic_of
+                              ] ,
+                              [ sh:datatype xsd:string ;
+                                sh:maxCount 1 ;
+                                sh:path i72:has_Name
+                              ] ;
+                  sh:targetClass i72:Variable .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

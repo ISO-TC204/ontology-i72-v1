@@ -1,8 +1,24 @@
 # cardinality_of
 
-**Domain**: [Cardinality](../classes/Cardinality.md)
+**IRI**: `https://w3id.org/citydata/21972/v1/cardinality_of`
 
-**Range**: [Population](../classes/Population.md)
+## Domain
+
+| Class |
+|-------|
+| [Cardinality](../classes/Cardinality.md) |
+
+## Range
+
+| Class |
+|-------|
+| [Population](../classes/Population.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [description_of](description_of.md) |
 
 ## Used in classes
 
@@ -10,4 +26,3 @@
 |-------|
 | [Cardinality](../classes/Cardinality.md) |
 
-**IRI**: `https://w3id.org/citydata/21972/v1/cardinality_of`

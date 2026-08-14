@@ -2,6 +2,8 @@
 
 Sum defines the sum over a variable possessed by members of the Population.
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Sum`
+
 
 ## Diagram
 

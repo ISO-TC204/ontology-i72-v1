@@ -2,6 +2,8 @@
 
 Measurement scales are concepts used for the expression of quantities. Four types of measurement scales are: nominal scales, ordinal scales, interval scales and ratio scales. The latter two scales are also called cardinal scales. An example of a scale is the Celsius scale, a temperature scale.
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Measurement_scale`
+
 
 ## Diagram
 

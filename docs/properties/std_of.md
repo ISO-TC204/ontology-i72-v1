@@ -1,8 +1,24 @@
 # std_of
 
-**Domain**: [Standard_deviation](../classes/Standard_deviation.md)
+**IRI**: `https://w3id.org/citydata/21972/v1/std_of`
 
-**Range**: [Population](../classes/Population.md)
+## Domain
+
+| Class |
+|-------|
+| [Standard_deviation](../classes/Standard_deviation.md) |
+
+## Range
+
+| Class |
+|-------|
+| [Population](../classes/Population.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [description_of](description_of.md) |
 
 ## Used in classes
 
@@ -10,4 +26,3 @@
 |-------|
 | [Standard_deviation](../classes/Standard_deviation.md) |
 
-**IRI**: `https://w3id.org/citydata/21972/v1/std_of`

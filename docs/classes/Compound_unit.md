@@ -1,5 +1,7 @@
 # Compound_unit
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Compound_unit`
+
 
 ## Diagram
 

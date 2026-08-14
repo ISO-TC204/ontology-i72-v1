@@ -1,6 +1,8 @@
 # Parameter
 
-Parameter is the Class of all  measures that can be made of a Population, both statistical, e.g., Mean, Starndard_devation, and others, e.g., Cardinality, Sum.
+Parameter is the Class of all  measures that can be made of a Population, both statistical, e.g., Mean, Standard_devation, and others, e.g., Cardinality, Sum.
+
+**IRI**: `https://w3id.org/citydata/21972/v1/Parameter`
 
 
 ## Diagram
@@ -112,4 +114,11 @@ Note that there is no property that links Cardinality to a Variable. |
 | [parameter_of_var](../properties/parameter_of_var.md) | exactly 1 [Variable](https://w3id.org/citydata/21972/v1/Variable) |
 | subClassOf | [ISO21972Thing](ISO21972Thing.md) |
 | subClassOf | [Quantity](Quantity.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Population](Population.md) | [is_described_by](../properties/is_described_by.md) |
+| [Statistic](Statistic.md) | [is_an_estimate_of](../properties/is_an_estimate_of.md) |
 

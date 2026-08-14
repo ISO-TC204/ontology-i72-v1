@@ -1,7 +1,28 @@
 # exponent
 
-**Domain**: [Unit_exponentiation](../classes/Unit_exponentiation.md)
-
-**Range**: [xsd:integer](https://w3id.org/citydata/imported/xsd/integer)
-
 **IRI**: `https://w3id.org/citydata/21972/v1/exponent`
+
+## Domain
+
+| Class |
+|-------|
+| [Unit_exponentiation](../classes/Unit_exponentiation.md) |
+
+## Range
+
+| Class |
+|-------|
+| [xsd:integer](https://w3id.org/citydata/imported/xsd/integer) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [iso21972DataProperty](iso21972DataProperty.md) |
+
+## Other annotations
+
+| Property | Value |
+|----------|-------|
+| [om-1:alternative_label](https://w3id.org/citydata/imported/om-1/alternative_label) | has exponent |
+

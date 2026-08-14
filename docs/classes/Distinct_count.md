@@ -4,6 +4,8 @@ Distinct_count class that is a Parameter that represents
          the number of distinct values of a property of the members of a
          Population
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Distinct_count`
+
 
 ## Diagram
 

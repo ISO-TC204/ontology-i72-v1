@@ -2,6 +2,8 @@
 
 An indicator is a quantity that is a ratio of a numerator and denominator that are also quantities. It has a city and time period associated with it. The numerator and denominator quantities can have different units of measure. One example of a unit of measure is the size of a population. A population_cardinality_unit is defined to be an individual of a Cardinality_unit that is a subclass of a Singular_unit.
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Indicator`
+
 
 ## Diagram
 
@@ -72,7 +74,7 @@ An indicator is a quantity that is a ratio of a numerator and denominator that a
     </g>
     </g>
     <!-- Indicator&#45;&gt;City -->
-    <g id="edge7" class="edge">
+    <g id="edge6" class="edge">
     <title>Indicator&#45;&gt;City</title>
     <path fill="none" stroke="black" d="M103.39,-284.21C98.24,-251.06 86.71,-176.89 80.37,-136.14"/>
     <polygon fill="black" stroke="black" points="83.85,-135.73 78.86,-126.38 76.94,-136.8 83.85,-135.73"/>
@@ -91,7 +93,7 @@ An indicator is a quantity that is a ratio of a numerator and denominator that a
     </g>
     </g>
     <!-- Indicator&#45;&gt;time_DateTimeInterval -->
-    <g id="edge6" class="edge">
+    <g id="edge7" class="edge">
     <title>Indicator&#45;&gt;time_DateTimeInterval</title>
     <path fill="none" stroke="black" d="M123.69,-284.44C131.86,-275.56 140.7,-263.9 145,-251.5 151.91,-231.55 147.94,-224.91 145,-204 137.59,-151.34 134.35,-137.25 112,-89 107.53,-79.34 101.45,-69.46 95.57,-60.83"/>
     <polygon fill="black" stroke="black" points="98.62,-59.08 89.98,-52.94 92.9,-63.13 98.62,-59.08"/>

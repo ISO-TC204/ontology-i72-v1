@@ -1,5 +1,7 @@
 # Standard_deviation
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Standard_deviation`
+
 
 ## Diagram
 

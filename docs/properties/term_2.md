@@ -1,8 +1,24 @@
 # term_2
 
-**Domain**: [Unit_multiplication](../classes/Unit_multiplication.md)
+**IRI**: `https://w3id.org/citydata/21972/v1/term_2`
 
-**Range**: [Unit_of_measure](../classes/Unit_of_measure.md)
+## Domain
+
+| Class |
+|-------|
+| [Unit_multiplication](../classes/Unit_multiplication.md) |
+
+## Range
+
+| Class |
+|-------|
+| [Unit_of_measure](../classes/Unit_of_measure.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [iso21972ObjectProperty](iso21972ObjectProperty.md) |
 
 ## Used in classes
 
@@ -11,4 +27,9 @@
 | [DifferenceIndicator](../classes/DifferenceIndicator.md) |
 | [SumIndicator](../classes/SumIndicator.md) |
 
-**IRI**: `https://w3id.org/citydata/21972/v1/term_2`
+## Other annotations
+
+| Property | Value |
+|----------|-------|
+| [om-1:alternative_label](https://w3id.org/citydata/imported/om-1/alternative_label) | has term 2 |
+

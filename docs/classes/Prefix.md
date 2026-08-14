@@ -2,6 +2,8 @@
 
 A prefix is a name that precedes a basic unit of measure to indicate a decimal multiple or fraction of the unit. Each prefix has a unique symbol that is prepended to the unit symbol. For example, an electric current of 0.000 000 001 ampere is written by using the SI-prefix nano as 1 nanoampere or 1 nA.
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Prefix`
+
 
 ## Diagram
 

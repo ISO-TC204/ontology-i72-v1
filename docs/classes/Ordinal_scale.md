@@ -1,5 +1,7 @@
 # Ordinal_scale
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Ordinal_scale`
+
 
 ## Diagram
 
@@ -76,6 +78,7 @@
 
 | Property | Constraint |
 |----------|------------|
+| [element](../properties/element.md) | only [Ordered_measurement_scale_category](Ordered_measurement_scale_category.md) |
 | [element](../properties/element.md) | only [Ordered_measurement_scale_category](https://w3id.org/citydata/21972/v1/Ordered_measurement_scale_category) |
 | subClassOf | [Measurement_scale](Measurement_scale.md) |
 

@@ -211,7 +211,12 @@ def definition_text(g: Graph, subject) -> Literal | None:
 
 
 def restriction_pairs(g: Graph, node: BNode):
-    """Return predicate/object pairs for a restriction, mapping allValuesFrom→onClass."""
+    """Return predicate/object pairs for a restriction.
+
+    Keep OWL-legal form:
+      - qualified cardinalities use owl:onClass / owl:onDataRange
+      - universal restrictions use owl:allValuesFrom (not bare owl:onClass)
+    """
     pairs = []
     props = {p: o for p, o in g.predicate_objects(node)}
     pairs.append((RDF.type, OWL.Restriction))
@@ -220,17 +225,33 @@ def restriction_pairs(g: Graph, node: BNode):
     if on_prop is not None:
         pairs.append((OWL.onProperty, on_prop))
 
-    # Class filler: prefer onClass; convert allValuesFrom class fillers to onClass
+    has_qcard = any(
+        p in props
+        for p in (
+            OWL.qualifiedCardinality,
+            OWL.minQualifiedCardinality,
+            OWL.maxQualifiedCardinality,
+        )
+    )
     on_class = props.get(OWL.onClass)
     all_from = props.get(OWL.allValuesFrom)
-    if on_class is not None:
-        pairs.append((OWL.onClass, on_class))
-    elif all_from is not None:
-        # Datatype fillers stay as allValuesFrom; class fillers become onClass
-        if isinstance(all_from, URIRef) and str(all_from).startswith(str(XSD)):
-            pairs.append((OWL.allValuesFrom, all_from))
-        else:
+
+    if has_qcard:
+        if on_class is not None:
+            pairs.append((OWL.onClass, on_class))
+        elif all_from is not None and not (
+            isinstance(all_from, URIRef) and str(all_from).startswith(str(XSD))
+        ):
+            # Unexpected: treat class filler with cardinality as onClass
             pairs.append((OWL.onClass, all_from))
+        if all_from is not None and isinstance(all_from, URIRef) and str(all_from).startswith(str(XSD)):
+            pairs.append((OWL.allValuesFrom, all_from))
+    else:
+        # Universal / existential style — never emit bare owl:onClass
+        if all_from is not None:
+            pairs.append((OWL.allValuesFrom, all_from))
+        elif on_class is not None:
+            pairs.append((OWL.allValuesFrom, on_class))
 
     for pred in (
         OWL.onDataRange,

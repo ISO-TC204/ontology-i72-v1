@@ -1,8 +1,24 @@
 # parameter_of_var
 
-**Domain**: [Parameter](../classes/Parameter.md)
+**IRI**: `https://w3id.org/citydata/21972/v1/parameter_of_var`
 
-**Range**: [Variable](../classes/Variable.md)
+## Domain
+
+| Class |
+|-------|
+| [Parameter](../classes/Parameter.md) |
+
+## Range
+
+| Class |
+|-------|
+| [Variable](../classes/Variable.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [iso21972ObjectProperty](iso21972ObjectProperty.md) |
 
 ## Used in classes
 
@@ -10,4 +26,3 @@
 |-------|
 | [Parameter](../classes/Parameter.md) |
 
-**IRI**: `https://w3id.org/citydata/21972/v1/parameter_of_var`

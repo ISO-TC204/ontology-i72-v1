@@ -1,5 +1,7 @@
 # Fixed_point
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Fixed_point`
+
 
 ## Diagram
 
@@ -43,16 +45,16 @@
     </g>
     <!-- Invis -->
     <!-- Fixed_point&#45;&gt;Invis -->
-    <!-- n49e7333729f74c3eb91b9b7c78626a1eb10 -->
+    <!-- n68d9447adccb4386bb07600c36c4dd52b10 -->
     <g id="node6" class="node">
-    <title>n49e7333729f74c3eb91b9b7c78626a1eb10</title>
+    <title>n68d9447adccb4386bb07600c36c4dd52b10</title>
     <polygon fill="lightyellow" stroke="none" points="89.25,-183.38 89.25,-201.62 148.75,-201.62 148.75,-183.38 89.25,-183.38"/>
     <text xml:space="preserve" text-anchor="start" x="91.25" y="-188.38" font-family="Arial" font-size="12.00">«unionOf»</text>
     <polygon fill="none" stroke="black" points="89.25,-183.38 89.25,-201.62 148.75,-201.62 148.75,-183.38 89.25,-183.38"/>
     </g>
-    <!-- Fixed_point&#45;&gt;n49e7333729f74c3eb91b9b7c78626a1eb10 -->
+    <!-- Fixed_point&#45;&gt;n68d9447adccb4386bb07600c36c4dd52b10 -->
     <g id="edge8" class="edge">
-    <title>Fixed_point&#45;&gt;n49e7333729f74c3eb91b9b7c78626a1eb10</title>
+    <title>Fixed_point&#45;&gt;n68d9447adccb4386bb07600c36c4dd52b10</title>
     <path fill="none" stroke="black" d="M71.01,-268.05C68.53,-256.34 67.2,-240.74 73.25,-228.5 74.81,-225.35 78.95,-221.3 84.15,-217.07"/>
     <polygon fill="black" stroke="black" points="85.89,-220.14 91.75,-211.31 81.66,-214.56 85.89,-220.14"/>
     <polygon fill="white" stroke="none" points="73.25,-228.5 73.25,-250 124,-250 124,-228.5 73.25,-228.5"/>
@@ -80,23 +82,23 @@
     </g>
     </g>
     <!-- Measure&#45;&gt;Quantity -->
-    <!-- n49e7333729f74c3eb91b9b7c78626a1eb10&#45;&gt;Fixed_point -->
+    <!-- n68d9447adccb4386bb07600c36c4dd52b10&#45;&gt;Fixed_point -->
     <g id="edge5" class="edge">
-    <title>n49e7333729f74c3eb91b9b7c78626a1eb10&#45;&gt;Fixed_point</title>
+    <title>n68d9447adccb4386bb07600c36c4dd52b10&#45;&gt;Fixed_point</title>
     <path fill="none" stroke="black" stroke-dasharray="1,5" d="M126.99,-210.48C131.28,-222.2 134.49,-237.81 128,-250 125.48,-254.73 122,-258.94 118.03,-262.65"/>
     <polygon fill="black" stroke="black" points="116.16,-259.67 110.52,-268.63 120.52,-265.14 116.16,-259.67"/>
     <text xml:space="preserve" text-anchor="middle" x="151.56" y="-235.55" font-family="Arial" font-size="11.00">member</text>
     </g>
-    <!-- n49e7333729f74c3eb91b9b7c78626a1eb10&#45;&gt;Measure -->
+    <!-- n68d9447adccb4386bb07600c36c4dd52b10&#45;&gt;Measure -->
     <g id="edge6" class="edge">
-    <title>n49e7333729f74c3eb91b9b7c78626a1eb10&#45;&gt;Measure</title>
+    <title>n68d9447adccb4386bb07600c36c4dd52b10&#45;&gt;Measure</title>
     <path fill="none" stroke="black" stroke-dasharray="1,5" d="M89.41,-175.85C81.19,-170.5 72.74,-163.96 66.25,-156.5 60.81,-150.25 56.35,-142.51 52.85,-135.06"/>
     <polygon fill="black" stroke="black" points="56.11,-133.8 48.98,-125.96 49.67,-136.53 56.11,-133.8"/>
     <text xml:space="preserve" text-anchor="middle" x="86.12" y="-146.05" font-family="Arial" font-size="11.00">member</text>
     </g>
-    <!-- n49e7333729f74c3eb91b9b7c78626a1eb10&#45;&gt;Quantity -->
+    <!-- n68d9447adccb4386bb07600c36c4dd52b10&#45;&gt;Quantity -->
     <g id="edge7" class="edge">
-    <title>n49e7333729f74c3eb91b9b7c78626a1eb10&#45;&gt;Quantity</title>
+    <title>n68d9447adccb4386bb07600c36c4dd52b10&#45;&gt;Quantity</title>
     <path fill="none" stroke="black" stroke-dasharray="1,5" d="M115.36,-174.63C113.11,-165.18 109.9,-153.27 106,-143 94.7,-113.22 75.65,-82.09 61.45,-60.94"/>
     <polygon fill="black" stroke="black" points="64.51,-59.22 55.97,-52.94 58.73,-63.17 64.51,-59.22"/>
     <text xml:space="preserve" text-anchor="middle" x="117.71" y="-103.3" font-family="Arial" font-size="11.00">member</text>
@@ -121,5 +123,6 @@
 
 | Property | Constraint |
 |----------|------------|
+| [definition](../properties/definition.md) | only [Fixed_point](Fixed_point.md) or [Measure](Measure.md) or [Quantity](Quantity.md) |
 | subClassOf | [Point](Point.md) |
 

@@ -1,5 +1,7 @@
 # Observation
 
+**IRI**: `https://w3id.org/citydata/21972/v1/Observation`
+
 
 ## Diagram
 
@@ -98,6 +100,15 @@
 |----------|------------|
 | [has_characteristic](../properties/has_characteristic.md) | exactly 1 |
 | [has_characteristic](../properties/has_characteristic.md) | exactly 1 [Variable](https://w3id.org/citydata/21972/v1/Variable) |
+| [member_of](../properties/member_of.md) | only [Population](Population.md) |
 | [member_of](../properties/member_of.md) | only [Population](https://w3id.org/citydata/21972/v1/Population) |
 | subClassOf | [ISO21972Thing](ISO21972Thing.md) |
+
+## Used by classes
+
+| Class | Property |
+|-------|----------|
+| [Population](Population.md) | [is_composed_of](../properties/is_composed_of.md) |
+| [Sample](Sample.md) | [is_composed_of](../properties/is_composed_of.md) |
+| [Variable](Variable.md) | [is_characteristic_of](../properties/is_characteristic_of.md) |
 

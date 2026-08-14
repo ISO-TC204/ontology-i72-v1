@@ -1,8 +1,24 @@
 # sum_of
 
-**Domain**: [Sum](../classes/Sum.md)
+**IRI**: `https://w3id.org/citydata/21972/v1/sum_of`
 
-**Range**: [Population](../classes/Population.md)
+## Domain
+
+| Class |
+|-------|
+| [Sum](../classes/Sum.md) |
+
+## Range
+
+| Class |
+|-------|
+| [Population](../classes/Population.md) |
+
+## Superordinate property
+
+| Property |
+|-------|
+| [description_of](description_of.md) |
 
 ## Used in classes
 
@@ -10,4 +26,3 @@
 |-------|
 | [Sum](../classes/Sum.md) |
 
-**IRI**: `https://w3id.org/citydata/21972/v1/sum_of`

@@ -1,7 +1,11 @@
-.cursor/
-.vscode/
-.venv/
+.DS_Store
 site/
 venv/
-~/
+__pycache__/
+*.py[cod]
+.Python
 .DS_Store
+.ontology-shared-scripts/
+*.pyc
+~/
+docs/catalog-v001.xml
