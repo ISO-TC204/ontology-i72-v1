@@ -2,9 +2,7 @@
   {
     "version": "r1.0",
     "title": "r1.0",
-    "aliases": [
-      "latest"
-    ]
+    "aliases": []
   },
   {
     "version": "2026-02-17_20-57-32",
@@ -25,5 +23,12 @@
     "version": "2026-02-12_02-45-07",
     "title": "2026-02-12_02-45-07",
     "aliases": []
+  },
+  {
+    "version": "v1.1.1-alpha.1",
+    "title": "v1.1.1-alpha.1",
+    "aliases": [
+      "latest"
+    ]
   }
 ]

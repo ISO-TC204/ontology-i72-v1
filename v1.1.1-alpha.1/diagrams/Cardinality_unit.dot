@@ -1,0 +1,24 @@
+// Diagram for Cardinality_unit
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=source
+		Singular_unit [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Singular_unit</TD></TR></TABLE>> URL="../Singular_unit" margin=0]
+	}
+	Cardinality_unit [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Cardinality_unit</TD></TR></TABLE>> URL="../Cardinality_unit" margin=0]
+	{
+		rank=max
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Cardinality_scale [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Cardinality_scale</TD></TR></TABLE>> URL="../Cardinality_scale" margin=0]
+	}
+	Cardinality_unit -> Singular_unit [arrowhead=onormal style=solid]
+	Cardinality_unit -> Invis [style=invis]
+	Invis -> Cardinality_scale [style=invis]
+	Cardinality_scale [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Cardinality_scale</TD></TR></TABLE>> URL="../Cardinality_scale" margin=0]
+	Cardinality_scale -> Cardinality_unit [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">inverse unit_of_measure</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=inv style=solid]
+}

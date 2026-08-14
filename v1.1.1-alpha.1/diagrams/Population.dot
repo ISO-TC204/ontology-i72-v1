@@ -1,0 +1,40 @@
+// Diagram for Population
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=source
+		ISO21972Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ISO21972Thing</TD></TR></TABLE>> URL="../ISO21972Thing" margin=0]
+	}
+	Population [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Population</TD></TR></TABLE>> URL="../Population" margin=0]
+	{
+		rank=max
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Feature [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Feature</TD></TR></TABLE>> URL="../Feature" margin=0]
+		Observation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Observation</TD></TR></TABLE>> URL="../Observation" margin=0]
+		owl_Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">owl:Thing</TD></TR></TABLE>> URL="https://w3id.org/citydata/imported/owl/latest/Thing" margin=0]
+		Parameter [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Parameter</TD></TR></TABLE>> URL="../Parameter" margin=0]
+		time_DateTimeInterval [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">time:DateTimeInterval</TD></TR></TABLE>> URL="https://w3id.org/citydata/imported/time/latest/DateTimeInterval" margin=0]
+	}
+	Population -> ISO21972Thing [arrowhead=onormal style=solid]
+	Population -> Invis [style=invis]
+	Invis -> Feature [style=invis]
+	Feature -> Observation [style=invis]
+	Observation -> owl_Thing [style=invis]
+	owl_Thing -> Parameter [style=invis]
+	Parameter -> time_DateTimeInterval [style=invis]
+	owl_Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">owl:Thing</TD></TR></TABLE>> URL="https://w3id.org/citydata/imported/owl/latest/Thing" margin=0]
+	Population -> owl_Thing [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">defined_by</TD></TR></TABLE>> arrowhead=normal style=solid]
+	time_DateTimeInterval [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">time:DateTimeInterval</TD></TR></TABLE>> URL="https://w3id.org/citydata/imported/time/latest/DateTimeInterval" margin=0]
+	Population -> time_DateTimeInterval [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">for_time_interval</TD></TR></TABLE>> arrowhead=normal style=solid]
+	Observation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Observation</TD></TR></TABLE>> URL="../Observation" margin=0]
+	Population -> Observation [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">is_composed_of</TD></TR></TABLE>> arrowhead=normal style=solid]
+	Parameter [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Parameter</TD></TR></TABLE>> URL="../Parameter" margin=0]
+	Population -> Parameter [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">is_described_by</TD></TR></TABLE>> arrowhead=normal style=solid]
+	Feature [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Feature</TD></TR></TABLE>> URL="../Feature" margin=0]
+	Population -> Feature [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">definition</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
+}
